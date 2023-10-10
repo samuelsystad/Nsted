@@ -1,3 +1,5 @@
 # Nsted
 Andreas
-Daniel
+Daniel trenger en dusj
+Simen
+

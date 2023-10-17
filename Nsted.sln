@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsted", "Nsted\Nsted.csproj", "{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nsted", "Nsted\Nsted.csproj", "{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,24 @@
+﻿/* Navbarstyle.css */
+
+.navbar-nav .nav-link {
+    color: #9cb7c2 !important;
+    margin-right : 20px;
+    margin-top : 10px;
+}
+
+.navbar-toggler-icon {
+    background-color: #9cb7c2 !important;
+}
+
+.custom-button {
+    color: transparent; /* Hide the text */
+    background:url('/images/Nostedlogo.png') no-repeat center center; /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire button */
+    width: 220px; /* Set the width of the button */
+    height: 44px; /* Set the height of the button */
+    display: inline-block; /* Ensure the button takes the size of its content */
+    text-indent: -9999px; /* Move the text out of the visible area */
+    margin-right : 50px;
+    margin-left : 10px;
+    margin-top : 10px;
+}

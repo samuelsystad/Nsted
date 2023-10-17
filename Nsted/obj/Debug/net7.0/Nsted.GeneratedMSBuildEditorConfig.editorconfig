@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/FerdigeOrdrer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GZXJkaWdlT3JkcmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Homepage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ib21lcGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,8 +32,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9MYWdlcmJlaG9sZG5pbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/NyService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9OeVNlcnZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Registrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3RyZXJpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/UnderBehandling.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9VbmRlckJlaGFuZGxpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Shared/Error.cshtml]

@@ -8,14 +8,22 @@
   <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Nsted/Controllers/HomeController.cs" Line="26" Column="21" />
-      <File FileName="Nsted/Models/ErrorViewModel.cs" />
-      <File FileName="Nsted/Properties/launchSettings.json" />
-      <File FileName="Nsted/Views/Home/Privacy.cshtml" Line="1" Column="1" />
-      <File FileName="Nsted/Views/Home/Index.cshtml" />
-      <File FileName="Nsted/Views/_ViewImports.cshtml" />
-      <File FileName="Nsted/wwwroot/css/site.css" />
+      <File FileName="Nsted/Controllers/HomeController.cs" Line="16" Column="30" />
+      <File FileName="Nsted/Views/Home/Privacy.cshtml" />
       <File FileName="Nsted/Views/_ViewStart.cshtml" />
+      <File FileName="Nsted/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="Nsted/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Nsted/Views/_ViewImports.cshtml" />
+      <File FileName="Nsted/Views/Shared/_Layout.cshtml" />
+      <File FileName="Nsted/Program.cs" />
+      <File FileName="Nsted/Views/Shared/Error.cshtml" />
+      <File FileName="Nsted/Startup.cs" />
+      <File FileName="Nsted/Dockerfile" />
+      <File FileName="Nsted/Models/ErrorViewModel.cs" />
+      <File FileName="Nsted/wwwroot/css/site.css" />
+      <File FileName="Nsted/wwwroot/js/site.js" />
+      <File FileName="Nsted/appsettings.json" />
+      <File FileName="Nsted/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,14 +32,6 @@
             <Node name="Nsted" expanded="True">
               <Node name="Controllers" expanded="True">
                 <Node name="HomeController.cs" selected="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="images" expanded="True" />
-                <Node name="lib" expanded="True" />
               </Node>
             </Node>
           </Node>

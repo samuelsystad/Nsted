@@ -5,12 +5,28 @@
       "PackagePath": "staticwebassets/Nsted.bundle.scp.css"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Homestyle.css",
+      "PackagePath": "staticwebassets/css/Homestyle.css"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Navbarstyle.css",
+      "PackagePath": "staticwebassets/css/Navbarstyle.css"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/images/Nostedlogo.png",
+      "PackagePath": "staticwebassets/images/Nostedlogo.png"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/images/backgroundhomepage.jpg",
+      "PackagePath": "staticwebassets/images/backgroundhomepage.jpg"
     },
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/site.js",

@@ -1,5 +1,6 @@
 # Nsted
+Samuel
 Andreas
-Daniel trenger en dusj
+Eskil
 Simen
-
+Daniel

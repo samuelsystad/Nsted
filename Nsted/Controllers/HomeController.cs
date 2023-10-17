@@ -13,12 +13,42 @@ namespace Nsted.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Homepage()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Service()
+        {
+            return View();
+        }
+
+        public IActionResult Lagerbeholdning()
+        {
+            return View();
+        }
+
+        public IActionResult Kalender()
+        {
+            return View();
+        }
+
+        public IActionResult Registrering()
+        {
+            return View();
+        }
+
+        public IActionResult NyService()
+        {
+            return View();
+        }
+
+        public IActionResult UnderBehandling()
+        {
+            return View();
+        }
+
+        public IActionResult FerdigeOrdrer()
         {
             return View();
         }

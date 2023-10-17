@@ -23,7 +23,12 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Lagerbeholdning()
+        {
+            return View();
+        }
+
+        public IActionResult Kalender()
         {
             return View();
         }

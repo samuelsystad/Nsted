@@ -28,7 +28,7 @@ app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Homepage}/{id?}");
 // This is the default route for MVC apps
 
 app.Run();

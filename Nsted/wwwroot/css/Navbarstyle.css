@@ -1,0 +1,9 @@
+﻿/* Navbarstyle.css */
+
+.navbar.navbar-custom-text-color .navbar-nav .nav-link {
+    color: #9cb7c2 !important;
+}
+
+.navbar.navbar-custom-text-color .navbar-toggler-icon {
+    background-color: #9cb7c2 !important;
+}

@@ -1,0 +1,6 @@
+﻿body {
+
+    background-image: url('/images/backgroundhomepage.jpg'); /* Adjust the path based on your folder structure */
+    background-size: cover; /* Ensures the image covers the entire body */
+    margin-bottom: 60px;
+}

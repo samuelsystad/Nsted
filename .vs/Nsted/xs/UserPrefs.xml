@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Nsted/Controllers/HomeController.cs" Line="26" Column="21" />
+      <File FileName="Nsted/Models/ErrorViewModel.cs" />
+      <File FileName="Nsted/Properties/launchSettings.json" />
+      <File FileName="Nsted/Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Nsted/Views/Home/Index.cshtml" />
+      <File FileName="Nsted/Views/_ViewImports.cshtml" />
+      <File FileName="Nsted/wwwroot/css/site.css" />
+      <File FileName="Nsted/Views/_ViewStart.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Nsted">
+            <Node name="Nsted" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="images" expanded="True" />
+                <Node name="lib" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

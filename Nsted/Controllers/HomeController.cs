@@ -13,7 +13,12 @@ namespace Nsted.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Homepage()
+        {
+            return View();
+        }
+
+        public IActionResult Service()
         {
             return View();
         }

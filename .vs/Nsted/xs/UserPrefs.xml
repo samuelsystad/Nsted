@@ -1,45 +1,41 @@
 ﻿<Properties StartupConfiguration="{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/wwwroot/css/Navbarstyle.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/wwwroot/css/Homestyle.css">
     <Files>
-      <File FileName="Nsted/Controllers/HomeController.cs" Line="28" Column="27" />
-      <File FileName="Nsted/Views/Home/Privacy.cshtml" Line="8" Column="1" />
+      <File FileName="Nsted/Controllers/HomeController.cs" />
       <File FileName="Nsted/Views/_ViewStart.cshtml" />
       <File FileName="Nsted/Views/Shared/_Layout.cshtml.css" />
-      <File FileName="Nsted/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
-      <File FileName="Nsted/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Nsted/Views/Shared/_Layout.cshtml" Line="38" Column="29" />
+      <File FileName="Nsted/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Nsted/Views/_ViewImports.cshtml" />
+      <File FileName="Nsted/Views/Shared/_Layout.cshtml" />
       <File FileName="Nsted/Program.cs" />
       <File FileName="Nsted/Views/Shared/Error.cshtml" />
       <File FileName="Nsted/Startup.cs" />
       <File FileName="Nsted/Dockerfile" />
       <File FileName="Nsted/Models/ErrorViewModel.cs" />
-      <File FileName="Nsted/wwwroot/css/site.css" Line="7" Column="18" />
       <File FileName="Nsted/wwwroot/js/site.js" />
       <File FileName="Nsted/appsettings.json" />
       <File FileName="Nsted/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
-      <File FileName="Nsted/Views/Home/Homepage.cshtml" Line="11" Column="25" />
-      <File FileName="Nsted/wwwroot/css/Homestyle.css" Line="1" Column="1" />
-      <File FileName="Nsted/wwwroot/css/Navbarstyle.css" Line="43" Column="31" />
-      <File FileName="Nsted/Views/Home/Service.cshtml" Line="4" Column="1" />
-      <File FileName="Nsted/Views/Home/Index.cshtml" Line="8" Column="58" />
+      <File FileName="Nsted/Views/Home/Homepage.cshtml" Line="1" Column="1" />
+      <File FileName="Nsted/wwwroot/css/Homestyle.css" Line="12" Column="1" />
+      <File FileName="Nsted/wwwroot/css/Navbarstyle.css" Line="11" Column="24" />
+      <File FileName="Nsted/Views/Home/Service.cshtml" />
+      <File FileName="Nsted/wwwroot/css/site.css" Line="48" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Nsted" expanded="True">
-            <Node name="Nsted" expanded="True">
+            <Node name="Nsted">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
+              <Node name="wwwroot">
                 <Node name="css" expanded="True" />
+                <Node name="images" expanded="True">
+                  <Node name="backgroundhomepage.jpg" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -47,4 +43,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

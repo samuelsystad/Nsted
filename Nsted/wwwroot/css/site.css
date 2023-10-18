@@ -1,11 +1,11 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 .display-1 {
@@ -40,15 +40,6 @@ html {
     margin-top: 25px;
 }
 
-.display-4 {
-    text-align: right;
-    color: #e7792c;
-    font-size: 45px;
-    margin-top: 200px;
-    opacity: 0.7;
-}
-
-
 
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -61,8 +52,8 @@ html {
 
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {

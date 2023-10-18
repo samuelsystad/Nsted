@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets/css/Navbarstyle.css"
     },
     {
-      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
-    },
-    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },

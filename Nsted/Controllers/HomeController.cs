@@ -29,7 +29,7 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Kalender()
+        public IActionResult Arbeidsdokument()
         {
             return View();
         }

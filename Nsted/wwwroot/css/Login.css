@@ -1,0 +1,63 @@
+﻿/* Styling av "Logg inn" teksten */
+p.lead {
+    font-size: 26px; /* Change the font size */
+    color: #FFFFFF; /* Change the text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+.form-control.form-control-lg[type="email"] {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+
+}
+.form-control.form-control-lg[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-label {
+color: #ffffff;
+    font-size: 16px;
+   
+}
+       /*Styling av tekstene under boksene E-post og Passord */
+.form-check-label {
+    color: #ffffff;
+    font-size: 16px;
+  
+}
+
+/* Styling the "Glemt passord?" link */
+a.text-body {
+    /* Add your styles here */
+    color: #ffffff !important; /* Change link text color to blue (you can use any color you prefer) */
+    /* Add any other styles you want */
+}
+
+.img-fluid {
+    position: fixed;
+    background-size: cover;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+

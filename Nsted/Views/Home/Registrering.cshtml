@@ -1,81 +1,109 @@
 ﻿@{
     ViewData["Title"] = "Registrering";
+    <link rel="stylesheet" href="~/css/Registreringstyle.css" />
 }
 
 
-<h1 style="color: white; margin-top: 50px;">Registrering</h1>
+<h1>Registrering</h1>
 <br />
+<div class="container">
+    <form method="post" action="/YourController/YourAction">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- First Row -->
+                <label for="bookingTilUke" class="form-label">Booket Service Til Uke:</label>
+                <input type="number" class="form-control" id="bookingTilUke" placeholder="Uke nr" aria-label="Booket Service Til Uke:" max="52" required>
+            </div>
+            <div class="col-md-6">
+                <!-- First Row -->
+                <label for="dateInput" class="form-label">Hendvendelse mottat og registrert:</label>
+                <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+            </div>
+        </div>
 
-<form method="post" action="/YourController/YourAction">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Second Row -->
+                <label for="case" class="form-label">Case ferdig?</label>
+                <select class="form-select" id="case" aria-label="Case ferdig?" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="1">Ja</option>
+                    <option value="2">Nei</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <!-- Second Row -->
+                <label for="produktType" class="form-label" >Produkt type:</label>
+                <input type="text" class="form-control" id="produktType" placeholder="Kommentar" aria-label="Produkt type:" required>
+            </div>
+        </div>
 
-        <label class="form-control-label" for="bookingTilUke" style="color : white">
-            Booket Service Til Uke:
-        </label>
-        <input class="form-control" id="bookingTilUke" type="number" placeholder="Nummer" aria-label="default input example" max="52">
+        <div class="row mb-3">
+            <div class="col-md-20">
+                <!-- Third Row -->
+                <label for="feilbeskrivelse" class="form-label">Bestilling / Feilbeskrivelse Fra Kunde:</label>
+                <textarea class="form-control" placeholder="Kommentar" id="feilbeskrivelse" aria-label="Bestilling / Feilbeskrivelse Fra Kunde:" required></textarea>
+                </div>
+                <div class="col-md-20">
+                    <!-- Third Row -->
+                    <label for="kundeinfo" class="form-label">Kundeinfo:</label>
+                    <textarea class="form-control" id="kundeinfo" placeholder="Kommentar" aria-label="Kundeinfo:" required></textarea>
+                </div>
+                </div>
 
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <!-- Fourth Row -->
+                        <label for="levering" class="form-label">Avtalt levering:</label>
+                        <input type="text" class="form-control" id="levering" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Fourth Row -->
+                        <label for="mottatt" class="form-label">Produkt mottatt:</label>
+                        <input type="text" class="form-control" id="mottatt" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                    </div>
+                </div>
 
-        <label class="form-control-registrert" for="dateInput" style="color : white">
-            Hendvendelse mottat og registrert:
-        </label>
-        <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <!-- Fifth Row -->
+                        <label for="ferdigstillelse" class="form-label">Avtalt ferdigstillelse innen:</label>
+                        <input type="text" class="form-control" id="ferdigstillelse" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Fifth Row -->
+                        <label for="serviceferdig" class="form-label">Service ferdig:</label>
+                        <input type="text" class="form-control" id="serviceferdig" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                    </div>
+                </div>
 
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <!-- Sixth Row -->
+                        <label for="utfortservice" class="form-label">Antall timer på utført service:</label>
+                        <input type="number" class="form-control" id="utfortservice" placeholder="Antall timer" aria-label="Antall timer på utført service:" required>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Sixth Row -->
+                        <label for="ordrenr" class="form-label">Ordrenr?</label>
+                        <select class="form-select" id="ordrenr" aria-label="Ordrenr?" required>
+                            <option disabled selected>Velg et alternativ</option>
+                            <option value="1">Ja</option>
+                            <option value="2">Nei</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Sixth Row -->
+                        <label for="skjemajanei" class="form-label">Service skjema?</label>
+                        <select class="form-select" id="skjemajanei" aria-label="Service skjema?" required>
+                            <option disabled selected>Velg et alternativ</option>
+                            <option value="1">Ja</option>
+                            <option value="2">Nei</option>
+                        </select>
+                    </div>
+                </div>
 
-        <label class="form-check-label" for="case" style="color : white; margin-top: 5px;">
-            Case ferdig?
-        </label>
-        <select class="form-select" aria-label="Default select example" id="case" required>
-            <option disabled selected>Velg et alternativ</option>
-            <option value="1">Ja</option>
-            <option value="2">Nei</option>
-        </select>
-        <br />
-        <label class="form-control-produkt" for="produktType" style="color : white">
-            Produkt type:
-        </label>
-        <input class="form-control" type="text" placeholder="Kommentar" aria-label="default input example" id="produktType">
-
-    <label class="form-control-produkt" for="feilbeskrivelse" style="color : white">
-        Bestilling / Feilbeskrivelse Fra Kunde:
-    </label>
-    <textarea class="form-control" placeholder="Kommentar" id="feilbeskrivelse" style="height: 100px" required></textarea>
-
-    @* //Disse er ikke ferdige//
-    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" required>
-
-    <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-
-    <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-
-    <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-
-    <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-
-    <input class="form-control" type="number" placeholder="Default input" aria-label="default input example">
-
-
-    <label class="form-check-label" for="ordrenr" style="color : white">
-        Ordrenr?
-    </label>
-    <br />
-    <select class="form-select-ordrenr" aria-label="Default select example" id="ordrenr" required>
-        <option disabled selected>Velg et alternativ</option>
-        <option value="1">Ja</option>
-        <option value="2">Nei</option>
-    </select>
-    <br />
-    <label class="form-check-label" for="skjemajanei" style="color : white">
-        Service skjema?
-    </label>
-    <br />
-    <select class="form-select-ordrenr" aria-label="Default select example" id="skjemajanei" required>
-        <option disabled selected>Velg et alternativ</option>
-        <option value="1">Ja</option>
-        <option value="2">Nei</option>
-    </select>
-
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-
-*@
+                <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
+</div>

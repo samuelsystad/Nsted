@@ -5,7 +5,6 @@ p.lead {
     font-weight: bold; /* Make the text bold */
 }
 
-
 /*Styling av Email*/
 .form-control.form-control-lg[type="email"] {
     border: 1px solid #ccc;

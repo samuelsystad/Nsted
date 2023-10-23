@@ -16,16 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Arbeidsdokument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BcmJlaWRzZG9rdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/FerdigeOrdrer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GZXJkaWdlT3JkcmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Homepage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ib21lcGFnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Kalender.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9LYWxlbmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Lagerbeholdning.cshtml]

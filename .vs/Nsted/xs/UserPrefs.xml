@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Views/Home/Registrering.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Views/Home/FerdigeOrdrer.cshtml">
     <Files>
-      <File FileName="Nsted/Controllers/HomeController.cs" />
+      <File FileName="Nsted/Controllers/HomeController.cs" Line="26" Column="1" />
       <File FileName="Nsted/Views/_ViewStart.cshtml" />
       <File FileName="Nsted/Views/Shared/_Layout.cshtml.css" />
       <File FileName="Nsted/Views/Shared/_ValidationScriptsPartial.cshtml" />
       <File FileName="Nsted/Views/_ViewImports.cshtml" />
-      <File FileName="Nsted/Views/Shared/_Layout.cshtml" />
+      <File FileName="Nsted/Views/Shared/_Layout.cshtml" Line="30" Column="71" />
       <File FileName="Nsted/Program.cs" />
       <File FileName="Nsted/Views/Shared/Error.cshtml" />
       <File FileName="Nsted/Startup.cs" />
@@ -16,27 +16,26 @@
       <File FileName="Nsted/appsettings.json" />
       <File FileName="Nsted/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
       <File FileName="Nsted/Views/Home/Homepage.cshtml" />
-      <File FileName="Nsted/wwwroot/css/Homestyle.css" />
-      <File FileName="Nsted/wwwroot/css/Navbarstyle.css" />
+      <File FileName="Nsted/wwwroot/css/Homestyle.css" Line="1" Column="1" />
+      <File FileName="Nsted/wwwroot/css/Navbarstyle.css" Line="1" Column="1" />
       <File FileName="Nsted/Views/Home/Service.cshtml" />
       <File FileName="Nsted/wwwroot/css/site.css" />
-      <File FileName="Nsted/Views/Home/FerdigeOrdrer.cshtml" />
+      <File FileName="Nsted/Views/Home/FerdigeOrdrer.cshtml" Line="8" Column="70" />
       <File FileName="Nsted/Views/Home/Registrering.cshtml" Line="14" Column="58" />
       <File FileName="Nsted/Views/Home/Lagerbeholdning.cshtml" />
-      <File FileName="Nsted/Views/Home/NyService.cshtml" />
-      <File FileName="Nsted/Views/Home/Kalender.cshtml" />
-      <File FileName="Nsted/Views/Home/UnderBehandling.cshtml" />
+      <File FileName="Nsted/Views/Home/NyService.cshtml" Line="8" Column="66" />
+      <File FileName="Nsted/Views/Home/Kalender.cshtml" Line="8" Column="71" />
+      <File FileName="Nsted/Views/Home/UnderBehandling.cshtml" Line="8" Column="72" />
+      <File FileName="Nsted/wwwroot/css/Registreringstyle.css" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Nsted">
+          <Node name="Nsted" expanded="True">
             <Node name="Nsted" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Registrering.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Nsted.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
 namespace Nsted.Controllers
@@ -28,7 +29,7 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Kalender()
+        public IActionResult Arbeidsdokument()
         {
             return View();
         }
@@ -53,12 +54,18 @@ namespace Nsted.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         public IActionResult Login()
         {
             return View();
         }   
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+=======
+
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+>>>>>>> 48671de3a933751918323943604fd53103473eba
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

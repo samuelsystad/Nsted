@@ -5,24 +5,51 @@
       "PackagePath": "staticwebassets\\Nsted.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Homestyle.css",
       "PackagePath": "staticwebassets\\css\\Homestyle.css"
+=======
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Homestyle.css",
+      "PackagePath": "staticwebassets/css/Homestyle.css"
+>>>>>>> 48671de3a933751918323943604fd53103473eba
     },
     {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Navbarstyle.css",
       "PackagePath": "staticwebassets\\css\\Navbarstyle.css"
+=======
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Registreringstyle.css",
+      "PackagePath": "staticwebassets/css/Registreringstyle.css"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+>>>>>>> 48671de3a933751918323943604fd53103473eba
     },
     {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+=======
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/images/Loginlogo.png",
+      "PackagePath": "staticwebassets/images/Loginlogo.png"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/images/Nostedlogo.png",
+      "PackagePath": "staticwebassets/images/Nostedlogo.png"
+>>>>>>> 48671de3a933751918323943604fd53103473eba
     },
     {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\images\\Nostedlogo.png",

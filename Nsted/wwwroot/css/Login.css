@@ -1,5 +1,6 @@
 ﻿/* Styling av "Logg inn" teksten */
 p.lead {
+    margin-top: 30px;
     font-size: 26px; /* Change the font size */
     color: #FFFFFF; /* Change the text color */
     font-weight: bold; /* Make the text bold */

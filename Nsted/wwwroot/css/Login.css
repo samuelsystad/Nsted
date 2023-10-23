@@ -6,6 +6,7 @@ p.lead {
 }
 
 
+/*Styling av Email*/
 .form-control.form-control-lg[type="email"] {
     border: 1px solid #ccc;
     border-radius: 0;

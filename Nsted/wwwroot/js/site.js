@@ -2,3 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+$(document).ready(function () {
+    $(".overlay-button").click(function () {
+        var overlayContent = $(this).closest('.description-cell').find('.overlay-content');
+        overlayContent.toggle();
+    });
+});

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HetJBRint2t8m3QXdnYW/q2CsU5QjoZWNkEGFXa8htewSYZfF0thd//+hU7xMgyuBH9QzbN0WgKNbFPlxA9a2g==",
+  "dgSpecHash": "OMUFPA2U3XPXe8bK6ZLE4kJ5FWO6xGe3avwUhBsWLzy7aGeHJ9EBmjBJrTNbLoOY1+61Emw9qMV/4pfXOPKPTQ==",
   "success": true,
-  "projectFilePath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
+  "projectFilePath": "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\Nsted.csproj",
   "expectedPackageFiles": [
-    "/Users/andreasiversen/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.19.4/microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+    "C:\\Users\\e5kil\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
   ],
   "logs": []
 }

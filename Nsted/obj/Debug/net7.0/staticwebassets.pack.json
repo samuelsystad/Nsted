@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/FerdigeOrdrer.css",
+      "PackagePath": "staticwebassets/css/FerdigeOrdrer.css"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Homestyle.css",
       "PackagePath": "staticwebassets/css/Homestyle.css"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Registreringstyle.css",
       "PackagePath": "staticwebassets/css/Registreringstyle.css"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/UnderBehandlingstyle.css",
+      "PackagePath": "staticwebassets/css/UnderBehandlingstyle.css"
     },
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/site.css",

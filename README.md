@@ -1,6 +1,5 @@
 # Nøsted
-Denne repositoryen tilhører medlemmene i gruppe 10 ved Universitetet i Agder, IT og Informasjonssystem.
-
+Denne repositoryen tilhører medlemmene i gruppe 10 ved Universitetet i Agder, IT og Informasjonssystem:
 Andreas Wahl Iversen,
 Daniel Vu,
 Eskil Skaret,

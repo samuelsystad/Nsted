@@ -2,6 +2,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
+    overflow: scroll;
 }
 
 .container {
@@ -11,7 +12,8 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    overflow-y: auto; /* Add vertical scroll if the content exceeds the height */
+    height: 100%;
+   
 }
 
 h1 {

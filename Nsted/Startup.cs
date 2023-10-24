@@ -21,5 +21,6 @@
                "connect-src 'self';");
             await next();
         });
+        app.UseHsts(); 
     }
 }

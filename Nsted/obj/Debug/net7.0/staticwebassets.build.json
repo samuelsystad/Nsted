@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uf/dSvQWaWBOjkzln6j/knX7CVHyHHU1+xN3bskt8ek=",
+  "Hash": "XV9sj0X/kYimWr67BhZCEVQODQI9FM3m65efBIlma7E=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/FerdigeOrdrer.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/FerdigeOrdrer.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/FerdigeOrdrer.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Homestyle.css",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/UnderBehandlingstyle.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/UnderBehandlingstyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/UnderBehandlingstyle.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/favicon.ico",

@@ -29,9 +29,10 @@
         text-align: justify-all;
     }
 
-    .table .green-background {
-        color: green !important;
-    }
+
+.orange-background {
+    color: orange;
+}
 
 
 table tr:nth-child(even) {
@@ -52,7 +53,24 @@ table tr:nth-child(odd) {
         color: #0026ff;
     }
 
+.fullfor-td {
+    font-size: 12px;
+    background-color: #0026ff;
+}
+
+    .fullfor-td:hover .fullfor-button {
+        display: block;
+        color: #0026ff;
+    }
+
+
+    .fullfor-td:hover .fullfor-button-two {
+        display: block;
+        color: #0026ff;
+    }
 
 .overlay-content {
     display: none;
 }
+
+

@@ -1,9 +1,9 @@
 ﻿/* Styling av "Logg inn" teksten */
 p.lead {
     margin-top: 30px;
-    font-size: 26px; /* Change the font size */
-    color: #FFFFFF; /* Change the text color */
-    font-weight: bold; /* Make the text bold */
+    font-size: 26px; 
+    color: #FFFFFF; 
+    font-weight: bold; 
 }
 
 /*Styling av Email*/
@@ -37,9 +37,8 @@ p.lead {
 
 /* Styling the "Glemt passord?" link */
 a.text-body {
-    /* Add your styles here */
-    color: #ffffff !important; /* Change link text color to blue (you can use any color you prefer) */
-    /* Add any other styles you want */
+    
+    color: #ffffff !important; 
 }
 
 .img-fluid {

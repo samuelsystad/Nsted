@@ -1,4 +1,4 @@
-﻿/* Styles for the navbar links */
+﻿/* Styling for navbar links */
 .navbar-nav .nav-item .nav-link {
     color: #9cb7c2 !important;
     margin-right: 20px;
@@ -11,12 +11,12 @@
     color: #ffffff !important;
 }
 
-/* Styles for the navbar toggler icon */
+/* Styling for navbar toggler ikon */
 .navbar-toggler-icon {
     background-color: #9cb7c2 !important;
 }
 
-/* Styles for the custom button */
+/* Styling for custom button */
 .custom-button {
     color: transparent;
     background: url('/images/Nostedlogo.png') no-repeat center center;
@@ -31,12 +31,12 @@
 }
 
 
-/* Hide the arrow beside the dropdown menu */
+
 .navbar-nav .nav-item .dropdown-toggle::after {
     display: none;
 }
 
-/* Styles for the dropdown menu container */
+/* Styling for dropdown menu container */
 .navbar-nav .nav-item .dropdown-menu {
     border-top: solid 3px;
     border-top-color: #e7792c;
@@ -45,27 +45,27 @@
     display: none;
 }
 
-    /* Styles for specific dropdown menu items */
+    /* Styling for spesifike dropdown menu items */
     .navbar-nav .nav-item .dropdown-menu .nav-link {
         width: 85%;
         color: #9cb7c2 !important;
         font-size: 15px;
-        border-bottom: 1px solid #9cb7c2; /* Add divider between dropdown items */
-        padding: 8px 0; /* Add padding for better spacing */
+        border-bottom: 1px solid #9cb7c2; 
+        padding: 8px 0; 
         margin: auto;
     }
 
-        /* Remove border-bottom from the last dropdown item */
+        
         .navbar-nav .nav-item .dropdown-menu .nav-link:last-child {
             border-bottom: solid 1px;
         }
 
-        /* Hover styles for the dropdown menu items */
+    
         .navbar-nav .nav-item .dropdown-menu .nav-link:hover {
             color: #ffffff !important;
         }
 
-/* Show dropdown menu on hover */
+/* Vis dropdown menu on hover */
 .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
 }

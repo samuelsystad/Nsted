@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\Nsted.csproj": {}
+    "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\Nsted.csproj": {
+    "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\Nsted.csproj",
+        "projectUniqueName": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
         "projectName": "Nsted",
-        "projectPath": "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\Nsted.csproj",
-        "packagesPath": "C:\\Users\\e5kil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e5kil\\IS-202\\Nsted\\Nsted\\obj\\",
+        "projectPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
+        "packagesPath": "C:\\Users\\simen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\e5kil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\simen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,37 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.Owin.Security.OAuth": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.4, )"
+            },
+            "Owin": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -64,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

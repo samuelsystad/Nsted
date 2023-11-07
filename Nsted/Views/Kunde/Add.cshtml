@@ -1,0 +1,19 @@
+﻿@model Nsted.Models.Kunde
+
+@{
+}
+<h2>Legg til kunde</h2>
+
+<form asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label>Fornavn:</label>
+        <input asp-for="Fornavn" class="form-control" required/>
+        <label>Etternavn:</label>
+        <input asp-for="Etternavn" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>

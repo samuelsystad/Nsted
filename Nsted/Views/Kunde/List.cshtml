@@ -1,5 +1,7 @@
 ﻿@model List<Nsted.Models.Kunde>
 
+<link rel="stylesheet" href="~/css/KundeList.css" />
+
 <h2>Kundeoversikt</h2>
 
 <table class="table">
@@ -8,6 +10,8 @@
             <th>Kundenr</th>
             <th>Fornavn</th>
             <th>Etternavn</th>
+            <th>Telefon</th>
+            <th>Email</th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +21,8 @@
                 <td>@customer.Id</td>
                 <td>@customer.Fornavn</td>
                 <td>@customer.Etternavn</td>
+                <td>@customer.Telefon</td>
+                <td>@customer.Email</td>
             </tr>
         }
     </tbody>

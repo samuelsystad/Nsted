@@ -1,0 +1,29 @@
+﻿/* KundeList.css */
+
+/* Style the table */
+h2 {
+    color: #9cb7c2;
+    text-align: center;
+    margin-top: 35px;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Style the table headers (th) */
+th {
+    background-color: #f2f2f2;
+    color: #f2f2f2;
+    font-size: 18px;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Style the table data cells (td) */
+td {
+    padding: 8px;
+    color: white;
+}

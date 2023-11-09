@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hLsI97GuNgdkZEqCK4+Fk0H9l1DgtozcH6JQ8eDq2wY=",
+  "Hash": "LA5dNkqeTM3EttOs4UmMIjOErHh6FOgHgOOSwx8rO98=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Homestyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\KundeList.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/KundeList.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\KundeList.css"
     },
     {
       "Identity": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Login.css",

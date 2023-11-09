@@ -13,9 +13,13 @@ namespace Nsted.Data
 
         public DbSet<Kunde> Kunder { get; set; }
 
-        internal void SaveChanges()
+        public override int SaveChanges()
         {
-            throw new NotImplementedException();
+            // You can add any custom logic here before saving changes, if needed.
+            // For example, auditing, validation, or other business logic.
+
+            return base.SaveChanges(); // Call the base class's SaveChanges method to persist changes to the database.
         }
+
     }
 }

@@ -69,24 +69,3 @@
     display: block;
 }
 
-/* Style the second dropdown-menu */
-.dropdown-menu[aria-labelledby="kundeDropdown"] {
-    /* Your styles for the second dropdown-menu */
-    background-color: #101820;
-     /* Example background color */
-    border: 1px solid #ccc; /* Example border */
-}
-
-    /* Style the items inside the second dropdown-menu */
-    .dropdown-menu[aria-labelledby="kundeDropdown"] .dropdown-item {
-        /* Your styles for the items in the second dropdown-menu */
-        color: #9cb7c2; /* Example text color */
-        font-size: 15px;
-    }
-
-    /* Style the dividers inside the second dropdown-menu */
-    .dropdown-menu[aria-labelledby="kundeDropdown"] .dropdown-divider {
-        /* Your styles for the dividers in the second dropdown-menu */
-        border-top: 1px solid #ccc; /* Example border color */
-    }
-

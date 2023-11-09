@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj": {}
+    "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj": {
+    "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
+        "projectUniqueName": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
         "projectName": "Nsted",
-        "projectPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
-        "packagesPath": "C:\\Users\\simen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\obj\\",
+        "projectPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
+        "packagesPath": "/Users/andreasiversen/.nuget/packages/",
+        "outputPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\simen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/andreasiversen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

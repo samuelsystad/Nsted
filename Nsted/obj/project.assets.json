@@ -6540,16 +6540,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\simen\\.nuget\\packages\\": {}
-=======
-    "/Users/andreasiversen/.nuget/packages/": {}
->>>>>>> 971ca4f45b09d65753ff3796c4dc1e69632a4598
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
       "projectName": "Nsted",
       "projectPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
@@ -6559,21 +6554,12 @@
       "configFilePaths": [
         "C:\\Users\\simen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
-      "projectName": "Nsted",
-      "projectPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
-      "packagesPath": "/Users/andreasiversen/.nuget/packages/",
-      "outputPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/Users/andreasiversen/.nuget/NuGet/NuGet.Config"
->>>>>>> 971ca4f45b09d65753ff3796c4dc1e69632a4598
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6644,11 +6630,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
->>>>>>> 971ca4f45b09d65753ff3796c4dc1e69632a4598
       }
     }
   },

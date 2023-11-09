@@ -34,7 +34,9 @@ namespace Nsted.Controllers
 
         public IActionResult List()
         {
-            return View();
+            // Retrieve the list of customers from the database using Entity Framework.
+            List<Kunde> customers = nstedDbContext.Kunde.ToList(); 
+            return View(Kunde);
         }
     }
 }

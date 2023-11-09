@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "D1M2KhxXl0TLarc5qw+YR5gSxew1+YL0Y6Jk1/gm42FJAK/b+p8nQJKkv3au+LFGjbLkgvnSMsnuaqji+xxfXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
@@ -117,13 +116,6 @@
     "C:\\Users\\simen\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\simen\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\simen\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
-=======
-  "dgSpecHash": "HetJBRint2t8m3QXdnYW/q2CsU5QjoZWNkEGFXa8htewSYZfF0thd//+hU7xMgyuBH9QzbN0WgKNbFPlxA9a2g==",
-  "success": true,
-  "projectFilePath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
-  "expectedPackageFiles": [
-    "/Users/andreasiversen/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.19.4/microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
->>>>>>> 971ca4f45b09d65753ff3796c4dc1e69632a4598
   ],
   "logs": [
     {

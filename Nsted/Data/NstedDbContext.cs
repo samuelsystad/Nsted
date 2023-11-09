@@ -13,5 +13,9 @@ namespace Nsted.Data
 
         public DbSet<Kunde> Kunder { get; set; }
 
+        internal void SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

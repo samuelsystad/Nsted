@@ -11,6 +11,8 @@
         public required int Telefon { get; set; }
 
         public required string Email { get; set; }
+        
+        public required DateTime Registrert {  get; set; }
     }
 }
 

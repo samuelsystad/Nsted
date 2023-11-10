@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Nsted.Data;
 using Nsted.Models;
+using System.Linq;
 
 namespace Nsted.Controllers
 {
@@ -24,23 +25,64 @@ namespace Nsted.Controllers
             nstedDbContext.Add(kunde);
             nstedDbContext.SaveChanges();
 
-            return View();
+            return RedirectToAction("List");
         }
 
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+
+            if (kunde == null)
+            {
+                return NotFound();
+            }
+
+            return View(kunde);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Kunde kunde)
+        {
+            if (id != kunde.Id)
+            {
+                return BadRequest();
+            }
+
+            var existingKunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+            if (existingKunde == null)
+            {
+                return NotFound();
+            }
+
+            existingKunde.Fornavn = kunde.Fornavn;
+            existingKunde.Etternavn = kunde.Etternavn;
+            existingKunde.Telefon = kunde.Telefon;
+            existingKunde.Email = kunde.Email;
+            existingKunde.Registrert = kunde.Registrert;
+            // Update other fields as necessary
+
+            nstedDbContext.SaveChanges();
+
+            return RedirectToAction("List");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+
+            if (kunde != null)
+            {
+                nstedDbContext.Kunder.Remove(kunde);
+                nstedDbContext.SaveChanges();
+            }
+
+            return RedirectToAction("List");
         }
 
         public IActionResult List()
         {
-           
-                    // Retrieve the list of customers from the database using Entity Framework.
-                    List<Kunde> kunder = nstedDbContext.Kunder.ToList();
-                    return View(kunder);
-                }
-
-            }
-
+            List<Kunde> kunder = nstedDbContext.Kunder.ToList();
+            return View(kunder);
         }
-   
+    }
+}

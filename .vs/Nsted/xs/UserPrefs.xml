@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{DC1B8B0E-4076-4C3B-922E-CF2814EC2CEF}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Views/Home/Registrering.cshtml">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nsted/Controllers/KundeController.cs">
     <Files>
       <File FileName="Nsted/Controllers/HomeController.cs" />
       <File FileName="Nsted/Views/_ViewStart.cshtml" />
       <File FileName="Nsted/Views/Shared/_Layout.cshtml.css" />
       <File FileName="Nsted/Views/Shared/_ValidationScriptsPartial.cshtml" />
       <File FileName="Nsted/Views/_ViewImports.cshtml" />
-      <File FileName="Nsted/Views/Shared/_Layout.cshtml" Line="60" Column="11" />
+      <File FileName="Nsted/Views/Shared/_Layout.cshtml" />
       <File FileName="Nsted/Program.cs" />
       <File FileName="Nsted/Views/Shared/Error.cshtml" />
       <File FileName="Nsted/Startup.cs" />
@@ -25,28 +29,21 @@
       <File FileName="Nsted/Views/Home/Lagerbeholdning.cshtml" />
       <File FileName="Nsted/Views/Home/NyService.cshtml" />
       <File FileName="Nsted/Views/Home/UnderBehandling.cshtml" />
-      <File FileName="Nsted/wwwroot/css/Registreringstyle.css" Line="1" Column="1" />
+      <File FileName="Nsted/wwwroot/css/Registreringstyle.css" />
       <File FileName="Nsted/Views/Home/Arbeidsdokument.cshtml" />
       <File FileName="Nsted/Views/Home/Login.cshtml" />
-      <File FileName="Nsted/wwwroot/css/Login.css" Line="3" Column="18" />
+      <File FileName="Nsted/wwwroot/css/Login.css" />
+      <File FileName="Nsted/Controllers/KundeController.cs" Line="39" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Nsted">
-            <Node name="Nsted">
+          <Node name="Nsted" expanded="True">
+            <Node name="Nsted" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Registrering.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot">
-                <Node name="js" expanded="True" />
-                <Node name="lib" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -55,10 +52,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

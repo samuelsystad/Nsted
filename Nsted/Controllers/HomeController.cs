@@ -34,10 +34,7 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Registrering()
-        {
-            return View();
-        }
+        
 
         public IActionResult NyService()
         {

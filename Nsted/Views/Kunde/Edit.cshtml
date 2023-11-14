@@ -7,7 +7,7 @@
 <h2>Rediger Kunde</h2>
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="KundeId" />
 
     <div class="form-group">
         <label asp-for="Fornavn" class="control-label"></label>
@@ -32,6 +32,13 @@
         <input asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label asp-for="Adresse" class="control-label"></label>"
+        <input asp-for="Adresse" class="form-control" />
+        <span asp-validation-for="Adresse" class="text-danger"></span>
+    </div>
+
 
     <div class="form-group">
         <label asp-for="Registrert" class="control-label"></label>

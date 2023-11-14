@@ -30,7 +30,7 @@ namespace Nsted.Controllers
 
         public IActionResult Edit(int id)
         {
-            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.KundeId == id);
 
             if (kunde == null)
             {
@@ -43,12 +43,12 @@ namespace Nsted.Controllers
         [HttpPost]
         public IActionResult Edit(int id, Kunde kunde)
         {
-            if (id != kunde.Id)
+            if (id != kunde.KundeId)
             {
                 return BadRequest();
             }
 
-            var existingKunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+            var existingKunde = nstedDbContext.Kunder.FirstOrDefault(k => k.KundeId == id);
             if (existingKunde == null)
             {
                 return NotFound();
@@ -58,6 +58,7 @@ namespace Nsted.Controllers
             existingKunde.Etternavn = kunde.Etternavn;
             existingKunde.Telefon = kunde.Telefon;
             existingKunde.Email = kunde.Email;
+            existingKunde.Adresse = kunde.Adresse;
             existingKunde.Registrert = kunde.Registrert;
             // Update other fields as necessary
 
@@ -68,7 +69,7 @@ namespace Nsted.Controllers
 
         public IActionResult Delete(int id)
         {
-            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.Id == id);
+            var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.KundeId == id);
 
             if (kunde != null)
             {

@@ -12,6 +12,7 @@
             <th>Etternavn</th>
             <th>Telefon</th>
             <th>Email</th>
+            <th>Adresse</th>
             <th>Registrert</th>
             
         </tr>
@@ -20,15 +21,16 @@
         @foreach (var customer in Model)
         {
             <tr>
-                <td>@customer.Id</td>
+                <td>@customer.KundeId</td>
                 <td>@customer.Fornavn</td>
                 <td>@customer.Etternavn</td>
                 <td>@customer.Telefon</td>
                 <td>@customer.Email</td>
+                <td>@customer.Adresse</td>
                 <td>@customer.Registrert</td>
                 <td>
-                    <a href="@Url.Action("Edit", "Kunde", new { id = customer.Id })" class="btn btn-primary">Rediger</a>
-                    <a href="@Url.Action("Delete", "Kunde", new { id = customer.Id })" class="btn btn-danger"
+                    <a href="@Url.Action("Edit", "Kunde", new { id = customer.KundeId })" class="btn btn-primary">Rediger</a>
+                    <a href="@Url.Action("Delete", "Kunde", new { id = customer.KundeId })" class="btn btn-danger"
                        onclick="return confirmDeletion('@customer.Fornavn','@customer.Etternavn');">Slett</a>
                 </td>
             </tr>

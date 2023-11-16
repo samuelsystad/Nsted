@@ -1,0 +1,16 @@
+﻿h1 {
+    position:center;
+    color:white;
+}
+
+.table {
+position: center;
+margin-left: 15px;
+width: 100%;
+max-width: 100%;
+overflow-x: auto;
+font-size: 14px;
+color: white;
+
+}
+

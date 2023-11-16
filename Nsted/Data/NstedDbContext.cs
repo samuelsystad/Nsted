@@ -13,6 +13,8 @@ namespace Nsted.Data
 
         public DbSet<Kunde> Kunder { get; set; }
 
+        public DbSet<Registrering> Registreringer { get; set; }
+
         public override int SaveChanges()
         {
             // You can add any custom logic here before saving changes, if needed.

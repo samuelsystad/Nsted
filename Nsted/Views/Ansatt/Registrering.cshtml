@@ -7,34 +7,36 @@
 <h1>Registrering</h1>
 <br />
 <div class="container">
-    <form method="post" action="/Home/Arbeidsdokument">
+    <form asp-controller="Ansatt" asp-action="HandleFormSubmission" method="post">
+
+
         <div class="row mb-3">
             <div class="col-md-6">
                 <!-- Første Rad -->
                 <label for="bookingTilUke" class="form-label">Booket Service Til Uke:</label>
-                <input type="number" class="form-control" id="bookingTilUke" placeholder="Uke nr" aria-label="Booket Service Til Uke:" max="52" required>
+                <input type="number" class="form-control" name="registrering.BookingTilUke" placeholder="Uke nr" aria-label="Booket Service Til Uke:" max="52" required>
             </div>
             <div class="col-md-6">
                 <!-- Første rad -->
-                <label for="dateInput" class="form-label">Henvendelse mottatt og registrert:</label>
-                    <input type="text" class="form-control" id="dateInput" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-                </div>
+                <label for="henvendelseMottatt" class="form-label">Henvendelse mottatt og registrert:</label>
+                <input type="date" class="form-control" name="registrering.HenvendelseMottatt" required>
             </div>
+        </div>
 
         <div class="row mb-3">
             <div class="col-md-6">
                 <!-- Andre rad -->
-                <label for="case" class="form-label">Case ferdig?</label>
-                <select class="form-select" id="case" aria-label="Case ferdig?" required>
+                <label for="caseFerdig" class="form-label">Case ferdig?</label>
+                <select class="form-select" name="registrering.CaseFerdig" required>
                     <option disabled selected>Velg et alternativ</option>
-                    <option value="1">Ja</option>
-                    <option value="2">Nei</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
                 </select>
             </div>
             <div class="col-md-6">
                 <!-- Andre rad -->
-                <label for="produktType" class="form-label" >Produkt type:</label>
-                <input type="text" class="form-control" id="produktType" placeholder="Kommentar" aria-label="Produkt type:" required>
+                <label for="produktType" class="form-label">Produkt type:</label>
+                <input type="text" class="form-control" name="registrering.ProduktType" placeholder="Produkttype" required>
             </div>
         </div>
 
@@ -42,91 +44,98 @@
             <div class="col-md-20">
                 <!-- Tredje rad -->
                 <label for="feilbeskrivelse" class="form-label">Bestilling / Feilbeskrivelse Fra Kunde:</label>
-                <textarea class="form-control" placeholder="Kommentar" id="feilbeskrivelse" aria-label="Bestilling / Feilbeskrivelse Fra Kunde:" required></textarea>
+                <textarea class="form-control" name="registrering.Feilbeskrivelse" placeholder="Feilbeskrivelse" required></textarea>
             </div>
-            <div class="col-md-20">
-                <!-- Tredje rad -->
-                <label for="kundeinfo" class="form-label">Kundeinfo:</label>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <label class="form-label">Kundeinformasjon:</label>
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <textarea class="form-control" id="navn" placeholder="Navn" aria-label="Navn" required></textarea>
-                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn" required>
+                    <label for="fornavn">Fornavn</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <textarea class="form-control" id="adresse" placeholder="Adresse" aria-label="Adressen til kunden" required></textarea>
+                    <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn" required>
+                    <label for="etternavn">Etternavn</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse" required>
                     <label for="adresse">Adresse</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="email" placeholder="navn@eksempel.no" value="navn@eksempel.no" required>
-                    <label for="floatingInputGrid">Email addresse</label>
+                    <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no" required>
+                    <label for="email">Email addresse</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <input type="number" class="form-control" id="telefonNummer" placeholder="Telefon" required>
+                    <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon" required>
                     <label for="telefonNummer">Telefon</label>
                 </div>
             </div>
         </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Fjerde rad -->
-                    <label for="levering" class="form-label">Avtalt levering:</label>
-                    <input type="text" class="form-control" id="levering" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Fjerde rad -->
-                    <label for="mottatt" class="form-label">Produkt mottatt:</label>
-                    <input type="text" class="form-control" id="mottatt" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-                </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Fjerde rad -->
+                <label for="avtaltLevering" class="form-label">Avtalt levering:</label>
+                <input type="date" class="form-control" name="registrering.AvtaltLevering" required>
             </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Femte rad -->
-                    <label for="ferdigstillelse" class="form-label">Avtalt ferdigstillelse innen:</label>
-                    <input type="text" class="form-control" id="ferdigstillelse" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Femte rad -->
-                    <label for="serviceferdig" class="form-label">Service ferdig:</label>
-                    <input type="text" class="form-control" id="serviceferdig" name="date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy" required>
-                </div>
+            <div class="col-md-6">
+                <!-- Fjerde rad -->
+                <label for="produktMottatt" class="form-label">Produkt mottatt:</label>
+                <input type="date" class="form-control" name="registrering.ProduktMottatt" required>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Sjette rad -->
-                    <label for="utfortservice" class="form-label">Antall timer på utført service:</label>
-                    <input type="number" class="form-control" id="utfortservice" placeholder="Antall timer" aria-label="Antall timer på utført service:" required>
-                </div>
-                <div class="col-md-3">
-                    <!-- Sjette rad -->
-                    <label for="ordrenr" class="form-label">Ordrenr?</label>
-                    <select class="form-select" id="ordrenr" aria-label="Ordrenr?" required>
-                        <option disabled selected>Velg et alternativ</option>
-                        <option value="1">Ja</option>
-                        <option value="2">Nei</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <!-- Sjette rad -->
-                    <label for="skjemajanei" class="form-label">Service skjema?</label>
-                    <select class="form-select" id="skjemajanei" aria-label="Service skjema?" required>
-                        <option disabled selected>Velg et alternativ</option>
-                        <option value="1">Ja</option>
-                        <option value="2">Nei</option>
-                    </select>
-                </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Femte rad -->
+                <label for="avtaltFerdigstillelseInnen" class="form-label">Avtalt ferdigstillelse innen:</label>
+                <input type="date" class="form-control" name="registrering.AvtaltFerdigstillelseInnen" required>
             </div>
+            <div class="col-md-6">
+                <!-- Femte rad -->
+                <label for="serviceFerdig" class="form-label">Service ferdig:</label>
+                <input type="date" class="form-control" name="registrering.ServiceFerdig" required>
+            </div>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Sjette rad -->
+                <label for="antallTimerUtført" class="form-label">Antall timer på utført service:</label>
+                <input type="number" class="form-control" name="registrering.AntallTimerUtført" placeholder="Antall timer" required>
+            </div>
+            <div class="col-md-3">
+                <!-- Sjette rad -->
+                <label for="ordreNr" class="form-label">Ordrenr?</label>
+                <select class="form-select" name="registrering.OrdreNr" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <!-- Sjette rad -->
+                <label for="serviceSkjema" class="form-label">Service skjema?</label>
+                <select class="form-select" name="registrering.ServiceSkjema" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
+            </div>
+        </div>
 
-</form>
+        <button type="submit" class="btn btn-primary">Send inn</button>
+    </form>
 </div>

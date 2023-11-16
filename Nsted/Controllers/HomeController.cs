@@ -35,13 +35,7 @@ namespace Nsted.Controllers
         }
 
         
-
         public IActionResult NyService()
-        {
-            return View();
-        }
-
-        public IActionResult UnderBehandling()
         {
             return View();
         }

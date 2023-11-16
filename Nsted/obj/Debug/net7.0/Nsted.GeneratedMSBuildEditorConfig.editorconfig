@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\simen\Desktop\IT\Nsted\Nsted
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/ListRegistrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RSZWdpc3RyZXJpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/Registrering.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XFJlZ2lzdHJlcmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,10 +50,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/UnderBehandling.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVbmRlckJlaGFuZGxpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Kunde/Add.cshtml]

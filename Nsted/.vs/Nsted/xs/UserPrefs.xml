@@ -1,0 +1,59 @@
+﻿<Properties StartupConfiguration="{C76B95EF-46DE-4B71-880C-7BE64CEB3B58}|https">
+  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AnsattController.cs">
+    <Files>
+      <File FileName="Startup.cs" />
+      <File FileName="obj/Debug/net7.0/Nsted.AssemblyInfo.cs" />
+      <File FileName="Views/Home/Login.cshtml" />
+      <File FileName="appsettings.json" Line="10" Column="84" />
+      <File FileName="Program.cs" />
+      <File FileName="Controllers/KundeController.cs" Line="89" Column="2" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Controllers/AnsattController.cs" Line="61" Column="1" />
+      <File FileName="Data/NstedDbContext.cs" Line="23" Column="1" />
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/Kunde.cs" Line="21" Column="1" />
+      <File FileName="Views/Ansatt/Registrering.cshtml" />
+      <File FileName="Views/Home/Arbeidsdokument.cshtml" />
+      <File FileName="Views/Home/FerdigeOrdrer.cshtml" />
+      <File FileName="Views/Home/Homepage.cshtml" />
+      <File FileName="Views/Home/Lagerbeholdning.cshtml" />
+      <File FileName="Views/Home/NyService.cshtml" />
+      <File FileName="Views/Home/Service.cshtml" />
+      <File FileName="Views/Kunde/Add.cshtml" />
+      <File FileName="Views/Kunde/Edit.cshtml" />
+      <File FileName="Views/Kunde/List.cshtml" />
+      <File FileName="Views/Shared/_Layout.cshtml" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="wwwroot/css/FerdigeOrdrer.css" />
+      <File FileName="wwwroot/css/Homestyle.css" />
+      <File FileName="Migrations/NstedDbContextModelSnapshot.cs" />
+      <File FileName="Data/SQL/CreateTableKunder.sql" Line="15" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Nsted">
+            <Node name="Nsted">
+              <Node name="Controllers" expanded="True">
+                <Node name="AnsattController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="SQL" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>

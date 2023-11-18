@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets/css/Registreringstyle.css"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ServiceSkjemaDetails.css",
+      "PackagePath": "staticwebassets/css/ServiceSkjemaDetails.css"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/UnderBehandlingstyle.css",
       "PackagePath": "staticwebassets/css/UnderBehandlingstyle.css"
     },

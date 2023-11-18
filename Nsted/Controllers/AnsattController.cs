@@ -5,17 +5,21 @@ using Nsted.Data;
 using Nsted.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace Nsted.Controllers
-{ 
+{
     [Authorize]
     public class AnsattController : Controller
     {
         private readonly NstedDbContext nstedDbContext;
+        private readonly ILogger<AnsattController> _logger;
 
-        public AnsattController(NstedDbContext nstedDbContext)
+        public AnsattController(NstedDbContext nstedDbContext, ILogger<AnsattController> logger)
         {
             this.nstedDbContext = nstedDbContext;
+            this._logger = logger; // Assign logger
         }
 
         public IActionResult Registrering()
@@ -35,68 +39,48 @@ namespace Nsted.Controllers
             return View();
         }
 
-
-
         [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
-
-            // Legg til kunden i Kunder-tabellen
             nstedDbContext.Kunder.Add(kunde);
-            nstedDbContext.SaveChanges(); // Lagre kunden først for å få KundeId
+            nstedDbContext.SaveChanges(); // Save customer to get CustomerId
 
-            // Sett KundeId i Registrering-objektet
             registrering.KundeId = kunde.KundeId;
-
-            // Legg til registreringen i Registreringer-tabellen
             nstedDbContext.Registreringer.Add(registrering);
             nstedDbContext.SaveChanges();
 
-            return RedirectToAction("ListRegistrering"); // Omdiriger til en suksessside
-
+            return RedirectToAction("ListRegistrering"); // Redirect to success page
         }
 
         [HttpPost]
         public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema)
         {
-            
-            
-                nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
-                nstedDbContext.SaveChanges();
-                return RedirectToAction("ListServiceSkjema"); // Redirect after successful save
-            }
-
-      
-
+            nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
+            nstedDbContext.SaveChanges();
+            return RedirectToAction("ListServiceSkjema"); // Redirect after successful save
+        }
 
         public IActionResult Delete(int id)
         {
-            // Find the registrering by ID
             var registrering = nstedDbContext.Registreringer.FirstOrDefault(r => r.RegistreringId == id);
 
             if (registrering != null)
             {
-                // Assuming each registrering is associated with a kunde, 
-                // and you have a foreign key or navigation property setup
-                var kundeId = registrering.KundeId; // Replace with the correct property if different
+                var kundeId = registrering.KundeId;
                 var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.KundeId == kundeId);
 
-                // Remove registrering
                 nstedDbContext.Registreringer.Remove(registrering);
 
-                // Check if the associated kunde exists and remove it
                 if (kunde != null)
                 {
                     nstedDbContext.Kunder.Remove(kunde);
                 }
 
-                // Save changes to the database
                 nstedDbContext.SaveChanges();
             }
 
             return RedirectToAction("ListRegistrering"); // Redirect to the list view
         }
-
 
         public IActionResult ListRegistrering()
         {
@@ -113,7 +97,87 @@ namespace Nsted.Controllers
             return View(serviceskjemas);
         }
 
+        public IActionResult OversiktServiceSkjema(int id)
+        {
+            var serviceSkjema = nstedDbContext.ServiceSkjemas
+                                .Include(s => s.Kunde)
+                                .FirstOrDefault(s => s.ServiceSkjemaId == id);
+
+            if (serviceSkjema == null)
+            {
+                return NotFound();
+            }
+
+            return View(serviceSkjema);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateServiceSkjema(ServiceSkjema updatedServiceSkjema)
+        {
+            ModelState.Remove("Kunde");
+            if (!ModelState.IsValid)
+            {
+                return View("OversiktServiceSkjema", updatedServiceSkjema);
+            }
+
+            var serviceSkjema = nstedDbContext.ServiceSkjemas
+                                      .FirstOrDefault(k => k.ServiceSkjemaId == updatedServiceSkjema.ServiceSkjemaId);
+
+            if (serviceSkjema == null)
+            {
+                return NotFound($"ServiceSkjema with ID {updatedServiceSkjema.ServiceSkjemaId} not found.");
+            }
+
+            // Check and update each property
+            if (updatedServiceSkjema.MottattDato != serviceSkjema.MottattDato)
+                serviceSkjema.MottattDato = updatedServiceSkjema.MottattDato;
+
+            if (updatedServiceSkjema.OrdreNr != serviceSkjema.OrdreNr)
+                serviceSkjema.OrdreNr = updatedServiceSkjema.OrdreNr;
+
+            if (updatedServiceSkjema.ProduktType != serviceSkjema.ProduktType)
+                serviceSkjema.ProduktType = updatedServiceSkjema.ProduktType;
+
+            if (updatedServiceSkjema.ÅrsModell != serviceSkjema.ÅrsModell)
+                serviceSkjema.ÅrsModell = updatedServiceSkjema.ÅrsModell;
+
+            if (updatedServiceSkjema.Servicetype != serviceSkjema.Servicetype)
+                serviceSkjema.Servicetype = updatedServiceSkjema.Servicetype;
+
+            if (updatedServiceSkjema.SerieNummer != serviceSkjema.SerieNummer)
+                serviceSkjema.SerieNummer = updatedServiceSkjema.SerieNummer;
+
+            if (updatedServiceSkjema.AvtaltMedKunden != serviceSkjema.AvtaltMedKunden)
+                serviceSkjema.AvtaltMedKunden = updatedServiceSkjema.AvtaltMedKunden;
+
+            if (updatedServiceSkjema.Reparasjonsbeskrivelse != serviceSkjema.Reparasjonsbeskrivelse)
+                serviceSkjema.Reparasjonsbeskrivelse = updatedServiceSkjema.Reparasjonsbeskrivelse;
+
+            if (updatedServiceSkjema.BrukteDeler != serviceSkjema.BrukteDeler)
+                serviceSkjema.BrukteDeler = updatedServiceSkjema.BrukteDeler;
+
+            if (updatedServiceSkjema.Arbeidstimer != serviceSkjema.Arbeidstimer)
+                serviceSkjema.Arbeidstimer = updatedServiceSkjema.Arbeidstimer;
+
+            if (updatedServiceSkjema.FerdigstiltDato != serviceSkjema.FerdigstiltDato)
+                serviceSkjema.FerdigstiltDato = updatedServiceSkjema.FerdigstiltDato;
+
+            if (updatedServiceSkjema.ReturDeler != serviceSkjema.ReturDeler)
+                serviceSkjema.ReturDeler = updatedServiceSkjema.ReturDeler;
+
+            if (updatedServiceSkjema.ForsendelsesMåte != serviceSkjema.ForsendelsesMåte)
+                serviceSkjema.ForsendelsesMåte = updatedServiceSkjema.ForsendelsesMåte;
+
+            if (updatedServiceSkjema.KundeSignatur != serviceSkjema.KundeSignatur)
+                serviceSkjema.KundeSignatur = updatedServiceSkjema.KundeSignatur;
+
+            if (updatedServiceSkjema.MekanikerSignatur != serviceSkjema.MekanikerSignatur)
+                serviceSkjema.MekanikerSignatur = updatedServiceSkjema.MekanikerSignatur;
+
+
+            nstedDbContext.SaveChanges();
+
+            return RedirectToAction("ListServiceSkjema");
+        }
     }
 }
-
-

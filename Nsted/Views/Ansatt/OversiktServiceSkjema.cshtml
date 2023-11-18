@@ -1,0 +1,79 @@
+﻿@model Nsted.Models.ServiceSkjema
+@{
+    ViewData["Title"] = "Rediger ServiceSkjema";
+}
+<link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
+<h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
+
+
+<form asp-controller="Ansatt" asp-action="UpdateServiceSkjema" method="post">
+    <div>
+        <input type="hidden" asp-for="ServiceSkjemaId" />
+        <input type="hidden" asp-for="KundeId" />
+
+        <label>Mottatt Dato:</label>
+        <input type="date" asp-for="MottattDato" readonly class="readonly-input" />
+
+        <label>Ordre Nr:</label>
+        <input type="number" asp-for="OrdreNr" readonly class="readonly-input" />
+
+        <label>Produkt Type:</label>
+        <input type="text" asp-for="ProduktType" readonly class="readonly-input" />
+
+        <label>Årsmodell:</label>
+        <input type="number" asp-for="ÅrsModell" readonly class="readonly-input" />
+
+        <label>Servicetype:</label>
+        <input type="text" asp-for="Servicetype" readonly class="readonly-input" />
+
+        <label>Serienummer:</label>
+        <input type="number" asp-for="SerieNummer" readonly class="readonly-input" />
+
+        <label>Avtalt med Kunde:</label>
+        <textarea asp-for="AvtaltMedKunden" readonly class="readonly-input"></textarea>
+
+        <label>Reparasjonsbeskrivelse:</label>
+        <textarea asp-for="Reparasjonsbeskrivelse" readonly class="readonly-input"></textarea>
+
+        <label>Brukte Deler:</label>
+        <textarea asp-for="BrukteDeler" readonly class="readonly-input"></textarea>
+
+        <label>Arbeidstimer:</label>
+        <input type="number" asp-for="Arbeidstimer" readonly class="readonly-input" />
+
+        <label>Ferdigstilt Dato:</label>
+        <input type="date" asp-for="FerdigstiltDato" readonly class="readonly-input" />
+
+        <label>Retur Deler:</label>
+        <input type="text" asp-for="ReturDeler" readonly class="readonly-input" />
+
+        <label>Forsendelsesmåte:</label>
+        <input type="text" asp-for="ForsendelsesMåte" readonly class="readonly-input" />
+
+        <label>Kunde Signatur:</label>
+        <input type="text" asp-for="KundeSignatur" readonly class="readonly-input" />
+
+        <label>Mekaniker Signatur:</label>
+        <input type="text" asp-for="MekanikerSignatur" readonly class="readonly-input" />
+
+        <!-- Edit button -->
+        <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
+    </div>
+</form>
+<div id="editAlert" style="display:none;" class="alert alert-info">
+    Du kan nå redigere skjemaet.
+</div>
+<script>function enableEditing() {
+        var formElements = document.querySelectorAll('.readonly-input');
+        formElements.forEach(function (element) {
+            element.removeAttribute('readonly');
+            element.classList.remove('readonly-input');
+            element.classList.add('editable-input');
+        });
+
+        document.getElementById('editAlert').style.display = 'block';
+        document.getElementById('editButton').style.display = 'none';
+        document.getElementById('updateButton').style.display = 'block';
+    }</script>

@@ -59,3 +59,20 @@ h1 {
     .btn-primary:hover {
         background-color: #f0873e;
     }
+
+.readonly-input {
+    background-color: #e9ecef;
+}
+
+.editable-input {
+    background-color: #fff;
+}
+
+.alert {
+    margin-top: 20px;
+    background-color: #ffc107; /* Change as needed */
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}

@@ -23,6 +23,14 @@ namespace Nsted.Controllers
             return View();
         }
 
+        public IActionResult Arbeidsdokument()
+        {
+            return View();
+        }
+
+
+
+
         [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
@@ -44,16 +52,32 @@ namespace Nsted.Controllers
 
         public IActionResult Delete(int id)
         {
+            // Find the registrering by ID
             var registrering = nstedDbContext.Registreringer.FirstOrDefault(r => r.RegistreringId == id);
 
             if (registrering != null)
             {
+                // Assuming each registrering is associated with a kunde, 
+                // and you have a foreign key or navigation property setup
+                var kundeId = registrering.KundeId; // Replace with the correct property if different
+                var kunde = nstedDbContext.Kunder.FirstOrDefault(k => k.KundeId == kundeId);
+
+                // Remove registrering
                 nstedDbContext.Registreringer.Remove(registrering);
+
+                // Check if the associated kunde exists and remove it
+                if (kunde != null)
+                {
+                    nstedDbContext.Kunder.Remove(kunde);
+                }
+
+                // Save changes to the database
                 nstedDbContext.SaveChanges();
             }
 
-            return RedirectToAction("ListRegistrering");
+            return RedirectToAction("ListRegistrering"); // Redirect to the list view
         }
+
 
         public IActionResult ListRegistrering()
         {

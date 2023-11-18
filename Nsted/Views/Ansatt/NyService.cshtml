@@ -1,48 +1,76 @@
-﻿@{
+﻿@model List<Nsted.Models.Registrering>
+@{
+    var customerList = ViewBag.CustomerList as List<Nsted.Models.Kunde>;
     ViewData["Title"] = "Ny Service";
-    <link rel="stylesheet" href="~/css/NyServicestyle.css" />
 }
 
-<h1>Nytt Serviceskjema</h1>
-<br />
+<link rel="stylesheet" href="~/css/NyServicestyle.css" />
+
 <div class="container">
-    <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
-        <!-- Kunde Informasjon -->
-        <div class="row mb-3">
-            <div class="col-12">
-                <label class="form-label">Kundeinformasjon:</label>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn" required>
-                    <label for="fornavn">Fornavn</label>
+    <h1>Nytt Serviceskjema</h1>
+
+    <!-- Customer Selection Section -->
+    <div class="row mb-3">
+        <!-- Toggle Button -->
+        <div class="col-12 mb-3 text-center">
+            <button class="btn btn-outline-secondary" id="toggleButton" onclick="toggleCustomerForm()">Legg til ny kunde</button>
+        </div>
+
+        <!-- Existing Customer Dropdown -->
+        <div class="col-md-6" id="existingCustomerSection">
+            <label for="customerInput" class="form-label">Søk og velg en eksisterende kunde:</label>
+            <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke...">
+            <datalist id="customers">
+                @foreach (var customer in customerList)
+                {
+                    <option data-value="@customer.KundeId" value="@customer.Fornavn @customer.Etternavn"></option>
+                }
+            </datalist>
+        </div>
+
+        <!-- New Customer Fields (Initially Hidden) -->
+        <div id="newCustomerFields" style="display: none;">
+            <!-- Kunde Informasjon -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label class="form-label">Legg til ny kunde:</label>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn" required>
-                    <label for="etternavn">Etternavn</label>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn">
+                        <label for="fornavn">Fornavn</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse" required>
-                    <label for="adresse">Adresse</label>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn">
+                        <label for="etternavn">Etternavn</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no" required>
-                    <label for="email">Email addresse</label>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse">
+                        <label for="adresse">Adresse</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon" required>
-                    <label for="telefonNummer">Telefon</label>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no">
+                        <label for="email">Email addresse</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon">
+                        <label for="telefonNummer">Telefon</label>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
+
+
         <div class="row mb-3">
             <!-- MottattDato -->
             <div class="col-md-6">
@@ -164,3 +192,22 @@
     </form>
 </div>
 
+<script>var isNewCustomerFormVisible = false;
+
+    function toggleCustomerForm() {
+        var newCustomerFields = document.getElementById('newCustomerFields');
+        var existingCustomerSection = document.getElementById('existingCustomerSection');
+        var toggleButton = document.getElementById('toggleButton');
+
+        isNewCustomerFormVisible = !isNewCustomerFormVisible;
+
+        if (isNewCustomerFormVisible) {
+            newCustomerFields.style.display = 'block';
+            existingCustomerSection.style.display = 'none';
+            toggleButton.textContent = 'Velg eksisterende kunde';
+        } else {
+            newCustomerFields.style.display = 'none';
+            existingCustomerSection.style.display = 'block';
+            toggleButton.textContent = 'Legg til ny kunde';
+        }
+    }</script>

@@ -34,3 +34,24 @@ CREATE TABLE IF NOT EXISTS Registreringer (
     ServiceSkjema BOOLEAN NOT NULL,
     FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId)
 );
+
+CREATE TABLE IF NOT EXISTS ServiceSkjemas (
+    ServiceSkjemaId INT AUTO_INCREMENT PRIMARY KEY,
+    KundeId INT NOT NULL,
+    MottattDato DATETIME NOT NULL,
+    OrdreNr INT NOT NULL,
+    ProduktType VARCHAR(255) NOT NULL,
+    ÅrsModell INT NOT NULL,
+    Servicetype VARCHAR(255) NOT NULL,
+    SerieNummer INT NOT NULL,
+    AvtaltMedKunden TEXT NOT NULL,
+    Reparasjonsbeskrivelse TEXT NOT NULL,
+    BrukteDeler TEXT NOT NULL,
+    Arbeidstimer INT NOT NULL,
+    FerdigstiltDato DATETIME NOT NULL,
+    ReturDeler TEXT NOT NULL,
+    ForsendelsesMåte VARCHAR(255) NOT NULL,
+    KundeSignatur VARCHAR(255) NOT NULL,
+    MekanikerSignatur VARCHAR(255) NOT NULL,
+    FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId)
+);

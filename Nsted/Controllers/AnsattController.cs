@@ -28,6 +28,10 @@ namespace Nsted.Controllers
             return View();
         }
 
+        public IActionResult NyService()
+        {
+            return View();
+        }
 
 
 
@@ -49,6 +53,19 @@ namespace Nsted.Controllers
             return RedirectToAction("ListRegistrering"); // Omdiriger til en suksessside
 
         }
+
+        [HttpPost]
+        public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema)
+        {
+            
+            
+                nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
+                nstedDbContext.SaveChanges();
+                return RedirectToAction("ListServiceSkjema"); // Redirect after successful save
+            }
+
+      
+
 
         public IActionResult Delete(int id)
         {
@@ -84,6 +101,17 @@ namespace Nsted.Controllers
             List<Registrering> registreringer = nstedDbContext.Registreringer.Include(r => r.Kunde).ToList();
             return View(registreringer);
         }
+
+
+        public IActionResult ListServiceSkjema()
+        {
+            // Fetch all ServiceSkjema records from the database, including related Kunde data
+            List<ServiceSkjema> serviceskjemas = nstedDbContext.ServiceSkjemas.Include(s => s.Kunde).ToList();
+
+            return View(serviceskjemas); // Pass the list to the View
+        }
+
+
     }
 }
 

@@ -18,20 +18,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var customer in Model)
+        @foreach (var kunde in Model)
         {
             <tr>
-                <td>@customer.KundeId</td>
-                <td>@customer.Fornavn</td>
-                <td>@customer.Etternavn</td>
-                <td>@customer.Telefon</td>
-                <td>@customer.Email</td>
-                <td>@customer.Adresse</td>
-                <td>@customer.Registrert</td>
+                <td>@kunde.KundeId</td>
+                <td>@kunde.Fornavn</td>
+                <td>@kunde.Etternavn</td>
+                <td>@kunde.Telefon</td>
+                <td>@kunde.Email</td>
+                <td>@kunde.Adresse</td>
+                <td>@kunde.Registrert</td>
                 <td>
-                    <a href="@Url.Action("Edit", "Kunde", new { id = customer.KundeId })" class="btn btn-primary">Rediger</a>
-                    <a href="@Url.Action("Delete", "Kunde", new { id = customer.KundeId })" class="btn btn-danger"
-                       onclick="return confirmDeletion('@customer.Fornavn','@customer.Etternavn');">Slett</a>
+                    <a href="@Url.Action("Edit", "Kunde", new { id = kunde.KundeId })" class="btn btn-primary">Rediger</a>
+                    <a href="@Url.Action("Delete", "Kunde", new { id = kunde.KundeId })" class="btn btn-danger"
+                       onclick="return confirmDeletion('@kunde.Fornavn','@kunde.Etternavn');">Slett</a>
                 </td>
             </tr>
         }

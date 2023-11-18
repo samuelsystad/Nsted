@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jEQhfLCZfgwOx764H9rMBrIJE6ua6XbrOr1BQfqjdbM=",
+  "Hash": "C/pmNGdRhl+pHbSguVT3cQbJHn7UGqUX8Lke/iKzEVE=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/ListRegistrering.css"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ListServiceSkjema.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/ListServiceSkjema.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/ListServiceSkjema.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoggedInAs.css",

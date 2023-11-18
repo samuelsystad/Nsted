@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0xpc3RSZWdpc3RyZXJpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/ListServiceSkjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0xpc3RTZXJ2aWNlU2tqZW1hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/NyService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L055U2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/Registrering.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L1JlZ2lzdHJlcmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,14 +50,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Lagerbeholdning.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9MYWdlcmJlaG9sZG5pbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/NyService.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9OeVNlcnZpY2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Service.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Kunde/Add.cshtml]

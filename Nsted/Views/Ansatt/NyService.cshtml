@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Ny Service";
+    <link rel="stylesheet" href="~/css/NyServicestyle.css" />
+}
+
+<h1>Nytt Serviceskjema</h1>
+<br />
+<div class="container">
+    <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
+        <!-- Kunde Informasjon -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <label class="form-label">Kundeinformasjon:</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn" required>
+                    <label for="fornavn">Fornavn</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn" required>
+                    <label for="etternavn">Etternavn</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse" required>
+                    <label for="adresse">Adresse</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no" required>
+                    <label for="email">Email addresse</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon" required>
+                    <label for="telefonNummer">Telefon</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <!-- MottattDato -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="mottattDato" name="MottattDato" placeholder="dd/mm/yyyy" required>
+                    <label for="mottattDato">Mottatt dato</label>
+                </div>
+            </div>
+
+            <!-- OrdreNr -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="ordreNr" name="OrdreNr" placeholder="OrdreNr" required>
+                    <label for="ordreNr">OrdreNr</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Service Informasjon:</label>
+            </div>
+            <!-- ProduktType -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="produktType" name="ProduktType" placeholder="ProduktType" required>
+                    <label for="produktType">Produkttype</label>
+                </div>
+            </div>
+
+            <!-- ÅrsModell -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="aarsModell" name="ÅrsModell" placeholder="Årsmodell" required>
+                    <label for="aarsModell">Årsmodell</label>
+                </div>
+            </div>
+
+            <!-- Servicetype -->
+            <div class="col-md-6">
+                <label for="servicetype" class="form-label">Servicetype?</label>
+                <select class="form-select" id="servicetype" name="Servicetype" aria-label="Servicetype" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="1">Reparasjon</option>
+                    <option value="2">Garanti</option>
+                </select>
+            </div>
+
+            <!-- SerieNummer -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="serieNummer" name="SerieNummer" placeholder="SerieNummer" required>
+                    <label for="serieNummer">Serienummer</label>
+                </div>
+            </div>
+
+            <!-- AvtaltMedKunden -->
+            <div class="col-md-12">
+                <label for="avtaltMedKunden" class="form-label">Hva er avtalt med kunden?:</label>
+                <textarea class="form-control" id="avtaltMedKunden" name="AvtaltMedKunden" placeholder="Kommentar" required></textarea>
+            </div>
+
+            <!-- Reparasjonsbeskrivelse -->
+            <div class="col-md-12">
+                <label for="reparasjonsbeskrivelse" class="form-label">Reparasjonsbeskrivelse:</label>
+                <textarea class="form-control" id="reparasjonsbeskrivelse" name="Reparasjonsbeskrivelse" placeholder="Kommentar" required></textarea>
+            </div>
+
+            <!-- BrukteDeler -->
+            <div class="col-md-12">
+                <label for="brukteDeler" class="form-label">Brukte deler:</label>
+                <textarea class="form-control" id="brukteDeler" name="BrukteDeler" placeholder="Kommentar" required></textarea>
+            </div>
+
+            <!-- Arbeidstimer -->
+            <div class="col-md-6">
+                <label for="arbeidstimer" class="form-label">Arbeidstimer:</label>
+                <input type="number" class="form-control" id="arbeidstimer" name="Arbeidstimer" placeholder="arbeidstimer" required>
+            </div>
+
+            <!-- FerdigstiltDato -->
+            <div class="col-md-6">
+                <label for="ferdigstiltDato" class="form-label">Ferdigstilt dato:</label>
+                <input type="date" class="form-control" id="ferdigstiltDato" name="FerdigstiltDato" placeholder="dd/mm/yyyy" required>
+            </div>
+
+            <!-- ReturDeler -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="returDeler" name="ReturDeler" placeholder="Utskiftet deler returnert" required>
+                    <label for="returDeler">Returdeler</label>
+                </div>
+            </div>
+
+            <!-- ForsendelsesMåte -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="forsendelsesMaate" name="ForsendelsesMåte" placeholder="Forsendelsesmåte" required>
+                    <label for="forsendelsesMaate">Forsendelsesmåte</label>
+                </div>
+            </div>
+
+            <!-- KundeSignatur -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="kundeSignatur" name="KundeSignatur" placeholder="Kunde signatur" required>
+                    <label for="kundeSignatur">Kunde signatur</label>
+                </div>
+            </div>
+
+            <!-- MekanikerSignatur -->
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="mekanikerSignatur" name="MekanikerSignatur" placeholder="Mekaniker signatur" required>
+                    <label for="mekanikerSignatur">Mekaniker signatur</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send inn</button>
+    </form>
+</div>
+

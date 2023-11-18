@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\ListRegistrering.css"
     },
     {
+      "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\ListServiceSkjema.css",
+      "PackagePath": "staticwebassets\\css\\ListServiceSkjema.css"
+    },
+    {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },

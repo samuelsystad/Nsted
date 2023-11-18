@@ -19,23 +19,12 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Service()
-        {
-            return View();
-        }
-
         public IActionResult Lagerbeholdning()
         {
             return View();
         }
 
         public IActionResult Arbeidsdokument()
-        {
-            return View();
-        }
-
-        
-        public IActionResult NyService()
         {
             return View();
         }

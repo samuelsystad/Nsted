@@ -15,6 +15,8 @@ namespace Nsted.Data
 
         public DbSet<Registrering> Registreringer { get; set; }
 
+        public DbSet<ServiceSkjema> ServiceSkjemas { get; set; }
+
         public override int SaveChanges()
         {
             // You can add any custom logic here before saving changes, if needed.

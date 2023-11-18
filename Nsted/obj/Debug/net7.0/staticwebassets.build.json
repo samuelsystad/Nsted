@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AiG4HEdkDGxJzT2fM/65cSJOW3Tb3X6hPwvCCoq9iBo=",
+  "Hash": "4tx3KB/zPwmI8eb7HXQt1ojg9T738r/gl/GLf3WAx3o=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ListRegistrering.css"
+    },
+    {
+      "Identity": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\ListServiceSkjema.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/ListServiceSkjema.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ListServiceSkjema.css"
     },
     {
       "Identity": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Login.css",

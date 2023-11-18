@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RSZWdpc3RyZXJpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/ListServiceSkjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RTZXJ2aWNlU2tqZW1hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/NyService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XE55U2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/Registrering.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XFJlZ2lzdHJlcmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,14 +46,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/NyService.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOeVNlcnZpY2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/Service.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Kunde/Add.cshtml]

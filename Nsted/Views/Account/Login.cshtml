@@ -1,48 +1,52 @@
-﻿@model Nsted.Models.UserLoginModel
+﻿<link rel="stylesheet" href="~/css/LoggedInAs.css">
+<link rel="stylesheet" href="~/css/LoginPage.css">
 
+@model Nsted.Models.UserLoginModel
+<div class="overlay-login"></div>
 @if (User.Identity.IsAuthenticated)
 {
-    <p>You are logged in as @User.Identity.Name!</p>
-    <form asp-action="Logout" asp-controller="Account" method="post">
-        <button type="submit" class="btn btn-primary">Log Out</button>
-    </form>
+    <div class="logged-in-container">
+        <p class="logged-in-message">You are logged in as @User.Identity.Name!</p>
+        <form asp-action="Logout" asp-controller="Account" method="post">
+            <button type="submit" class="logout-button">Log Out</button>
+        </form>
+    </div>
 }
 else
 {
-    <form asp-action="Login" asp-controller="Account" class="Formborder" method="post">
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <input asp-for="Email" type="email" class="form-control form-control-lg"
-                   placeholder="Oppgi en gyldig e-post adresse" />
-            <label asp-for="Email" class="form-label">E-post addresse</label>
-        </div>
+    <div class="login-container">
+        <h3>Velkommen</h3>
+        <h4>Logg på Nosted& AS for å fortsette til den administrative siden.</h4>
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <!-- Email input -->
+            <div class="form-outline mb-2">
+                <input asp-for="Email" type="email" class="form-input"
+                       placeholder="Oppgi en gyldig e-post adresse" />
+            </div>
 
-        <!-- Password input -->
-        <div class="form-outline mb-3">
-            <input asp-for="Password" type="password" class="form-control form-control-lg"
-                   placeholder="Oppgi passord" />
-            <label asp-for="Password" class="form-label">Passord</label>
-        </div>
+            <!-- Password input -->
+            <div class="form-outline mb-1">
+                <input asp-for="Password" type="password" class="form-input"
+                       placeholder="Oppgi passord" />
+            </div>
+            <!-- Error Message -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="error-message">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
+            }
+            <!-- Registration Link -->
+            <div class="text-center mt-2 pt-1">
+                <a href="@Url.Action("Register", "Account")" class="additional-link">Registrer deg</a>
+            </div>
 
-        <!-- Checkbox -->
-        <div class="form-check mb-0">
-            <input asp-for="RememberMe" class="form-check-input me-2" type="checkbox" />
-            <label asp-for="RememberMe" class="form-check-label">
-                Husk meg
-            </label>
-        </div>
-        
-        <!-- Registration Link -->
-        <div class="text-center text-lg-start mt-4 pt-2">
-            <a href="@Url.Action("Register", "Account")" class="btn btn-secondary btn-lg">Registrer deg</a>
-        </div>
-
-        <!-- Login Button -->
-        <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="submit" class="btn btn-primary btn-lg"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
-                Logg inn
-            </button>
-        </div>
-    </form>
+            <!-- Login Button -->
+            <div class="text-center mt-2 pt-1">
+                <button type="submit" class="login-button">
+                    Logg inn
+                </button>
+            </div>
+        </form>
+    </div>
 }

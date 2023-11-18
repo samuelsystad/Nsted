@@ -49,8 +49,11 @@ public class AccountController : Controller
                 // Redirect to the desired page (Homepage in this case)
                 return RedirectToAction("Homepage", "Home");
             }
-
-            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            else
+            {
+                // Set an error message when login fails
+                ModelState.AddModelError(string.Empty, "Brukernavnet eller passordet er feil, vennligst prøv igjen.");
+            }
         }
 
         return View(model);
@@ -60,37 +63,46 @@ public class AccountController : Controller
     [HttpGet]
     public IActionResult Register()
     {
-        return View();
+        return View(new UserRegistrationModel());
     }
-
     [AllowAnonymous]
     [HttpPost]
-    public async Task<IActionResult> Register(UserLoginModel model)
+    public async Task<IActionResult> Register(UserRegistrationModel model)
     {
         if (ModelState.IsValid)
         {
             if (!_context.Users.Any(u => u.Email == model.Email))
             {
                 var hashedPassword = _userService.HashPassword(model.Password);
-
                 var newUser = new User { Email = model.Email, PasswordHash = hashedPassword };
                 _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
 
-                // Optionally log the user in immediately after registration
-                // Similar logic as in the Login method
+                // Create the claims for the user
+                var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, newUser.Email),
+                // Add other claims as needed
+            };
 
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                // Sign in the user
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                // Redirect to the homepage or any other desired page
                 return RedirectToAction("Homepage", "Home");
-
             }
             else
             {
-                ModelState.AddModelError("", "Email already in use.");
+                ModelState.AddModelError("", "Email allerede i bruk.");
             }
         }
 
         return View(model);
     }
+
 
     public async Task<IActionResult> Logout()
     {
@@ -98,4 +110,3 @@ public class AccountController : Controller
         return RedirectToAction("Login");
     }
 }
-

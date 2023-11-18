@@ -1,17 +1,40 @@
-﻿@model Nsted.Models.UserLoginModel
+﻿<link rel="stylesheet" href="~/css/RegisterPage.css">
 
-<form asp-action="Register" asp-controller="Account" method="post">
-    <div class="form-outline mb-4">
-        <input asp-for="Email" type="email" class="form-control form-control-lg" placeholder="Enter email" />
-        <label asp-for="Email" class="form-label">Email</label>
-    </div>
+@model Nsted.Models.UserRegistrationModel
 
-    <div class="form-outline mb-3">
-        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Enter password" />
-        <label asp-for="Password" class="form-label">Password</label>
-    </div>
+<div class="overlay-register"></div>
 
-    <div class="text-center text-lg-start mt-4 pt-2">
-        <button type="submit" class="btn btn-primary btn-lg">Register</button>
-    </div>
-</form>
+<div class="register-container">
+    <h3>Velkommen</h3>
+    <h4>Lag en bruker hos Nosted& AS for å fortsette til den administrative siden.</h4>
+    <form asp-action="Register" asp-controller="Account" method="post">
+        <!-- Email input -->
+        <div class="form-outline mb-2">
+            <input asp-for="Email" type="email" class="form-input"
+                   placeholder="Oppgi en gyldig e-post adresse" />
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-1">
+            <input asp-for="Password" type="password" class="form-input"
+                   placeholder="Enter password" />
+        </div>
+
+        <!-- Confirm Password input -->
+        <div class="form-outline mb-3">
+            <input asp-for="ConfirmPassword" type="password" class="form-input"
+                   placeholder="Confirm password" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <!-- Registration Link -->
+        <div class="text-center mt-2 pt-1">
+            <a href="@Url.Action("Login", "Account")" class="additional-link">Eksisterende bruker?</a>
+        </div>
+
+        <!-- Register Button -->
+        <div class="text-center text-lg-start mt-2 pt-1">
+            <button type="submit" class="register-button">Registrer deg</button>
+        </div>
+    </form>
+</div>

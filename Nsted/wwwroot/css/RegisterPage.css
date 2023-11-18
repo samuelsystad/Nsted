@@ -1,0 +1,81 @@
+﻿.overlay-register {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('/images/backgroundhomepage.jpg') !important;
+    background-size: cover !important;
+    opacity: 0.15 !important;
+    z-index: -1 !important;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+/* Registration container styling */
+.register-container {
+    background-color: #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    max-width: 360px !important;
+    margin: 40px auto !important;
+    padding: 20px !important;
+    text-align: center !important;
+}
+
+/* Form input styling */
+.form-input {
+    width: 100% !important;
+    padding: 5px !important;
+    margin: 5px 0 !important;
+    border-radius: 5px !important;
+    border: 1px solid #ddd !important;
+}
+
+/* Label styling */
+.form-label {
+    display: block !important;
+    margin-bottom: 2px !important;
+    color: #333 !important;
+}
+
+/* Button styling */
+.register-button {
+    width: 100% !important;
+    padding: 10px !important;
+    margin-top: 10px !important; /* Reduced margin */
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: #007bff !important;
+    color: white !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+}
+
+    .register-button:hover {
+        background-color: #0056b3 !important;
+    }
+
+/* Error message styling */
+.error-message {
+    color: red !important;
+    margin-bottom: 15px !important;
+    list-style-type: none !important; /* No bullets */
+    padding-left: 0 !important; /* Align with other elements */
+}
+
+.additional-link {
+    color: #007bff !important;
+    text-decoration: none !important;
+    margin-right: 140px !important; /* Adjusted margin */
+}
+
+    .additional-link:hover {
+        text-decoration: underline !important;
+    }

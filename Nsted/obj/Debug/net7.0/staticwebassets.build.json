@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/fQ03lRdIzQsT16gngwzMTIo/eJ7gS8lb1snWRwXOFg=",
+  "Hash": "jEQhfLCZfgwOx764H9rMBrIJE6ua6XbrOr1BQfqjdbM=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -136,12 +136,12 @@
       "OriginalItemSpec": "wwwroot/css/ListRegistrering.css"
     },
     {
-      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Login.css",
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoggedInAs.css",
       "SourceId": "Nsted",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
       "BasePath": "_content/Nsted",
-      "RelativePath": "css/Login.css",
+      "RelativePath": "css/LoggedInAs.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +150,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Login.css"
+      "OriginalItemSpec": "wwwroot/css/LoggedInAs.css"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoginPage.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/LoginPage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/LoginPage.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Navbarstyle.css",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/NyServicestyle.css"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/RegisterPage.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/RegisterPage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/RegisterPage.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Registreringstyle.css",

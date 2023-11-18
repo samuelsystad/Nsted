@@ -25,8 +25,12 @@
       "PackagePath": "staticwebassets/css/ListRegistrering.css"
     },
     {
-      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Login.css",
-      "PackagePath": "staticwebassets/css/Login.css"
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoggedInAs.css",
+      "PackagePath": "staticwebassets/css/LoggedInAs.css"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoginPage.css",
+      "PackagePath": "staticwebassets/css/LoginPage.css"
     },
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Navbarstyle.css",
@@ -35,6 +39,10 @@
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/NyServicestyle.css",
       "PackagePath": "staticwebassets/css/NyServicestyle.css"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/RegisterPage.css",
+      "PackagePath": "staticwebassets/css/RegisterPage.css"
     },
     {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Registreringstyle.css",

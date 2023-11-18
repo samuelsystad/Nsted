@@ -27,7 +27,6 @@ public class AccountController : Controller
     {
         return View();
     }
-
     [HttpPost]
     public async Task<IActionResult> Login(UserLoginModel model)
     {
@@ -36,7 +35,19 @@ public class AccountController : Controller
             var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
             if (user != null && _userService.VerifyPassword(model.Password, user.PasswordHash))
             {
-                // Rest of your login logic...
+                var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Email),
+                // Add other claims as needed
+            };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                // Redirect to the desired page (Homepage in this case)
+                return RedirectToAction("Homepage", "Home");
             }
 
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
@@ -44,6 +55,7 @@ public class AccountController : Controller
 
         return View(model);
     }
+
     [AllowAnonymous]
     [HttpGet]
     public IActionResult Register()
@@ -68,7 +80,8 @@ public class AccountController : Controller
                 // Optionally log the user in immediately after registration
                 // Similar logic as in the Login method
 
-                return RedirectToAction("Home", "Homepage");
+                return RedirectToAction("Homepage", "Home");
+
             }
             else
             {
@@ -77,6 +90,12 @@ public class AccountController : Controller
         }
 
         return View(model);
+    }
+
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Login");
     }
 }
 

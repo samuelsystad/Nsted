@@ -23,30 +23,20 @@ namespace Nsted
         {
             services.AddControllersWithViews();
 
-            // Register UserService
             services.AddScoped<UserService>();
 
-            // Register DbContext with connection string from appsettings.json
             services.AddDbContext<NstedDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
                     ServerVersion.AutoDetect(Configuration.GetConnectionString("DefaultConnection"))));
 
-            // Configure Authentication
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                .AddCookie(options =>
                 {
                     options.LoginPath = "/Account/Login";
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
                 });
 
-            // Add authorization policy if needed
-            // services.AddAuthorization(options =>
-            // {
-            //     options.AddPolicy("YourPolicyName", policy =>
-            //     {
-            //         policy.RequireAuthenticatedUser();
-            //     });
-            // });
+            services.AddAuthorization();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

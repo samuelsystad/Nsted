@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C/pmNGdRhl+pHbSguVT3cQbJHn7UGqUX8Lke/iKzEVE=",
+  "Hash": "2RYhbSclkrEMndsmPhq10ZHj6kr6+1cioUkUOpHaqzA=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
+      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/AddKundeStyle.css",
+      "SourceId": "Nsted",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
+      "BasePath": "_content/Nsted",
+      "RelativePath": "css/AddKundeStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/AddKundeStyle.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/FerdigeOrdrer.css",

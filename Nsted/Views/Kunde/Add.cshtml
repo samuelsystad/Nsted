@@ -1,27 +1,55 @@
 ﻿@model Nsted.Models.Kunde
 
 @{
+    ViewData["Title"] = "Legg til kunde";
 }
+
+<link rel="stylesheet" href="~/css/AddKundeStyle.css" />
+
 <h2>Legg til kunde</h2>
 
-<form asp-action="Add" method="post">
+<div class="container">
+    <form asp-action="Add" method="post">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="Fornavn" class="form-label">Fornavn:</label>
+                <input asp-for="Fornavn" class="form-control" id="Fornavn" required />
+            </div>
+            <div class="col-md-6">
+                <label for="Etternavn" class="form-label">Etternavn:</label>
+                <input asp-for="Etternavn" class="form-control" id="Etternavn" required />
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label>Fornavn:</label>
-        <input asp-for="Fornavn" class="form-control" required/>
-        <label>Etternavn:</label>
-        <input asp-for="Etternavn" class="form-control" required />
-        <label>Telefon:</label>
-        <input asp-for="Telefon" class="form-control" required />
-        <label>Email:</label>
-        <input asp-for="Email" class="form-control" required />
-        <label>Adresse:</label>
-        <input asp-for="Adresse" class="form-control" required />
-        <label>Registrert:</label>
-        <input asp-for="Registrert" class="form-control" required />
-    </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="Telefon" class="form-label">Telefon:</label>
+                <input asp-for="Telefon" class="form-control" id="Telefon" required />
+            </div>
+            <div class="col-md-6">
+                <label for="Email" class="form-label">Email:</label>
+                <input asp-for="Email" class="form-control" id="Email" required />
+            </div>
+        </div>
 
-    <div class="form-group">
-        <input type="submit" value="Registrer" class="btn btn-primary" />
-    </div>
-</form>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label for="Adresse" class="form-label">Adresse:</label>
+                <input asp-for="Adresse" class="form-control" id="Adresse" required />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label for="Registrert" class="form-label">Registrert:</label>
+                <input asp-for="Registrert" class="form-control" id="Registrert" required />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <input type="submit" value="Registrer" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>

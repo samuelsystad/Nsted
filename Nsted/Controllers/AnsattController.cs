@@ -30,6 +30,8 @@ namespace Nsted.Controllers
 
         public IActionResult NyService()
         {
+            var customers = nstedDbContext.Kunder.ToList(); // Get the list of customers
+            ViewBag.CustomerList = customers; // Pass the list to the view
             return View();
         }
 
@@ -102,15 +104,14 @@ namespace Nsted.Controllers
             return View(registreringer);
         }
 
-
         public IActionResult ListServiceSkjema()
         {
-            // Fetch all ServiceSkjema records from the database, including related Kunde data
             List<ServiceSkjema> serviceskjemas = nstedDbContext.ServiceSkjemas.Include(s => s.Kunde).ToList();
+            var customers = nstedDbContext.Kunder.ToList();
+            ViewBag.CustomerList = customers;
 
-            return View(serviceskjemas); // Pass the list to the View
+            return View(serviceskjemas);
         }
-
 
     }
 }

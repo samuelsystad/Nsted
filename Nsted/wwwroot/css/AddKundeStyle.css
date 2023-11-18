@@ -1,0 +1,43 @@
+﻿body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: scroll;
+}
+
+h2 {
+    color: #e7792c;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Adjust width as necessary */
+    margin: auto; /* Center the form in the page */
+    margin-top: 10px;
+}
+
+.form-label, label {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #e7792c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+
+    .btn-primary:hover {
+        background-color: #f0873e;
+    }

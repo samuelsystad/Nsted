@@ -1,0 +1,17 @@
+﻿@model Nsted.Models.UserLoginModel
+
+<form asp-action="Register" asp-controller="Account" method="post">
+    <div class="form-outline mb-4">
+        <input asp-for="Email" type="email" class="form-control form-control-lg" placeholder="Enter email" />
+        <label asp-for="Email" class="form-label">Email</label>
+    </div>
+
+    <div class="form-outline mb-3">
+        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Enter password" />
+        <label asp-for="Password" class="form-label">Password</label>
+    </div>
+
+    <div class="text-center text-lg-start mt-4 pt-2">
+        <button type="submit" class="btn btn-primary btn-lg">Register</button>
+    </div>
+</form>

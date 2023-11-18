@@ -1,27 +1,29 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Nsted.Models;
-using System.Security.Cryptography.X509Certificates;
+using Nsted.Models; // Assuming User is within this namespace
 
 namespace Nsted.Data
 {
     public class NstedDbContext : DbContext
     {
-        public NstedDbContext(DbContextOptions<NstedDbContext> options) : base(options) 
+        public NstedDbContext(DbContextOptions<NstedDbContext> options) : base(options)
         {
-            
+
         }
 
+        // Existing DbSets
         public DbSet<Kunde> Kunder { get; set; }
-
         public DbSet<Registrering> Registreringer { get; set; }
+
+        // Add DbSet for User
+        public DbSet<User> Users { get; set; }
 
         public override int SaveChanges()
         {
-            // You can add any custom logic here before saving changes, if needed.
-            // For example, auditing, validation, or other business logic.
+            // Custom logic before saving changes...
 
-            return base.SaveChanges(); // Call the base class's SaveChanges method to persist changes to the database.
+            return base.SaveChanges(); // Persist changes to the database.
         }
 
+        // Other DbContext configuration...
     }
 }

@@ -1,0 +1,48 @@
+﻿@model Nsted.Models.UserLoginModel
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>You are logged in as @User.Identity.Name!</p>
+    <form asp-action="Logout" asp-controller="Account" method="post">
+        <button type="submit" class="btn btn-primary">Log Out</button>
+    </form>
+}
+else
+{
+    <form asp-action="Login" asp-controller="Account" class="Formborder" method="post">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input asp-for="Email" type="email" class="form-control form-control-lg"
+                   placeholder="Oppgi en gyldig e-post adresse" />
+            <label asp-for="Email" class="form-label">E-post addresse</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-3">
+            <input asp-for="Password" type="password" class="form-control form-control-lg"
+                   placeholder="Oppgi passord" />
+            <label asp-for="Password" class="form-label">Passord</label>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-check mb-0">
+            <input asp-for="RememberMe" class="form-check-input me-2" type="checkbox" />
+            <label asp-for="RememberMe" class="form-check-label">
+                Husk meg
+            </label>
+        </div>
+        
+        <!-- Registration Link -->
+        <div class="text-center text-lg-start mt-4 pt-2">
+            <a href="@Url.Action("Register", "Account")" class="btn btn-secondary btn-lg">Registrer deg</a>
+        </div>
+
+        <!-- Login Button -->
+        <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                Logg inn
+            </button>
+        </div>
+    </form>
+}

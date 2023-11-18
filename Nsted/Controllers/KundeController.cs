@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Nsted.Data;
 using Nsted.Models;
 using System.Linq;
 
 namespace Nsted.Controllers
 {
+    [Authorize]
     public class KundeController : Controller
     {
         private readonly NstedDbContext nstedDbContext;

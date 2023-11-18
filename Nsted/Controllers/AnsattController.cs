@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nsted.Data;
 using Nsted.Models;
@@ -6,7 +7,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
 namespace Nsted.Controllers
-{
+{ 
+    [Authorize]
     public class AnsattController : Controller
     {
         private readonly NstedDbContext nstedDbContext;

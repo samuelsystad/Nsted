@@ -1,33 +1,3 @@
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.Development.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.staticwebassets.runtime.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.deps.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.runtimeconfig.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.dll
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.pdb
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.GeneratedMSBuildEditorConfig.editorconfig
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.AssemblyInfoInputs.cache
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.AssemblyInfo.cs
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CoreCompileInputs.cache
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.MvcApplicationPartsAssemblyInfo.cache
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.RazorAssemblyInfo.cache
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.RazorAssemblyInfo.cs
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.Nsted.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.build.Nsted.props
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Nsted.props
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Nsted.props
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.pack.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.build.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.development.json
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/bundle/Nsted.styles.css
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/projectbundle/Nsted.bundle.scp.css
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.dll
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/refint/Nsted.dll
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.pdb
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.genruntimeconfig.cache
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/ref/Nsted.dll
 C:/Users/e5kil/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.Development.json
 C:/Users/e5kil/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.json
 C:/Users/e5kil/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.staticwebassets.runtime.json
@@ -105,6 +75,15 @@ C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/Pomelo.EntityFrameworkCor
 C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/System.CodeDom.dll
 C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.AssemblyReference.cache
 C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CopyComplete
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.Development.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.staticwebassets.runtime.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.deps.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.runtimeconfig.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.dll
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.pdb
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Humanizer.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -121,5 +100,26 @@ C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CopyComplete
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/System.CodeDom.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.AssemblyReference.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.AssemblyInfoInputs.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.AssemblyInfo.cs
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CoreCompileInputs.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.MvcApplicationPartsAssemblyInfo.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.RazorAssemblyInfo.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.RazorAssemblyInfo.cs
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.Nsted.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.build.Nsted.props
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Nsted.props
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Nsted.props
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.build.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/staticwebassets.development.json
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/bundle/Nsted.styles.css
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/scopedcss/projectbundle/Nsted.bundle.scp.css
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CopyComplete
-/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/BCrypt.Net-Next.dll
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.dll
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/refint/Nsted.dll
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.pdb
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.genruntimeconfig.cache
+/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/ref/Nsted.dll

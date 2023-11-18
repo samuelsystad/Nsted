@@ -14,8 +14,12 @@ namespace Nsted.Data
         public DbSet<Kunde> Kunder { get; set; }
         public DbSet<Registrering> Registreringer { get; set; }
 
+
         // Add DbSet for User
         public DbSet<User> Users { get; set; }
+
+        public DbSet<ServiceSkjema> ServiceSkjemas { get; set; }
+
 
         public override int SaveChanges()
         {

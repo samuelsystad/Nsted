@@ -1,27 +1,30 @@
 ﻿CREATE DATABASE IF NOT EXISTS NstedDb;
-use NstedDb;
+USE NstedDb;
 
-{
-CREATE TABLE IF NOT EXISTS Kunder
-(
-    KundeId INT PRIMARY KEY,
-    Fornavn VARCHAR(50),
-    Etternavn VARCHAR(50),
-    Telefon INT,
-    Email VARCHAR(100),
-    Adresse VARCHAR(100),
-    Registrert DATETIME
+CREATE TABLE IF NOT EXISTS Users (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Email VARCHAR(255) NOT NULL,
+    PasswordHash VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Registreringer
-(
-    RegistreringId INT PRIMARY KEY,
-    KundeId INT,
+CREATE TABLE IF NOT EXISTS Kunder (
+    KundeId INT AUTO_INCREMENT PRIMARY KEY,
+    Fornavn VARCHAR(255) NOT NULL,
+    Etternavn VARCHAR(255) NOT NULL,
+    Telefon INT NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Adresse VARCHAR(255) NOT NULL,
+    Registrert DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Registreringer (
+    RegistreringId INT AUTO_INCREMENT PRIMARY KEY,
+    KundeId INT NOT NULL,
     BookingTilUke INT NOT NULL,
     HenvendelseMottatt DATETIME NOT NULL,
     CaseFerdig BOOLEAN NOT NULL,
     ProduktType VARCHAR(255) NOT NULL,
-    Feilbeskrivelse VARCHAR(500) NOT NULL,
+    Feilbeskrivelse TEXT NOT NULL,
     AvtaltLevering DATETIME NOT NULL,
     ProduktMottatt DATETIME NOT NULL,
     AvtaltFerdigstillelseInnen DATETIME NOT NULL,
@@ -29,7 +32,5 @@ CREATE TABLE IF NOT EXISTS Registreringer
     AntallTimerUtført INT NOT NULL,
     OrdreNr BOOLEAN NOT NULL,
     ServiceSkjema BOOLEAN NOT NULL,
-    FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId) -- Assumes Kunder table exists with KundeId as primary key
+    FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId)
 );
-
-        }

@@ -26,12 +26,20 @@
             <th>Handlinger</th>
         </tr>
     </thead>
-    <tbody>
+
         @foreach (var serviceskjema in Model)
         {
             <tr>
-                <td>@serviceskjema.ServiceSkjemaId</td>
-                <td>@serviceskjema.KundeId</td>
+                <td>
+                    <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })">
+                        @serviceskjema.ServiceSkjemaId
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Kunde", new { id = serviceskjema.KundeId })">
+                        @serviceskjema.KundeId
+                    </a>
+                </td>
                 <td>@serviceskjema.MottattDato.ToShortDateString()</td>
                 <td>@serviceskjema.OrdreNr</td>
                 <td>@serviceskjema.ProduktType</td>
@@ -47,8 +55,8 @@
                 <td>@serviceskjema.ForsendelsesMåte</td>
                 <td>@serviceskjema.KundeSignatur</td>
                 <td>@serviceskjema.MekanikerSignatur</td>
-               
+
             </tr>
         }
-    </tbody>
+
 </table>

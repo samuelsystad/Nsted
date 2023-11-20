@@ -24,10 +24,10 @@ namespace Nsted.Controllers
 
         public IActionResult Registrering()
         {
+            var customers = nstedDbContext.Kunder.ToList(); // Get the list of customers
+            ViewBag.CustomerList = customers; // Pass the list to the view
             return View();
         }
-
-      
 
         public IActionResult Arbeidsdokument()
         {
@@ -115,7 +115,6 @@ namespace Nsted.Controllers
 
             return View(serviceSkjema);
         }
-
         [HttpPost]
         public IActionResult UpdateServiceSkjema(ServiceSkjema updatedServiceSkjema)
         {

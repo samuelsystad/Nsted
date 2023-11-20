@@ -68,8 +68,10 @@
             </div>
         </div>
     </div>
-    <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
 
+    <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
+        <!-- Skjult felt for KundeId -->
+        <input type="hidden" id="kundeId" name="KundeId">
 
         <div class="row mb-3">
             <!-- MottattDato -->
@@ -192,7 +194,10 @@
     </form>
 </div>
 
-<script>var isNewCustomerFormVisible = false;
+
+
+<script>
+    var isNewCustomerFormVisible = false;
 
     function toggleCustomerForm() {
         var newCustomerFields = document.getElementById('newCustomerFields');
@@ -210,4 +215,23 @@
             existingCustomerSection.style.display = 'block';
             toggleButton.textContent = 'Legg til ny kunde';
         }
-    }</script>
+    }
+
+    function updateSelectedCustomer() {
+        var customerInput = document.getElementById('customerInput');
+        var selectedOption = document.querySelector(`#customers option[value="${customerInput.value}"]`);
+        var kundeIdField = document.getElementById('kundeId');
+
+        if (selectedOption) {
+            kundeIdField.value = selectedOption.getAttribute('data-value');
+        }
+    }
+
+    // Legg til eventlistener for endringer i customerInput
+    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
+
+    // Call the updateSelectedCustomer function on page load
+    window.onload = function () {
+        updateSelectedCustomer();
+    };
+</script>

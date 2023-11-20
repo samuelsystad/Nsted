@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nsted.Data;
 
@@ -10,82 +11,16 @@ using Nsted.Data;
 namespace Nsted.Migrations
 {
     [DbContext(typeof(NstedDbContext))]
-    partial class NstedDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231120134221_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("FullførtOrdre", b =>
-                {
-                    b.Property<int>("ServiceSkjemaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("Arbeidstimer")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AvtaltMedKunden")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("BrukteDeler")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("FerdigstiltDato")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("ForsendelsesMåte")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("KundeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("KundeSignatur")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("MekanikerSignatur")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("MottattDato")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("OrdreNr")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProduktType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Reparasjonsbeskrivelse")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ReturDeler")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("SerieNummer")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Servicetype")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ÅrsModell")
-                        .HasColumnType("int");
-
-                    b.HasKey("ServiceSkjemaId");
-
-                    b.ToTable("FullførteOrdrer");
-                });
 
             modelBuilder.Entity("Nsted.Models.Kunde", b =>
                 {

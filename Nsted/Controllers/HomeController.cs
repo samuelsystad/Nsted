@@ -31,10 +31,7 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult FerdigeOrdrer()
-        {
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

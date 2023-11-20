@@ -3,77 +3,122 @@
     ViewData["Title"] = "Rediger ServiceSkjema";
 }
 <link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
+
 <h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
 
-
 <form asp-controller="Ansatt" asp-action="UpdateServiceSkjema" method="post">
-    <div>
+
         <input type="hidden" asp-for="ServiceSkjemaId" />
         <input type="hidden" asp-for="KundeId" />
 
-        <label>Mottatt Dato:</label>
-        <input type="date" asp-for="MottattDato" readonly class="readonly-input" />
+        <!-- Read-only Display -->
+        <div class="view-only">
+            <div class="row">
+                <div class="col-md-6"><p>Mottatt Dato: <br /><span>@Model.MottattDato.ToString("yyyy-MM-dd")</span></p></div>
+                <div class="col-md-6"><p>Ordre Nr: <br /><span>@Model.OrdreNr</span></p></div>
+                <div class="col-md-6"><p>Produkt Type: <br /><span>@Model.ProduktType</span></p></div>
+                <div class="col-md-6"><p>Årsmodell: <br /><span>@Model.ÅrsModell</span></p></div>
+                <div class="col-md-6"><p>Servicetype: <br /><span>@Model.Servicetype</span></p></div>
+                <div class="col-md-6"><p>Serienummer:<br /> <span>@Model.SerieNummer</span></p></div>
+                <div class="col-md-6"><p>Avtalt med Kunde: <br /><span>@Model.AvtaltMedKunden</span></p></div>
+                <div class="col-md-6"><p>Reparasjonsbeskrivelse:<br /> <span>@Model.Reparasjonsbeskrivelse</span></p></div>
+                <div class="col-md-6"><p>Brukte Deler: <br /><span>@Model.BrukteDeler</span></p></div>
+                <div class="col-md-6"><p>Arbeidstimer: <br /><span>@Model.Arbeidstimer</span></p></div>
+                <div class="col-md-6"><p>Ferdigstilt Dato: <br /><span>@Model.FerdigstiltDato.ToString("yyyy-MM-dd")</span></p></div>
+                <div class="col-md-6"><p>Retur Deler: <br /><span>@Model.ReturDeler</span></p></div>
+                <div class="col-md-6"><p>Forsendelsesmåte: <br /><span>@Model.ForsendelsesMåte</span></p></div>
+                <div class="col-md-6"><p>Kunde Signatur: <br /><span>@Model.KundeSignatur</span></p></div>
+                <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
+            </div>
 
-        <label>Ordre Nr:</label>
-        <input type="number" asp-for="OrdreNr" readonly class="readonly-input" />
-
-        <label>Produkt Type:</label>
-        <input type="text" asp-for="ProduktType" readonly class="readonly-input" />
-
-        <label>Årsmodell:</label>
-        <input type="number" asp-for="ÅrsModell" readonly class="readonly-input" />
-
-        <label>Servicetype:</label>
-        <input type="text" asp-for="Servicetype" readonly class="readonly-input" />
-
-        <label>Serienummer:</label>
-        <input type="number" asp-for="SerieNummer" readonly class="readonly-input" />
-
-        <label>Avtalt med Kunde:</label>
-        <textarea asp-for="AvtaltMedKunden" readonly class="readonly-input"></textarea>
-
-        <label>Reparasjonsbeskrivelse:</label>
-        <textarea asp-for="Reparasjonsbeskrivelse" readonly class="readonly-input"></textarea>
-
-        <label>Brukte Deler:</label>
-        <textarea asp-for="BrukteDeler" readonly class="readonly-input"></textarea>
-
-        <label>Arbeidstimer:</label>
-        <input type="number" asp-for="Arbeidstimer" readonly class="readonly-input" />
-
-        <label>Ferdigstilt Dato:</label>
-        <input type="date" asp-for="FerdigstiltDato" readonly class="readonly-input" />
-
-        <label>Retur Deler:</label>
-        <input type="text" asp-for="ReturDeler" readonly class="readonly-input" />
-
-        <label>Forsendelsesmåte:</label>
-        <input type="text" asp-for="ForsendelsesMåte" readonly class="readonly-input" />
-
-        <label>Kunde Signatur:</label>
-        <input type="text" asp-for="KundeSignatur" readonly class="readonly-input" />
-
-        <label>Mekaniker Signatur:</label>
-        <input type="text" asp-for="MekanikerSignatur" readonly class="readonly-input" />
-
-        <!-- Edit button -->
-        <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
-    </div>
+   <!-- Edit button (initially visible) -->
+ <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+ </div>
+            <div class="editable-field" style="display: none;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Mottatt Dato:</label>
+                        <input type="date" asp-for="MottattDato" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Ordre Nr:</label>
+                        <input type="number" asp-for="OrdreNr" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Produkt Type:</label>
+                        <input type="text" asp-for="ProduktType" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Årsmodell:</label>
+                        <input type="number" asp-for="ÅrsModell" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Servicetype:</label>
+                        <input type="text" asp-for="Servicetype" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Serienummer:</label>
+                        <input type="number" asp-for="SerieNummer" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Avtalt med Kunde:</label>
+                        <textarea asp-for="AvtaltMedKunden"class="form-control readonly-input"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Reparasjonsbeskrivelse:</label>
+                        <textarea asp-for="Reparasjonsbeskrivelse" class="form-control readonly-input"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Brukte Deler:</label>
+                        <textarea asp-for="BrukteDeler" class="form-control readonly-input"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Arbeidstimer:</label>
+                        <input type="number" asp-for="Arbeidstimer" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Ferdigstilt Dato:</label>
+                        <input type="date" asp-for="FerdigstiltDato" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Retur Deler:</label>
+                        <input type="text" asp-for="ReturDeler" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Forsendelsesmåte:</label>
+                        <input type="text" asp-for="ForsendelsesMåte" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Kunde Signatur:</label>
+                        <input type="text" asp-for="KundeSignatur" class="form-control readonly-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mekaniker Signatur:</label>
+                        <input type="text" asp-for="MekanikerSignatur" class="form-control readonly-input" />
+                        </div>
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
+                </div>
 </form>
 <div id="editAlert" style="display:none;" class="alert alert-info">
     Du kan nå redigere skjemaet.
 </div>
 <script>function enableEditing() {
-        var formElements = document.querySelectorAll('.readonly-input');
-        formElements.forEach(function (element) {
-            element.removeAttribute('readonly');
-            element.classList.remove('readonly-input');
-            element.classList.add('editable-input');
+        var viewOnlyFields = document.querySelector('.view-only');
+        var editableFields = document.querySelector('.editable-field');
+
+        viewOnlyFields.style.display = 'none';
+        editableFields.style.display = 'block';
+
+        // Remove the 'readonly' attribute from each input field
+        var inputs = document.querySelectorAll('.editable-field .readonly-input');
+        inputs.forEach(function (input) {
+            input.removeAttribute('readonly');
         });
 
         document.getElementById('editAlert').style.display = 'block';
         document.getElementById('editButton').style.display = 'none';
         document.getElementById('updateButton').style.display = 'block';
-    }</script>
+    }
+    </script>

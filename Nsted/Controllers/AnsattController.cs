@@ -28,6 +28,7 @@ namespace Nsted.Controllers
             ViewBag.CustomerList = customers; // Pass the list to the view
             return View();
         }
+
         public IActionResult Arbeidsdokument()
         {
             return View();
@@ -43,6 +44,7 @@ namespace Nsted.Controllers
         [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
+
             nstedDbContext.Kunder.Add(kunde);
             nstedDbContext.SaveChanges(); // Save customer to get CustomerId
 
@@ -54,11 +56,13 @@ namespace Nsted.Controllers
         }
 
         [HttpPost]
+
         public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema)
         {
+
             nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
             nstedDbContext.SaveChanges();
-            return RedirectToAction("ListServiceSkjema"); // Redirect after successful save
+            return RedirectToAction("ListServiceSkjema"); // Redirect etter vellykket lagring
         }
 
         public IActionResult Delete(int id)
@@ -179,5 +183,55 @@ namespace Nsted.Controllers
 
             return RedirectToAction("ListServiceSkjema");
         }
+
+        public IActionResult FullførService(int id)
+        {
+            var serviceSkjema = nstedDbContext.ServiceSkjemas.Find(id);
+            if (serviceSkjema == null)
+            {
+                // Håndter feil hvis serviceskjema ikke finnes
+                return NotFound();
+            }
+            var fullførtOrdre = new FullførtOrdre
+            {
+                ServiceSkjemaId = serviceSkjema.ServiceSkjemaId,
+                KundeId = serviceSkjema.KundeId,
+                MottattDato = serviceSkjema.MottattDato,
+                OrdreNr = serviceSkjema.OrdreNr,
+                ProduktType = serviceSkjema.ProduktType,
+                ÅrsModell = serviceSkjema.ÅrsModell,
+                Servicetype = serviceSkjema.Servicetype,
+                SerieNummer = serviceSkjema.SerieNummer,
+                AvtaltMedKunden = serviceSkjema.AvtaltMedKunden,
+                Reparasjonsbeskrivelse = serviceSkjema.Reparasjonsbeskrivelse,
+                BrukteDeler = serviceSkjema.BrukteDeler,
+                Arbeidstimer = serviceSkjema.Arbeidstimer,
+                FerdigstiltDato = serviceSkjema.FerdigstiltDato,
+                ReturDeler = serviceSkjema.ReturDeler,
+                ForsendelsesMåte = serviceSkjema.ForsendelsesMåte,
+                KundeSignatur = serviceSkjema.KundeSignatur,
+                MekanikerSignatur = serviceSkjema.MekanikerSignatur
+            };
+
+            // Lagre fullført ordre i databasen
+            nstedDbContext.FullførteOrdrer.Add(fullførtOrdre);
+            nstedDbContext.SaveChanges();
+
+            // Slett servicen fra serviceskjema-databasen
+            nstedDbContext.ServiceSkjemas.Remove(serviceSkjema);
+            nstedDbContext.SaveChanges();
+
+            // Du kan returnere en passende respons, for eksempel en bekreftelsesmelding eller redirect til en annen visning
+            return RedirectToAction("ListFullførteOrdrer"); // Redirect tilbake til oversikten over serviceskjema
+        }
+
+
+        public IActionResult ListFullførteOrdrer()
+        {
+            List<FullførtOrdre> fullførteOrdrer = nstedDbContext.FullførteOrdrer.ToList();
+            return View(fullførteOrdrer);
+        }
+
     }
 }
+        

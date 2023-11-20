@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Nsted.Models; // Assuming User is within this namespace
 
+
 namespace Nsted.Data
 {
     public class NstedDbContext : DbContext
@@ -19,6 +20,8 @@ namespace Nsted.Data
         public DbSet<User> Users { get; set; }
 
         public DbSet<ServiceSkjema> ServiceSkjemas { get; set; }
+
+        public DbSet<FullførtOrdre> FullførteOrdrer { get; set; }
 
 
         public override int SaveChanges()

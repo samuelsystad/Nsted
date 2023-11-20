@@ -1,0 +1,60 @@
+﻿@model List<FullførtOrdre>
+<link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
+
+<h1> Oversikt over Fullførte Ordrer</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Service Skjema ID</th>
+            <th>Kunde Nr</th>
+            <th>Mottatt Dato</th>
+            <th>Ordre Nr</th>
+            <th>Produkt Type</th>
+            <th>Årsmodell</th>
+            <th>Servicetype</th>
+            <th>Serienummer</th>
+            <th>Avtalt med Kunde</th>
+            <th>Reparasjonsbeskrivelse</th>
+            <th>Brukte Deler</th>
+            <th>Arbeidstimer</th>
+            <th>Ferdigstilt Dato</th>
+            <th>Retur Deler</th>
+            <th>Forsendelsesmåte</th>
+            <th>Kunde Signatur</th>
+            <th>Mekaniker Signatur</th>
+            <th>Handlinger</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fullførtOrdre in Model)
+        {
+            <tr>
+                <td>
+                    @fullførtOrdre.ServiceSkjemaId
+                </td>
+                <td>
+                    @fullførtOrdre.KundeId
+                </td>
+                <td>@fullførtOrdre.MottattDato.ToShortDateString()</td>
+                <td>@fullførtOrdre.OrdreNr</td>
+                <td>@fullførtOrdre.ProduktType</td>
+                <td>@fullførtOrdre.ÅrsModell</td>
+                <td>@fullførtOrdre.Servicetype</td>
+                <td>@fullførtOrdre.SerieNummer</td>
+                <td>@fullførtOrdre.AvtaltMedKunden</td>
+                <td>@fullførtOrdre.Reparasjonsbeskrivelse</td>
+                <td>@fullførtOrdre.BrukteDeler</td>
+                <td>@fullførtOrdre.Arbeidstimer</td>
+                <td>@fullførtOrdre.FerdigstiltDato.ToShortDateString()</td>
+                <td>@fullførtOrdre.ReturDeler</td>
+                <td>@fullførtOrdre.ForsendelsesMåte</td>
+                <td>@fullførtOrdre.KundeSignatur</td>
+                <td>@fullførtOrdre.MekanikerSignatur</td>
+                <td>
+                    <!-- Du kan legge til handlinger for fullførte ordrer her -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

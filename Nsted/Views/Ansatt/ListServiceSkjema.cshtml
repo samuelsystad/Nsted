@@ -26,7 +26,7 @@
             <th>Handlinger</th>
         </tr>
     </thead>
-
+    <tbody>
         @foreach (var serviceskjema in Model)
         {
             <tr>
@@ -55,8 +55,13 @@
                 <td>@serviceskjema.ForsendelsesMåte</td>
                 <td>@serviceskjema.KundeSignatur</td>
                 <td>@serviceskjema.MekanikerSignatur</td>
+                <td>
+                    <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })">
+                        <button type="submit" class="btn btn-success">Fullfør</button>
+                    </form>
 
+                </td>
             </tr>
         }
-
+    </tbody>
 </table>

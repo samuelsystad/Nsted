@@ -55,3 +55,25 @@ CREATE TABLE IF NOT EXISTS ServiceSkjemas (
     MekanikerSignatur VARCHAR(255) NOT NULL,
     FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId)
 );
+
+CREATE TABLE IF NOT EXISTS FullførteOrdrer (
+    ServiceSkjemaId INT AUTO_INCREMENT PRIMARY KEY,
+    KundeId INT,
+    MottattDato DATETIME,
+    OrdreNr INT,
+    ProduktType VARCHAR(255),
+    ÅrsModell INT,
+    Servicetype VARCHAR(255),
+    SerieNummer INT,
+    AvtaltMedKunden VARCHAR(255),
+    Reparasjonsbeskrivelse VARCHAR(255),
+    BrukteDeler VARCHAR(255),
+    Arbeidstimer INT,
+    FerdigstiltDato DATETIME,
+    ReturDeler VARCHAR(255),
+    ForsendelsesMåte VARCHAR(155),
+    KundeSignatur VARCHAR(155),
+    MekanikerSignatur VARCHAR(155),
+    FOREIGN KEY (KundeId) REFERENCES Kunder(KundeId)
+);
+

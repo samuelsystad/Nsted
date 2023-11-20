@@ -7,6 +7,9 @@ using Nsted.Data;
 using Nsted.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,5 +50,7 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
+
+
 
 app.Run();

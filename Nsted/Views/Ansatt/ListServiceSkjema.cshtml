@@ -56,10 +56,16 @@
                 <td>@serviceskjema.KundeSignatur</td>
                 <td>@serviceskjema.MekanikerSignatur</td>
                 <td>
-                    <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })">
+                    <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })"
+                          onsubmit="return confirmCompletion();">
                         <button type="submit" class="btn btn-success">Fullfør</button>
                     </form>
 
+                    <script>
+                        function confirmCompletion() {
+                            return confirm("Er du sikker på at du vil fullføre servicen?");
+                        }
+                    </script>
                 </td>
             </tr>
         }

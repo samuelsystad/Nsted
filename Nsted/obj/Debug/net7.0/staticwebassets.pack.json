@@ -13,16 +13,16 @@
       "PackagePath": "staticwebassets\\css\\AddKundeStyle.css"
     },
     {
-      "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\FerdigeOrdrer.css",
-      "PackagePath": "staticwebassets\\css\\FerdigeOrdrer.css"
-    },
-    {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\Homestyle.css",
       "PackagePath": "staticwebassets\\css\\Homestyle.css"
     },
     {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\KundeList.css",
       "PackagePath": "staticwebassets\\css\\KundeList.css"
+    },
+    {
+      "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\ListFullførteOrdrer.css",
+      "PackagePath": "staticwebassets\\css\\ListFullførteOrdrer.css"
     },
     {
       "Id": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\wwwroot\\css\\ListRegistrering.css",

@@ -1,6 +1,6 @@
-﻿h2 {
+﻿h1 {
     position: center;
-    margin-left: 450px;
+    margin-left: 330px;
     color: #9cb7c2;
     margin-top: 10px;
 }
@@ -8,7 +8,8 @@
 .table {
     margin-top: 60px;
     position: fixed;
-    font-size: 14px;
+    left: 0;
+    font-size: 11px;
     font: bold;
     width: 100%;
     border-collapse: collapse;
@@ -19,14 +20,13 @@
         border-bottom: 2px solid black;
         background-color: #9cb7c2;
         color: black;
+        
     }
 
     .table td {
         border-right: 1px solid black;
         background-color: white;
     }
-
-   
 
     .table th {
         border-right: 1px solid black;
@@ -36,3 +36,7 @@
     .table .green-background {
         color: green !important;
     }
+
+
+
+

@@ -25,14 +25,6 @@
       "PackagePath": "staticwebassets/css/ListFullførteOrdrer.css"
     },
     {
-      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ListRegistrering.css",
-      "PackagePath": "staticwebassets/css/ListRegistrering.css"
-    },
-    {
-      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ListServiceSkjema.css",
-      "PackagePath": "staticwebassets/css/ListServiceSkjema.css"
-    },
-    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/LoggedInAs.css",
       "PackagePath": "staticwebassets/css/LoggedInAs.css"
     },

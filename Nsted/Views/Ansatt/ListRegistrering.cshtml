@@ -1,5 +1,5 @@
 ﻿@model List<Registrering>
-<link rel="stylesheet" href="~/css/ListRegistrering.css" />
+<link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 
 <h1>Oversikt over registreringskjema</h1>
 
@@ -27,7 +27,11 @@
         {
             <tr>
                 <td>@registrering.RegistreringId</td>
-                <td>@registrering.KundeId</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Kunde", new { id = registrering.KundeId })">
+                        @registrering.KundeId
+                    </a>
+                </td>
                 <td>@registrering.BookingTilUke</td>
                 <td>@registrering.HenvendelseMottatt.ToShortDateString()</td>
                 <td>@registrering.CaseFerdig</td>

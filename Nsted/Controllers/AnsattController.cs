@@ -29,8 +29,8 @@ namespace Nsted.Controllers
             return View();
         }
 
-      
-            public IActionResult Arbeidsdokument()
+
+        public IActionResult Arbeidsdokument()
         {
             return View();
         }
@@ -42,10 +42,7 @@ namespace Nsted.Controllers
             return View();
         }
 
-
-
-        [HttpPost]
-        public IActionResult NyServiceNyKunde(Kunde kunde, ServiceSkjema serviceSkjema)
+        public IActionResult NyKundeOgService(Kunde kunde, ServiceSkjema serviceSkjema)
         {
             nstedDbContext.Kunder.Add(kunde);
             nstedDbContext.SaveChanges();
@@ -60,6 +57,7 @@ namespace Nsted.Controllers
         }
 
 
+
         [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
@@ -71,7 +69,7 @@ namespace Nsted.Controllers
             nstedDbContext.Registreringer.Add(registrering);
             nstedDbContext.SaveChanges();
 
-            return RedirectToAction("ListRegistrering"); 
+            return RedirectToAction("ListRegistrering");
         }
 
         [HttpPost]
@@ -268,4 +266,4 @@ namespace Nsted.Controllers
 
     }
 }
-        
+

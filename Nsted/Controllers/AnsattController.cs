@@ -29,7 +29,8 @@ namespace Nsted.Controllers
             return View();
         }
 
-        public IActionResult Arbeidsdokument()
+      
+            public IActionResult Arbeidsdokument()
         {
             return View();
         }
@@ -44,17 +45,33 @@ namespace Nsted.Controllers
 
 
         [HttpPost]
+        public IActionResult NyServiceNyKunde(Kunde kunde, ServiceSkjema serviceSkjema)
+        {
+            nstedDbContext.Kunder.Add(kunde);
+            nstedDbContext.SaveChanges();
+
+            // Ensure that the KundeId is set for the serviceSkjema
+            serviceSkjema.KundeId = kunde.KundeId;
+
+            nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
+            nstedDbContext.SaveChanges();
+
+            return RedirectToAction("ListServiceSkjema");
+        }
+
+
+        [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
 
             nstedDbContext.Kunder.Add(kunde);
-            nstedDbContext.SaveChanges(); // Save customer to get CustomerId
+            nstedDbContext.SaveChanges();
 
             registrering.KundeId = kunde.KundeId;
             nstedDbContext.Registreringer.Add(registrering);
             nstedDbContext.SaveChanges();
 
-            return RedirectToAction("ListRegistrering"); // Redirect to success page
+            return RedirectToAction("ListRegistrering"); 
         }
 
         [HttpPost]
@@ -67,12 +84,12 @@ namespace Nsted.Controllers
                     throw new InvalidOperationException("Invalid KundeId");
                 }
 
-                serviceSkjema.KundeId = kundeId; // Assign existing KundeId to ServiceSkjema
                 nstedDbContext.ServiceSkjemas.Add(serviceSkjema); // Add new ServiceSkjema
                 nstedDbContext.SaveChanges(); // Save changes
 
                 return RedirectToAction("ListServiceSkjema"); // Redirect to list view
             }
+
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while creating ServiceSkjema");

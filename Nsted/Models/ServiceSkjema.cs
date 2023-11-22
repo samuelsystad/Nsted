@@ -1,26 +1,31 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations; // Required for data annotations
+using System.ComponentModel.DataAnnotations;
 
 namespace Nsted.Models
 {
     public class ServiceSkjema
     {
         public int ServiceSkjemaId { get; set; }
-        public int KundeId { get; set; } // Foreign Key referencing Kunde
+        public int KundeId { get; set; } // Foreign key referencing the Kunder table
 
-        // Navigation property to Kunde
-        public Kunde Kunde { get; set; }
+        public Kunde Kunde { get; set; } // Navigation property to Kunde
 
+        [Required]
         public DateTime MottattDato { get; set; }
+
+        [Required]
         public int OrdreNr { get; set; }
 
         [Required]
         public string ProduktType { get; set; }
 
+        [Required]
         public int ÅrsModell { get; set; }
 
+        [Required]
         public string Servicetype { get; set; }
 
+        [Required]
         public int SerieNummer { get; set; }
 
         [Required]
@@ -32,7 +37,10 @@ namespace Nsted.Models
         [Required]
         public string BrukteDeler { get; set; }
 
+        [Required]
         public int Arbeidstimer { get; set; }
+
+        [Required]
         public DateTime FerdigstiltDato { get; set; }
 
         [Required]

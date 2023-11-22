@@ -1,0 +1,145 @@
+﻿@model Nsted.Models.ServiceSkjema
+
+@{
+    ViewData["Title"] = "Legg Til Ny Kunde for Service";
+}
+
+<link rel="stylesheet" href="~/css/NyServicestyle.css" />
+
+<h1>Nytt Serviceskjema</h1>
+<div class="container">
+    <!-- Toggle Button for Adding New Customer -->
+    <div class="col-12 mb-3 text-center">
+        <button class="btn btn-outline-secondary" id="toggleButton" onclick="window.location.href='/Ansatt/NyService'">Legg til ny kunde</button>
+    </div>
+    <form asp-controller="Ansatt" asp-action="NyServiceNyKunde" method="post">
+        <div class="row mb-3">
+            <div class="col-12">
+                <label class="form-label">Kundeinformasjon:</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" asp-for="Kunde.Fornavn" placeholder="Fornavn" required>
+                    <label asp-for="Kunde.Fornavn">Fornavn</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" asp-for="Kunde.Etternavn" placeholder="Etternavn" required>
+                    <label asp-for="Kunde.Etternavn">Etternavn</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" asp-for="Kunde.Adresse" placeholder="Adresse">
+                    <label asp-for="Kunde.Adresse">Adresse</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control" asp-for="Kunde.Email" placeholder="navn@eksempel.no" required>
+                    <label asp-for="Kunde.Email">Email addresse</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="number" class="form-control" asp-for="Kunde.Telefon" placeholder="Telefon" required>
+                    <label asp-for="Kunde.Telefon">Telefon</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" asp-for="ProduktType" placeholder="ProduktType" required>
+            <label asp-for="ProduktType">Produkttype</label>
+        </div>
+
+        <!-- ÅrsModell -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control" asp-for="ÅrsModell" placeholder="Årsmodell" required>
+                <label asp-for="ÅrsModell">Årsmodell</label>
+            </div>
+        </div>
+
+        <!-- Servicetype -->
+        <div class="col-md-6">
+            <label for="servicetype" class="form-label">Servicetype?</label>
+            <select class="form-select" asp-for="Servicetype" aria-label="Servicetype" required>
+                <option disabled selected>Velg et alternativ</option>
+                <option value="Reparasjon">Reparasjon</option>
+                <option value="Garanti">Garanti</option>
+            </select>
+        </div>
+
+        <!-- SerieNummer -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control" asp-for="SerieNummer" placeholder="SerieNummer" required>
+                <label asp-for="SerieNummer">Serienummer</label>
+            </div>
+        </div>
+
+        <!-- AvtaltMedKunden -->
+        <div class="col-md-12">
+            <label for="avtaltMedKunden" class="form-label">Hva er avtalt med kunden?:</label>
+            <textarea class="form-control" asp-for="AvtaltMedKunden" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- Reparasjonsbeskrivelse -->
+        <div class="col-md-12">
+            <label for="reparasjonsbeskrivelse" class="form-label">Reparasjonsbeskrivelse:</label>
+            <textarea class="form-control" asp-for="Reparasjonsbeskrivelse" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- BrukteDeler -->
+        <div class="col-md-12">
+            <label for="brukteDeler" class="form-label">Brukte deler:</label>
+            <textarea class="form-control" asp-for="BrukteDeler" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- Arbeidstimer -->
+        <div class="col-md-6">
+            <label for="arbeidstimer" class="form-label">Arbeidstimer:</label>
+            <input type="number" class="form-control" asp-for="Arbeidstimer" placeholder="arbeidstimer" required>
+        </div>
+
+        <!-- FerdigstiltDato -->
+        <div class="col-md-6">
+            <label for="ferdigstiltDato" class="form-label">Ferdigstilt dato:</label>
+            <input type="date" class="form-control" asp-for="FerdigstiltDato" required>
+        </div>
+
+        <!-- ReturDeler -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" asp-for="ReturDeler" placeholder="Utskiftet deler returnert" required>
+                <label asp-for="ReturDeler">Returdeler</label>
+            </div>
+        </div>
+
+        <!-- ForsendelsesMåte -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" asp-for="ForsendelsesMåte" placeholder="Forsendelsesmåte" required>
+                <label asp-for="ForsendelsesMåte">Forsendelsesmåte</label>
+            </div>
+        </div>
+
+        <!-- KundeSignatur -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" asp-for="KundeSignatur" placeholder="Kunde signatur" required>
+                <label asp-for="KundeSignatur">Kunde signatur</label>
+            </div>
+        </div>
+
+        <!-- MekanikerSignatur -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" asp-for="MekanikerSignatur" placeholder="Mekaniker signatur" required>
+                <label asp-for="MekanikerSignatur">Mekaniker signatur</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Lagre Kunde og Service</button>
+    </form>
+</div>

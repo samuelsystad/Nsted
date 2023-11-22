@@ -13,14 +13,14 @@
     <div class="row mb-3">
         <!-- Toggle Button for Adding New Customer -->
         <div class="col-12 mb-3 text-center">
-            <button class="btn btn-outline-secondary" id="toggleButton" onclick="window.location.href='/Kunde/LeggTilNyKundeService'">Legg til ny kunde</button>
+            <button class="btn btn-outline-secondary" id="toggleButton" onclick="window.location.href='/Ansatt/NyServiceNyKunde'">Legg til ny kunde</button>
         </div>
 
 
         <!-- Existing Customer Dropdown -->
         <div class="col-md-6" id="existingCustomerSection">
             <label for="customerInput" class="form-label">Søk og velg en eksisterende kunde:</label>
-            <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke..." onchange="updateSelectedCustomer()">
+            <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke...">
             <datalist id="customers">
                 @foreach (var customer in customerList)
                 {
@@ -31,7 +31,7 @@
     </div>
     <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
         <!-- Skjult felt for KundeId -->
-        <input type="hidden" id="kundeId" name="KundeId" />
+        <input type="hidden" id="kundeId" name="KundeId">
 
         <div class="row mb-3">
             <!-- MottattDato -->
@@ -116,7 +116,6 @@
                 <label for="ferdigstiltDato" class="form-label">Ferdigstilt dato:</label>
                 <input type="date" class="form-control" id="ferdigstiltDato" name="FerdigstiltDato" placeholder="dd/mm/yyyy" required>
             </div>
-
             <!-- ReturDeler -->
             <div class="col-md-6">
                 <div class="form-floating">
@@ -155,14 +154,16 @@
 </div>
 
 
-<script>function updateSelectedCustomer() {
+<script>
+        function updateSelectedCustomer() {
         var customerInput = document.getElementById('customerInput');
         var selectedOption = document.querySelector(`#customers option[value="${customerInput.value}"]`);
         var kundeIdField = document.getElementById('kundeId');
 
         if (selectedOption) {
             kundeIdField.value = selectedOption.getAttribute('data-value');
-        } else {
-            kundeIdField.value = '';
         }
-    }</script>>
+        }
+
+    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
+    </script>>

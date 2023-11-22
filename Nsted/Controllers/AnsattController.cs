@@ -29,6 +29,15 @@ namespace Nsted.Controllers
             return View();
         }
 
+        public IActionResult EksisterendeKunde()
+        {
+
+            var customers = nstedDbContext.Kunder.ToList(); // Get the list of customers
+            ViewBag.CustomerList = customers; // Pass the list to the view
+            return View();
+        }
+    
+
         public IActionResult Arbeidsdokument()
         {
             return View();
@@ -55,15 +64,28 @@ namespace Nsted.Controllers
             return RedirectToAction("ListRegistrering"); // Redirect to success page
         }
 
+
+
+
+
+
         [HttpPost]
-
-        public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema)
+        public IActionResult HandleFormSubmission2(Registrering registrering, int kundeId) // Changed parameter to directly use kundeId
         {
+            
+                if (kundeId <= 0)
+                {
+                    throw new InvalidOperationException("Invalid KundeId");
+                }
+            registrering.KundeId = kundeId;
+            nstedDbContext.Registreringer.Add(registrering); // Add new ServiceSkjema
+                nstedDbContext.SaveChanges(); // Save changes
 
-            nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
-            nstedDbContext.SaveChanges();
-            return RedirectToAction("ListServiceSkjema"); // Redirect etter vellykket lagring
-        }
+                return RedirectToAction("ListRegistrering"); // Redirect to list view
+            
+            }
+           
+       
 
         public IActionResult Delete(int id)
         {

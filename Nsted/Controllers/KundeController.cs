@@ -22,6 +22,12 @@ namespace Nsted.Controllers
         }
 
         [HttpPost]
+        public IActionResult LeggTilNyKundeService()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public IActionResult Add(Kunde kunde)
         {
             nstedDbContext.Add(kunde);

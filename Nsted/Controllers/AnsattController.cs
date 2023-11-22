@@ -41,6 +41,8 @@ namespace Nsted.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         public IActionResult HandleFormSubmission(Kunde kunde, Registrering registrering)
         {
@@ -56,14 +58,29 @@ namespace Nsted.Controllers
         }
 
         [HttpPost]
-
-        public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema)
+        public IActionResult CreateServiceSkjema(ServiceSkjema serviceSkjema, int kundeId) // Changed parameter to directly use kundeId
         {
+            try
+            {
+                if (kundeId <= 0)
+                {
+                    throw new InvalidOperationException("Invalid KundeId");
+                }
 
-            nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
-            nstedDbContext.SaveChanges();
-            return RedirectToAction("ListServiceSkjema"); // Redirect etter vellykket lagring
+                serviceSkjema.KundeId = kundeId; // Assign existing KundeId to ServiceSkjema
+                nstedDbContext.ServiceSkjemas.Add(serviceSkjema); // Add new ServiceSkjema
+                nstedDbContext.SaveChanges(); // Save changes
+
+                return RedirectToAction("ListServiceSkjema"); // Redirect to list view
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating ServiceSkjema");
+                // Handle error appropriately, maybe redirect to an error view
+                return View("Error");
+            }
         }
+
 
         public IActionResult Delete(int id)
         {

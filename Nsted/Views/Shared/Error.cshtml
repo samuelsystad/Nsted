@@ -6,11 +6,27 @@
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <h3>Error Details</h3>
+    <p><strong>Message:</strong> @Model.ErrorMessage</p>
+}
+
+@if (!string.IsNullOrEmpty(Model.StackTrace))
+{
+    <p><strong>Stack Trace:</strong></p>
+    <pre>@Model.StackTrace</pre>
+}
+
 @if (Model.ShowRequestId)
 {
     <p>
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
+}
+@if (!string.IsNullOrEmpty(Model.InnerExceptionMessage))
+{
+    <p><strong>Inner Exception Message:</strong> @Model.InnerExceptionMessage</p>
 }
 
 <h3>Development Mode</h3>

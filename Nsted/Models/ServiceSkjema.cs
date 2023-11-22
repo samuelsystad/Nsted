@@ -19,7 +19,6 @@ namespace Nsted.Models
 
         public int ÅrsModell { get; set; }
 
-        // If Servicetype is a string, change to string
         public string Servicetype { get; set; }
 
         public int SerieNummer { get; set; }

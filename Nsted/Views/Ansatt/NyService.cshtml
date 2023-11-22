@@ -9,18 +9,18 @@
 <h1>Nytt Serviceskjema</h1>
 
 <div class="container">
-
     <!-- Customer Selection Section -->
     <div class="row mb-3">
-        <!-- Toggle Button -->
+        <!-- Toggle Button for Adding New Customer -->
         <div class="col-12 mb-3 text-center">
-            <button class="btn btn-outline-secondary" id="toggleButton" onclick="toggleCustomerForm()">Legg til ny kunde</button>
+            <button class="btn btn-outline-secondary" id="toggleButton" onclick="window.location.href='/Kunde/LeggTilNyKundeService'">Legg til ny kunde</button>
         </div>
+
 
         <!-- Existing Customer Dropdown -->
         <div class="col-md-6" id="existingCustomerSection">
             <label for="customerInput" class="form-label">Søk og velg en eksisterende kunde:</label>
-            <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke...">
+            <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke..." onchange="updateSelectedCustomer()">
             <datalist id="customers">
                 @foreach (var customer in customerList)
                 {
@@ -28,51 +28,10 @@
                 }
             </datalist>
         </div>
-
-        <!-- New Customer Fields (Initially Hidden) -->
-        <div id="newCustomerFields" style="display: none;">
-            <!-- Kunde Informasjon -->
-            <div class="row mb-3">
-                <div class="col-12">
-                    <label class="form-label">Legg til ny kunde:</label>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn">
-                        <label for="fornavn">Fornavn</label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn">
-                        <label for="etternavn">Etternavn</label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse">
-                        <label for="adresse">Adresse</label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no">
-                        <label for="email">Email addresse</label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon">
-                        <label for="telefonNummer">Telefon</label>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
     <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
         <!-- Skjult felt for KundeId -->
-        <input type="hidden" id="kundeId" name="KundeId">
+        <input type="hidden" id="kundeId" name="KundeId" />
 
         <div class="row mb-3">
             <!-- MottattDato -->
@@ -196,43 +155,14 @@
 </div>
 
 
-
-<script>
-    var isNewCustomerFormVisible = false;
-
-    function toggleCustomerForm() {
-        var newCustomerFields = document.getElementById('newCustomerFields');
-        var existingCustomerSection = document.getElementById('existingCustomerSection');
-        var toggleButton = document.getElementById('toggleButton');
-
-        isNewCustomerFormVisible = !isNewCustomerFormVisible;
-
-        if (isNewCustomerFormVisible) {
-            newCustomerFields.style.display = 'block';
-            existingCustomerSection.style.display = 'none';
-            toggleButton.textContent = 'Velg eksisterende kunde';
-        } else {
-            newCustomerFields.style.display = 'none';
-            existingCustomerSection.style.display = 'block';
-            toggleButton.textContent = 'Legg til ny kunde';
-        }
-    }
-
-    function updateSelectedCustomer() {
+<script>function updateSelectedCustomer() {
         var customerInput = document.getElementById('customerInput');
         var selectedOption = document.querySelector(`#customers option[value="${customerInput.value}"]`);
         var kundeIdField = document.getElementById('kundeId');
 
         if (selectedOption) {
             kundeIdField.value = selectedOption.getAttribute('data-value');
+        } else {
+            kundeIdField.value = '';
         }
-    }
-
-    // Legg til eventlistener for endringer i customerInput
-    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
-
-    // Call the updateSelectedCustomer function on page load
-    window.onload = function () {
-        updateSelectedCustomer();
-    };
-</script>
+    }</script>>

@@ -6575,7 +6575,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "BCrypt.Net-Next >= 4.0.3",
-      "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
       "Microsoft.Owin.Security.OAuth >= 4.2.2",
@@ -6585,26 +6584,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\simen\\.nuget\\packages\\": {}
+    "/Users/andreasiversen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
+      "projectUniqueName": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
       "projectName": "Nsted",
-      "projectPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\Nsted.csproj",
-      "packagesPath": "C:\\Users\\simen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simen\\Desktop\\IT\\Nsted\\Nsted\\obj\\",
+      "projectPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
+      "packagesPath": "/Users/andreasiversen/.nuget/packages/",
+      "outputPath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\simen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/andreasiversen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6626,10 +6624,6 @@
           "BCrypt.Net-Next": {
             "target": "Package",
             "version": "[4.0.3, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.13, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -6679,7 +6673,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
       }
     }
   },

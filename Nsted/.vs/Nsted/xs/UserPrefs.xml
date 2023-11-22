@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{C76B95EF-46DE-4B71-880C-7BE64CEB3B58}|https">
-  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
+  <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Ansatt/LeggTilNyKundeService.cshtml">
     <Files>
       <File FileName="obj/Debug/net7.0/Nsted.AssemblyInfo.cs" />
       <File FileName="appsettings.json" />
@@ -16,17 +16,13 @@
       <File FileName="Models/ErrorViewModel.cs" />
       <File FileName="Models/Kunde.cs" />
       <File FileName="Views/Ansatt/Registrering.cshtml" />
-      <File FileName="Views/Home/FerdigeOrdrer.cshtml" />
       <File FileName="Views/Home/Homepage.cshtml" />
       <File FileName="Views/Home/Lagerbeholdning.cshtml" />
-      <File FileName="Views/Home/NyService.cshtml" />
-      <File FileName="Views/Home/Service.cshtml" />
       <File FileName="Views/Kunde/Add.cshtml" />
       <File FileName="Views/Kunde/Edit.cshtml" />
       <File FileName="Views/Kunde/List.cshtml" />
       <File FileName="Views/Shared/_Layout.cshtml" />
       <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="wwwroot/css/FerdigeOrdrer.css" />
       <File FileName="wwwroot/css/Homestyle.css" />
       <File FileName="Migrations/NstedDbContextModelSnapshot.cs" />
       <File FileName="Models/Registrering.cs" />
@@ -38,27 +34,43 @@
       <File FileName="Views/Ansatt/ListRegistrering.cshtml" />
       <File FileName="wwwroot/css/LoggedInAs.css" />
       <File FileName="wwwroot/css/ListRegistrering.css" />
-      <File FileName="Controllers/AccountController.cs" Line="99" Column="68" />
+      <File FileName="Controllers/AccountController.cs" />
       <File FileName="Views/Account/Register.cshtml" />
       <File FileName="wwwroot/css/LoginPage.css" />
       <File FileName="wwwroot/css/RegisterPage.css" />
       <File FileName="wwwroot/css/KundeList.css" />
       <File FileName="Views/Account/Login.cshtml" />
       <File FileName="Models/UserRegistrationModel.cs" />
+      <File FileName="Data/SQL/Tables.sql" />
+      <File FileName="Views/Ansatt/NyService.cshtml" />
+      <File FileName="Models/FullførtOrdre.cs" />
+      <File FileName="Models/ServiceSkjema.cs" />
+      <File FileName="Views/Ansatt/ListFullførteOrdrer.cshtml" />
+      <File FileName="Views/Ansatt/ListServiceSkjema.cshtml" />
+      <File FileName="Views/Ansatt/OversiktServiceSkjema.cshtml" />
+      <File FileName="Services/UserService.cs" />
+      <File FileName="Views/Shared/Error.cshtml" />
+      <File FileName="Views/Ansatt/LeggTilNyKundeService.cshtml" Line="149" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Nsted">
-            <Node name="Nsted" expanded="True">
-              <Node name="Controllers" expanded="True" />
+            <Node name="Nsted">
+              <Node name="Views" expanded="True">
+                <Node name="Ansatt" expanded="True">
+                  <Node name="LeggTilNyKundeService.cshtml" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Kunde" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
 </Properties>

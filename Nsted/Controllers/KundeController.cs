@@ -21,6 +21,8 @@ namespace Nsted.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         public IActionResult Add(Kunde kunde)
         {

@@ -28,6 +28,7 @@ namespace Nsted.Data
         {
             // Custom logic before saving changes...
 
+
             return base.SaveChanges(); // Persist changes to the database.
         }
 

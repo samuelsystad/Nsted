@@ -29,6 +29,7 @@ namespace Nsted.Controllers
             return View();
         }
 
+
         public IActionResult EksisterendeKunde()
         {
 
@@ -65,27 +66,35 @@ namespace Nsted.Controllers
         }
 
 
-
-
-
-
         [HttpPost]
         public IActionResult HandleFormSubmission2(Registrering registrering, int kundeId) // Changed parameter to directly use kundeId
         {
-            
-                if (kundeId <= 0)
-                {
-                    throw new InvalidOperationException("Invalid KundeId");
-                }
+
+            if (kundeId <= 0)
+            {
+                throw new InvalidOperationException("Invalid KundeId");
+            }
             registrering.KundeId = kundeId;
             nstedDbContext.Registreringer.Add(registrering); // Add new ServiceSkjema
-                nstedDbContext.SaveChanges(); // Save changes
+            nstedDbContext.SaveChanges(); // Save changes
 
-                return RedirectToAction("ListRegistrering"); // Redirect to list view
-            
-            }
-           
-       
+            return RedirectToAction("ListRegistrering"); // Redirect to list view
+
+        }
+
+        public IActionResult NyKundeOgService(Kunde kunde, ServiceSkjema serviceSkjema)
+        {
+            nstedDbContext.Kunder.Add(kunde);
+            nstedDbContext.SaveChanges();
+
+            // Ensure that the KundeId is set for the serviceSkjema
+            serviceSkjema.KundeId = kunde.KundeId;
+
+            nstedDbContext.ServiceSkjemas.Add(serviceSkjema);
+            nstedDbContext.SaveChanges();
+
+            return RedirectToAction("ListServiceSkjema");
+        }
 
         public IActionResult Delete(int id)
         {
@@ -256,4 +265,4 @@ namespace Nsted.Controllers
 
     }
 }
-        
+

@@ -34,6 +34,9 @@
                     @fullførtOrdre.ServiceSkjemaId
                 </td>
                 <td>
+                    <a href="@Url.Action("Edit", "Kunde", new { id = fullførtOrdre.KundeId })">
+                            @fullførtOrdre.KundeId
+                    </a>
                     @fullførtOrdre.KundeId
                 </td>
                 <td>@fullførtOrdre.MottattDato.ToShortDateString()</td>

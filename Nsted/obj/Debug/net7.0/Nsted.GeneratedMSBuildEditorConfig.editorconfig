@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Nsted
 build_property.RootNamespace = Nsted
-build_property.ProjectDir = /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/
+build_property.ProjectDir = C:\Users\simen\Desktop\IT\Nsted\Nsted\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted
+build_property.MSBuildProjectDirectory = C:\Users\simen\Desktop\IT\Nsted\Nsted
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/EksisterendeKunde.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0Vrc2lzdGVyZW5kZUt1bmRlLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/EksisterendeKunde.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XEVrc2lzdGVyZW5kZUt1bmRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/ListFullførteOrdrer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0xpc3RGdWxsZsO4cnRlT3JkcmVyLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/ListFullførteOrdrer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RGdWxsZsO4cnRlT3JkcmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/ListRegistrering.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0xpc3RSZWdpc3RyZXJpbmcuY3NodG1s
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/ListRegistrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RSZWdpc3RyZXJpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/ListServiceSkjema.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L0xpc3RTZXJ2aWNlU2tqZW1hLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/ListServiceSkjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XExpc3RTZXJ2aWNlU2tqZW1hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/NyKundeOgService.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L055S3VuZGVPZ1NlcnZpY2UuY3NodG1s
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/NyKundeService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XE55S3VuZGVTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/NyService.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L055U2VydmljZS5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/NyService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XE55U2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/OversiktServiceSkjema.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L092ZXJzaWt0U2VydmljZVNramVtYS5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/OversiktServiceSkjema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XE92ZXJzaWt0U2VydmljZVNramVtYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Ansatt/Registrering.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zYXR0L1JlZ2lzdHJlcmluZy5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Ansatt/Registrering.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zYXR0XFJlZ2lzdHJlcmluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Homepage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ib21lcGFnZS5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/Homepage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lcGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Home/Lagerbeholdning.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9MYWdlcmJlaG9sZG5pbmcuY3NodG1s
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Home/Lagerbeholdning.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYWdlcmJlaG9sZG5pbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Kunde/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS3VuZGUvQWRkLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Kunde/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VuZGVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Kunde/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS3VuZGUvRWRpdC5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Kunde/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VuZGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Kunde/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS3VuZGUvTGlzdC5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Kunde/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VuZGVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-qvdca9apfg
+[C:/Users/simen/Desktop/IT/Nsted/Nsted/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nu5v4w8jk0

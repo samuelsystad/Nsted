@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets/css/Homestyle.css"
     },
     {
-      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/KundeList.css",
-      "PackagePath": "staticwebassets/css/KundeList.css"
-    },
-    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ListFullførteOrdrer.css",
       "PackagePath": "staticwebassets/css/ListFullførteOrdrer.css"
     },

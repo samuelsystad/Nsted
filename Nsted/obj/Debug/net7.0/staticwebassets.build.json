@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jDyr3oQ0QSdJrsGtcGKTwLAgY2tv9vqa1atX/3LeRtA=",
+  "Hash": "xQbwuR1yIYZElraIKVIuHwYFVkDjMtcvTFeuu+/rvfA=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -100,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/Homestyle.css"
-    },
-    {
-      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/KundeList.css",
-      "SourceId": "Nsted",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
-      "BasePath": "_content/Nsted",
-      "RelativePath": "css/KundeList.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/KundeList.css"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/ListFullførteOrdrer.css",

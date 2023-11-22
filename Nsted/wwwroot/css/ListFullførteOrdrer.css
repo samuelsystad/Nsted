@@ -1,27 +1,33 @@
-﻿h1 {
+﻿
+h1 {
     position: center;
     margin-left: 330px;
     color: #9cb7c2;
     margin-top: 10px;
 }
 
+/* Apply font size to all elements within the table */
+.table, .table th, .table td {
+    font-size: 50px !important;
+    font-weight: bold !important;
+}
+
+
+
 .table {
     margin-top: 60px;
     position: fixed;
     left: 0;
-    font-size: 11px;
-    font: bold;
     width: 100%;
     border-collapse: collapse;
     border-bottom: 2px solid white;
 }
 
-    .table tr {
-        border-bottom: 2px solid black;
-        background-color: #9cb7c2;
-        color: black;
-        
-    }
+.table tr {
+    border-bottom: 2px solid black;
+    background-color: #9cb7c2;
+    color: black;
+}
 
     .table td {
         border-right: 1px solid black;

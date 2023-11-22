@@ -6,66 +6,42 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Service Skjema ID</th>
-            <th>Kunde Nr</th>
-            <th>Mottatt Dato</th>
-            <th>Ordre Nr</th>
-            <th>Produkt Type</th>
-            <th>Årsmodell</th>
-            <th>Servicetype</th>
-            <th>Serienummer</th>
-            <th>Avtalt med Kunde</th>
-            <th>Reparasjonsbeskrivelse</th>
-            <th>Brukte Deler</th>
-            <th>Arbeidstimer</th>
-            <th>Ferdigstilt Dato</th>
-            <th>Retur Deler</th>
-            <th>Forsendelsesmåte</th>
-            <th>Kunde Signatur</th>
-            <th>Mekaniker Signatur</th>
-            <th>Handlinger</th>
+            <th style="font-size: 20px; text-align: center;">Serviceskjema ID</th>
+            <th style="font-size: 20px; text-align: center;">Kunde Nr</th>
+            <th style="font-size: 20px; text-align: center;">Mottatt Dato</th>
+            <th style="font-size: 20px; text-align: center;">Ordre Nr</th>
+            <th style="font-size: 20px; text-align: center;">Serienummer</th>
+            <th style="font-size: 20px; text-align: center;">Ferdigstilt Dato</th>
+            <th style="font-size: 20px; text-align: center;">Handlinger</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var serviceskjema in Model)
         {
             <tr>
-                <td>
+                <td style="font-size: 24px; text-align: center;">
                     <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })">
                         @serviceskjema.ServiceSkjemaId
                     </a>
                 </td>
-                <td>
+                <td style="font-size: 24px; text-align: center;">
                     <a href="@Url.Action("Edit", "Kunde", new { id = serviceskjema.KundeId })">
                         @serviceskjema.KundeId
                     </a>
                 </td>
-                <td>@serviceskjema.MottattDato.ToShortDateString()</td>
-                <td>@serviceskjema.OrdreNr</td>
-                <td>@serviceskjema.ProduktType</td>
-                <td>@serviceskjema.ÅrsModell</td>
-                <td>@serviceskjema.Servicetype</td>
-                <td>@serviceskjema.SerieNummer</td>
-                <td>@serviceskjema.AvtaltMedKunden</td>
-                <td>@serviceskjema.Reparasjonsbeskrivelse</td>
-                <td>@serviceskjema.BrukteDeler</td>
-                <td>@serviceskjema.Arbeidstimer</td>
-                <td>@serviceskjema.FerdigstiltDato.ToShortDateString()</td>
-                <td>@serviceskjema.ReturDeler</td>
-                <td>@serviceskjema.ForsendelsesMåte</td>
-                <td>@serviceskjema.KundeSignatur</td>
-                <td>@serviceskjema.MekanikerSignatur</td>
-                <td>
+                <td style="font-size: 15px;">@serviceskjema.MottattDato.ToShortDateString()</td>
+                <td style="font-size: 15px;">@serviceskjema.OrdreNr</td>
+                <td style="font-size: 15px;">@serviceskjema.SerieNummer</td>
+                <td style="font-size: 15px;">@serviceskjema.FerdigstiltDato.ToShortDateString()</td>
+                <td style="text-align: center;">
                     <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })"
                           onsubmit="return confirmCompletion();">
                         <button type="submit" class="btn btn-success">Fullfør</button>
                     </form>
 
-                    <script>
-                        function confirmCompletion() {
+                    <script>function confirmCompletion() {
                             return confirm("Er du sikker på at du vil fullføre servicen?");
-                        }
-                    </script>
+                        }</script>
                 </td>
             </tr>
         }

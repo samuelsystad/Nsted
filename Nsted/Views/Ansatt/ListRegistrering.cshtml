@@ -6,44 +6,44 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Registrering ID</th>
-            <th>Kunde Nr</th>
-            <th>Booking Til Uke</th>
-            <th>Henvendelse Mottatt</th>
-            <th>Case Ferdig</th>
-            <th>Produkt Type</th>
-            <th>Feilbeskrivelse</th>
-            <th>Avtalt Levering</th>
-            <th>Produkt Mottatt</th>
-            <th>Avtalt Ferdigstillelse Innen</th>
-            <th>Service Ferdig</th>
-            <th>Antall Timer Utført</th>
-            <th>Ordre Nr</th>
-            <th>Service Skjema</th>
+            <th style="font-size: 20px;">Registrering ID</th>
+            <th style="font-size: 20px;">Kunde Nr</th>
+            <th style="font-size: 20px;">Booking Til Uke</th>
+            <th style="font-size: 20px;">Henvendelse Mottatt</th>
+            <th style="font-size: 20px;">Case Ferdig</th>
+            <th style="font-size: 20px;">Produkt Type</th>
+            <th style="font-size: 20px;">Feilbeskrivelse</th>
+            <th style="font-size: 20px;">Avtalt Levering</th>
+            <th style="font-size: 20px;">Produkt Mottatt</th>
+            <th style="font-size: 20px;">Avtalt Ferdigstillelse Innen</th>
+            <th style="font-size: 20px;">Service Ferdig</th>
+            <th style="font-size: 20px;">Antall Timer Utført</th>
+            <th style="font-size: 20px;">Ordre Nr</th>
+            <th style="font-size: 20px;">Service Skjema</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var registrering in Model)
         {
             <tr>
-                <td>@registrering.RegistreringId</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Kunde", new { id = registrering.KundeId })">
+                <td style="font-size: 20px;">@registrering.RegistreringId</td>
+                <td style="font-size: 20px;">
+                    <a href="@Url.Action("Edit", "Kunde", new { id = registrering.KundeId })" class="no-underline">
                         @registrering.KundeId
                     </a>
                 </td>
-                <td>@registrering.BookingTilUke</td>
-                <td>@registrering.HenvendelseMottatt.ToShortDateString()</td>
-                <td>@registrering.CaseFerdig</td>
-                <td>@registrering.ProduktType</td>
-                <td>@registrering.Feilbeskrivelse</td>
-                <td>@registrering.AvtaltLevering.ToShortDateString()</td>
-                <td>@registrering.ProduktMottatt.ToShortDateString()</td>
-                <td>@registrering.AvtaltFerdigstillelseInnen.ToShortDateString()</td>
-                <td>@registrering.ServiceFerdig.ToShortDateString()</td>
-                <td>@registrering.AntallTimerUtført</td>
-                <td>@registrering.OrdreNr</td>
-                <td>@registrering.ServiceSkjema</td>
+                <td style="font-size: 15px;">@registrering.BookingTilUke</td>
+                <td style="font-size: 15px;">@registrering.HenvendelseMottatt.ToShortDateString()</td>
+                <td style="font-size: 15px;">@registrering.CaseFerdig</td>
+                <td style="font-size: 15px;">@registrering.ProduktType</td>
+                <td style="font-size: 15px;">@registrering.Feilbeskrivelse</td>
+                <td style="font-size: 15px;">@registrering.AvtaltLevering.ToShortDateString()</td>
+                <td style="font-size: 15px;">@registrering.ProduktMottatt.ToShortDateString()</td>
+                <td style="font-size: 15px;">@registrering.AvtaltFerdigstillelseInnen.ToShortDateString()</td>
+                <td style="font-size: 15px;">@registrering.ServiceFerdig.ToShortDateString()</td>
+                <td style="font-size: 15px;">@registrering.AntallTimerUtført</td>
+                <td style="font-size: 15px;">@registrering.OrdreNr</td>
+                <td style="font-size: 15px;">@registrering.ServiceSkjema</td>
                 <td>
                     <a href="@Url.Action("Edit", "Kunde", new { id = registrering.RegistreringId })" class="btn btn-primary">Rediger</a>
                     <a href="@Url.Action("Delete", "Ansatt", new { id = registrering.RegistreringId })" class="btn btn-danger"

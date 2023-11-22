@@ -1,20 +1,20 @@
 ﻿@model List<Nsted.Models.Kunde>
 
-<link rel="stylesheet" href="~/css/KundeList.css" />
+<link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 
-<h2>Kundeoversikt</h2>
+<h1>Kundeoversikt</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Kundenr</th>
-            <th>Fornavn</th>
-            <th>Etternavn</th>
-            <th>Telefon</th>
-            <th>Email</th>
-            <th>Adresse</th>
-            <th>Registrert</th>
-            <th>Handlinger</th>
+            <th style="font-size: 20px; text-align: center;">Kundenr</th>
+            <th style="font-size: 20px; text-align: center;">Fornavn</th>
+            <th style="font-size: 20px; text-align: center;">Etternavn</th>
+            <th style="font-size: 20px; text-align: center;">Telefon</th>
+            <th style="font-size: 20px; text-align: center;">Email</th>
+            <th style="font-size: 20px; text-align: center;">Adresse</th>
+            <th style="font-size: 20px; text-align: center;">Registrert</th>
+            <th style="font-size: 20px; text-align: center;">Handlinger</th>
             
         </tr>
     </thead>
@@ -22,14 +22,14 @@
         @foreach (var kunde in Model)
         {
             <tr>
-                <td>@kunde.KundeId </td>
-                <td>@kunde.Fornavn</td>
-                <td>@kunde.Etternavn</td>
-                <td>@kunde.Telefon</td>
-                <td>@kunde.Email</td>
-                <td>@kunde.Adresse</td>
-                <td>@kunde.Registrert</td>
-                <td>
+                <td style="font-size: 20px;">@kunde.KundeId </td>
+                <td style="font-size: 15px;">@kunde.Fornavn</td>
+                <td style="font-size: 15px;">@kunde.Etternavn</td>
+                <td style="font-size: 15px;">@kunde.Telefon</td>
+                <td style="font-size: 15px;">@kunde.Email</td>
+                <td style="font-size: 15px;">@kunde.Adresse</td>
+                <td style="font-size: 15px;">@kunde.Registrert</td>
+                <td style="text-align: center;">
                     <a href="@Url.Action("Edit", "Kunde", new { id = kunde.KundeId })" class="btn btn-primary">Rediger</a>
                     <a href="@Url.Action("Delete", "Kunde", new { id = kunde.KundeId })" class="btn btn-danger"
                        onclick="return confirmDeletion('@kunde.Fornavn','@kunde.Etternavn');">Slett</a>
@@ -38,7 +38,6 @@
         }
     </tbody>
 </table>
-
 <script>
     function confirmDeletion(firstName, lastName) {
         return confirm("Er du sikker på at du vil slette " + firstName + " " + lastName + "?");

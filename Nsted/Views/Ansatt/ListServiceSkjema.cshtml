@@ -1,5 +1,6 @@
 ﻿@model List<ServiceSkjema>
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
+<link rel="stylesheet" href="~/css/NoUnderline.css" />
 
 <h1> Oversikt over serviceskjema</h1>
 
@@ -19,13 +20,13 @@
         @foreach (var serviceskjema in Model)
         {
             <tr>
-                <td style="font-size: 24px; text-align: center;">
-                    <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })">
-                        @serviceskjema.ServiceSkjemaId
+                <td style="font-size: 25px; text-align: center;">
+                    <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })" class="no-underline">
+                 @serviceskjema.ServiceSkjemaId
                     </a>
                 </td>
-                <td style="font-size: 24px; text-align: center;">
-                    <a href="@Url.Action("Edit", "Kunde", new { id = serviceskjema.KundeId })">
+                <td style="font-size: 25px; text-align: center;">
+                    <a href="@Url.Action("Edit", "Kunde", new { id = serviceskjema.KundeId })" class="no-underline">
                         @serviceskjema.KundeId
                     </a>
                 </td>

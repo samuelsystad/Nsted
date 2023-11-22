@@ -1,4 +1,4 @@
-﻿@model Nsted.Models.ServiceSkjema
+﻿@model List<Nsted.Models.ServiceSkjema>
 
 @{
     ViewData["Title"] = "Legg Til Ny Kunde for Service";
@@ -7,46 +7,47 @@
 <link rel="stylesheet" href="~/css/NyServicestyle.css" />
 
 <h1>Nytt Serviceskjema</h1>
-<div class="container">
-    <!-- Toggle Button for Adding New Customer -->
-    <div class="col-12 mb-3 text-center">
-        <button class="btn btn-outline-secondary" id="toggleButton" onclick="window.location.href='/Ansatt/NyService'">Legg til ny kunde</button>
+
+<div class="col-12 mb-3 text-center">
+    <a asp-controller="Ansatt" asp-action="NyService" class="btn btn-outline-secondary">Velg en eksisterende kunde</a>
+</div>
+
+    <form asp-controller="Ansatt" asp-action="NyKundeOgService" method="post">
+    <div class="row mb-3">
+        <div class="col-12">
+            <label class="form-label">Kundeinformasjon:</label>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn" required>
+                <label for="fornavn">Fornavn</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn" required>
+                <label for="etternavn">Etternavn</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse" required>
+                <label for="adresse">Adresse</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no" required>
+                <label for="email">Email addresse</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon" required>
+                <label for="telefonNummer">Telefon</label>
+            </div>
+        </div>
     </div>
-    <form asp-controller="Ansatt" asp-action="NyServiceNyKunde" method="post">
-        <div class="row mb-3">
-            <div class="col-12">
-                <label class="form-label">Kundeinformasjon:</label>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" asp-for="Kunde.Fornavn" placeholder="Fornavn" required>
-                    <label asp-for="Kunde.Fornavn">Fornavn</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" asp-for="Kunde.Etternavn" placeholder="Etternavn" required>
-                    <label asp-for="Kunde.Etternavn">Etternavn</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" asp-for="Kunde.Adresse" placeholder="Adresse">
-                    <label asp-for="Kunde.Adresse">Adresse</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="email" class="form-control" asp-for="Kunde.Email" placeholder="navn@eksempel.no" required>
-                    <label asp-for="Kunde.Email">Email addresse</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="number" class="form-control" asp-for="Kunde.Telefon" placeholder="Telefon" required>
-                    <label asp-for="Kunde.Telefon">Telefon</label>
-                </div>
-            </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
@@ -149,4 +150,9 @@
 
             <button type="submit" class="btn btn-primary">Send inn</button>
         </form>
+<<<<<<< HEAD:Nsted/Views/Ansatt/NyKundeOgService.cshtml
 </div>
+=======
+
+
+>>>>>>> origin:Nsted/Views/Ansatt/NyKundeService.cshtml

@@ -14,15 +14,13 @@
     <div class="row mb-3">
         <!-- New Customer Link/Button -->
         <div class="col-12 mb-3 text-center">
-            <a asp-controller="Ansatt" asp-action="NyKundeOgService" class="btn btn-outline-secondary">Legg til en ny kunde</a>
+            <a asp-controller="Ansatt" asp-action="NyKundeService" class="btn btn-outline-secondary">Legg til en ny kunde</a>
         </div>
 
 
     </div>
 
 
-
-    <!-- Existing Customer Dropdown -->
     <div class="col-md-6" id="existingCustomerSection">
         <label for="customerInput" class="form-label">Søk og velg en eksisterende kunde:</label>
         <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke...">
@@ -155,16 +153,21 @@
 
     <button type="submit" class="btn btn-primary">Send inn</button>
 </form>
-</div>
 
 
 
-<script>function updateSelectedCustomer() {
+
+<script>
+    function updateSelectedCustomer() {
         var customerInput = document.getElementById('customerInput');
         var selectedOption = document.querySelector(`#customers option[value="${customerInput.value}"]`);
         var kundeIdField = document.getElementById('kundeId');
+
         if (selectedOption) {
             kundeIdField.value = selectedOption.getAttribute('data-value');
         }
     }
-    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);</script>
+
+    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
+</script>
+

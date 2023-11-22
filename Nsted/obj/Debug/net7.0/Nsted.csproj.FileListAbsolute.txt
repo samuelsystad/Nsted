@@ -75,6 +75,7 @@ C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/Pomelo.EntityFrameworkCor
 C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/System.CodeDom.dll
 C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.AssemblyReference.cache
 C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CopyComplete
+C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.Development.json
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/appsettings.json
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/bin/Debug/net7.0/Nsted.staticwebassets.runtime.json
@@ -123,4 +124,3 @@ C:/Users/simen/Desktop/IT/Nsted/Nsted/obj/Debug/net7.0/Nsted.csproj.CopyComplete
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.pdb
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/Nsted.genruntimeconfig.cache
 /Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/obj/Debug/net7.0/ref/Nsted.dll
-C:/Users/simen/Desktop/IT/Nsted/Nsted/bin/Debug/net7.0/BCrypt.Net-Next.dll

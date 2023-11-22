@@ -6,12 +6,6 @@ h1 {
     margin-top: 10px;
 }
 
-/* Apply font size to all elements within the table */
-.table, .table th, .table td {
-    font-size: 50px !important;
-    font-weight: bold !important;
-}
-
 
 
 .table {

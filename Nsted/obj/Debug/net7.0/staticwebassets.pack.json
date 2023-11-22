@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/css/Navbarstyle.css"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/NoUnderline.css",
+      "PackagePath": "staticwebassets/css/NoUnderline.css"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/NyServicestyle.css",
       "PackagePath": "staticwebassets/css/NyServicestyle.css"
     },

@@ -39,8 +39,7 @@
                 <td style="font-size: 15px;">@registrering.ServiceFerdig.ToShortDateString()</td>
                 <td style="font-size: 15px;">@registrering.OrdreNr</td>
                 <td style="font-size: 15px;">@registrering.ServiceSkjema</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Kunde", new { id = registrering.RegistreringId })" class="btn btn-primary">Rediger</a>
+                <td style="text-align: center;">
                     <a href="@Url.Action("Delete", "Ansatt", new { id = registrering.RegistreringId })" class="btn btn-danger"
                        onclick="return confirmDeletion('@registrering.Kunde.Fornavn','@registrering.Kunde.Etternavn');">Slett</a>
                 </td>

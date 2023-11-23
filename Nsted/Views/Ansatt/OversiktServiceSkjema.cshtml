@@ -34,8 +34,7 @@
 
             <!-- Edit button (initially visible) -->
             <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
-
-            <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
+            <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListServiceSkjema", "Ansatt")'">Avbryt</button>
         </div>
             <div class="editable-field" style="display: none;">
                 <div class="row">

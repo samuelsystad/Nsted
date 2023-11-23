@@ -27,6 +27,8 @@
         <div class="col-md-6"><p>Kunde Signatur: <br /><span>@Model.KundeSignatur</span></p></div>
         <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
     </div>
-        <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
-    </form>
+    <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListFullførteOrdrer", "Ansatt")'">Avbryt</button>
+
+
+</form>
 

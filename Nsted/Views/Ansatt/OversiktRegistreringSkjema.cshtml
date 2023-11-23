@@ -1,0 +1,116 @@
+﻿@model Nsted.Models.Registrering
+@{
+    ViewData["Title"] = "Rediger Registrering";
+}
+<link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
+
+<h1>Oversikt Registrering @Model.RegistreringId</h1>
+
+<form asp-controller="Ansatt" asp-action="UpdateRegistrering" method="post">
+    <input type="hidden" asp-for="RegistreringId" />
+    <input type="hidden" asp-for="KundeId" />
+
+    <!-- Read-only Display -->
+    <div class="view-only">
+        <div class="row">
+            <div class="col-md-6"><p>Booking Til Uke: <br /><span>@Model.BookingTilUke</span></p></div>
+            <div class="col-md-6"><p>Henvendelse Mottatt: <br /><span>@Model.HenvendelseMottatt.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Case Ferdig: <br /><span>@(Model.CaseFerdig ? "Ja" : "Nei")</span></p></div>
+            <div class="col-md-6"><p>Produkt Type: <br /><span>@Model.ProduktType</span></p></div>
+            <div class="col-md-6"><p>Feilbeskrivelse: <br /><span>@Model.Feilbeskrivelse</span></p></div>
+            <div class="col-md-6"><p>Avtalt Levering: <br /><span>@Model.AvtaltLevering.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Produkt Mottatt: <br /><span>@Model.ProduktMottatt.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Avtalt Ferdigstillelse Innen: <br /><span>@Model.AvtaltFerdigstillelseInnen.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Service Ferdig: <br /><span>@Model.ServiceFerdig.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Antall Timer Utført: <br /><span>@Model.AntallTimerUtført</span></p></div>
+            <div class="col-md-6"><p>Ordre Nr: <br /><span>@Model.OrdreNr</span></p></div>
+            <div class="col-md-6"><p>Service Skjema: <br /><span>@Model.ServiceSkjema</span></p></div>
+            <!-- Edit button (initially visible) -->
+            <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+        </div>
+    </div>
+
+    <!-- Editable Fields -->
+    <div class="editable-field" style="display: none;">
+        <div class="row">
+            <!-- Editable input fields for each property -->
+            <div class="col-md-6">
+                <label>Booking Til Uke:</label>
+                <input type="number" asp-for="BookingTilUke" class="form-control readonly-input" />
+            </div>
+            <!-- ... other editable fields ... -->
+            <div class="col-md-6">
+                <label>Henvendelse Mottatt:</label>
+                <input type="date" asp-for="HenvendelseMottatt" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Case Ferdig:</label>
+                <select asp-for="CaseFerdig" class="form-control">
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label>Produkt Type:</label>
+                <input type="text" asp-for="ProduktType" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Feilbeskrivelse:</label>
+                <textarea asp-for="Feilbeskrivelse" class="form-control readonly-input"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label>Avtalt Levering:</label>
+                <input type="date" asp-for="AvtaltLevering" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Produkt Mottatt:</label>
+                <input type="date" asp-for="ProduktMottatt" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Avtalt Ferdigstillelse Innen:</label>
+                <input type="date" asp-for="AvtaltFerdigstillelseInnen" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Service Ferdig:</label>
+                <input type="date" asp-for="ServiceFerdig" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Antall Timer Utført:</label>
+                <input type="number" asp-for="AntallTimerUtført" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Ordre Nr:</label>
+                <input type="text" asp-for="OrdreNr" class="form-control readonly-input" />
+            </div>
+            <div class="col-md-6">
+                <label>Service Skjema:</label>
+                <input type="text" asp-for="ServiceSkjema" class="form-control readonly-input" />
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
+        </div>
+    </div>
+</form>
+
+<div id="editAlert" style="display:none;" class="alert alert-info">
+    Du kan nå redigere skjemaet.
+</div>
+
+<script>function enableEditing() {
+        var viewOnlyFields = document.querySelector('.view-only');
+        var editableFields = document.querySelector('.editable-field');
+
+        viewOnlyFields.style.display = 'none';
+        editableFields.style.display = 'block';
+
+        // Remove the 'readonly' attribute from each input field
+        var inputs = document.querySelectorAll('.editable-field .readonly-input');
+        inputs.forEach(function (input) {
+            input.removeAttribute('readonly');
+        });
+
+        document.getElementById('editAlert').style.display = 'block';
+        document.getElementById('editButton').style.display = 'none';
+        document.getElementById('updateButton').style.display = 'block';
+    }</script>

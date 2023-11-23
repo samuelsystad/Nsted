@@ -133,12 +133,12 @@ namespace Nsted.Controllers
                 nstedDbContext.SaveChanges();
             }
 
-            return RedirectToAction("ListRegistrering"); // Redirect to the list view
+            return RedirectToAction("ListRegistrering");
         }
 
         public IActionResult ListRegistrering()
         {
-            List<Registrering> registreringer = nstedDbContext.Registreringer.Include(r => r.Kunde).ToList();
+            var registreringer = nstedDbContext.Registreringer.Include(r => r.Kunde).ToList();
             return View(registreringer);
         }
 
@@ -164,6 +164,108 @@ namespace Nsted.Controllers
 
             return View(serviceSkjema);
         }
+
+        public IActionResult OversiktRegistreringSkjema(int id)
+        {
+
+            var registreringSkjema = nstedDbContext.Registreringer
+                                    .Include(r => r.Kunde)
+                                    .FirstOrDefault(r => r.RegistreringId == id);
+
+            if (registreringSkjema == null)
+            {
+                return NotFound(); 
+            }
+
+            return View(registreringSkjema); 
+        }
+
+        public IActionResult OversiktFullførteOrdreSide(int id)
+        {
+            var fullførtOrdre = nstedDbContext.FullførteOrdrer // Ensure the correct DbSet name
+                .FirstOrDefault(s => s.ServiceSkjemaId == id); // Assuming FullførtOrdreId is the primary key property
+
+            if (fullførtOrdre == null)
+            {
+                return NotFound();
+            }
+
+            return View(fullførtOrdre);
+        }
+        [HttpPost]
+       
+
+        [HttpPost]
+            public IActionResult UpdateRegistrering(Registrering updatedRegistrering)
+            {
+                try
+                {
+                    ModelState.Remove("Kunde");
+                    if (!ModelState.IsValid)
+                    {
+                        // Return to the editing page if the model state is invalid
+                        return View("OversiktRegistreringSkjema", updatedRegistrering);
+                    }
+
+                    var registrering = nstedDbContext.Registreringer
+                                                      .FirstOrDefault(r => r.RegistreringId == updatedRegistrering.RegistreringId);
+
+                    if (registrering == null)
+                    {
+                        return NotFound($"Registrering with ID {updatedRegistrering.RegistreringId} not found.");
+                    }
+
+                    // Check and update each property
+                    if (updatedRegistrering.BookingTilUke != registrering.BookingTilUke)
+                    registrering.BookingTilUke = updatedRegistrering.BookingTilUke;
+
+                if (updatedRegistrering.HenvendelseMottatt != registrering.HenvendelseMottatt)
+                    registrering.HenvendelseMottatt = updatedRegistrering.HenvendelseMottatt;
+
+                if (updatedRegistrering.CaseFerdig != registrering.CaseFerdig)
+                    registrering.CaseFerdig = updatedRegistrering.CaseFerdig;
+
+                if (updatedRegistrering.ProduktType != registrering.ProduktType)
+                    registrering.ProduktType = updatedRegistrering.ProduktType;
+
+                if (updatedRegistrering.Feilbeskrivelse != registrering.Feilbeskrivelse)
+                    registrering.Feilbeskrivelse = updatedRegistrering.Feilbeskrivelse;
+
+                if (updatedRegistrering.AvtaltLevering != registrering.AvtaltLevering)
+                    registrering.AvtaltLevering = updatedRegistrering.AvtaltLevering;
+
+                if (updatedRegistrering.ProduktMottatt != registrering.ProduktMottatt)
+                    registrering.ProduktMottatt = updatedRegistrering.ProduktMottatt;
+
+                if (updatedRegistrering.AvtaltFerdigstillelseInnen != registrering.AvtaltFerdigstillelseInnen)
+                    registrering.AvtaltFerdigstillelseInnen = updatedRegistrering.AvtaltFerdigstillelseInnen;
+
+                if (updatedRegistrering.ServiceFerdig != registrering.ServiceFerdig)
+                    registrering.ServiceFerdig = updatedRegistrering.ServiceFerdig;
+
+                if (updatedRegistrering.AntallTimerUtført != registrering.AntallTimerUtført)
+                    registrering.AntallTimerUtført = updatedRegistrering.AntallTimerUtført;
+
+                if (updatedRegistrering.OrdreNr != registrering.OrdreNr)
+                    registrering.OrdreNr = updatedRegistrering.OrdreNr;
+
+                if (updatedRegistrering.ServiceSkjema != registrering.ServiceSkjema)
+                    registrering.ServiceSkjema = updatedRegistrering.ServiceSkjema;
+
+                nstedDbContext.SaveChanges();
+
+                return RedirectToAction("ListRegistrering", "Ansatt");
+            }
+
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error in UpdateRegistrering");
+                // Handle the error appropriately - for example, return an error view
+                // You may want to pass a custom error message or a model to the view
+                return View("Error", new ErrorViewModel { ErrorMessage = "An error occurred while updating the registration." });
+            }
+        }
+
         [HttpPost]
         public IActionResult UpdateServiceSkjema(ServiceSkjema updatedServiceSkjema)
         {

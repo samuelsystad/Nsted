@@ -1,7 +1,6 @@
 ﻿@model List<Registrering>
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
-
 <h1>Oversikt over registreringskjema</h1>
 
 <table class="table">
@@ -12,22 +11,18 @@
             <th style="font-size: 20px;">Booking Til Uke</th>
             <th style="font-size: 20px;">Henvendelse Mottatt</th>
             <th style="font-size: 20px;">Case Ferdig</th>
-            <th style="font-size: 20px;">Produkt Type</th>
-            <th style="font-size: 20px;">Feilbeskrivelse</th>
-            <th style="font-size: 20px;">Avtalt Levering</th>
-            <th style="font-size: 20px;">Produkt Mottatt</th>
             <th style="font-size: 20px;">Avtalt Ferdigstillelse Innen</th>
             <th style="font-size: 20px;">Service Ferdig</th>
-            <th style="font-size: 20px;">Antall Timer Utført</th>
             <th style="font-size: 20px;">Ordre Nr</th>
             <th style="font-size: 20px;">Service Skjema</th>
+            <th style="font-size: 20px; text-align: center;">Handlinger</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var registrering in Model)
         {
             <tr>
-               <td style="font-size: 25px; text-align: center;">
+               <td style="font-size: 20px; text-align: center;">
                    <a href="@Url.Action("OversiktRegistreringSkjema", "Ansatt", new { id = registrering.RegistreringId })" class="no-underline">
                        @registrering.RegistreringId
                    </a>
@@ -40,13 +35,8 @@
                 <td style="font-size: 15px;">@registrering.BookingTilUke</td>
                 <td style="font-size: 15px;">@registrering.HenvendelseMottatt.ToShortDateString()</td>
                 <td style="font-size: 15px;">@registrering.CaseFerdig</td>
-                <td style="font-size: 15px;">@registrering.ProduktType</td>
-                <td style="font-size: 15px;">@registrering.Feilbeskrivelse</td>
-                <td style="font-size: 15px;">@registrering.AvtaltLevering.ToShortDateString()</td>
-                <td style="font-size: 15px;">@registrering.ProduktMottatt.ToShortDateString()</td>
                 <td style="font-size: 15px;">@registrering.AvtaltFerdigstillelseInnen.ToShortDateString()</td>
                 <td style="font-size: 15px;">@registrering.ServiceFerdig.ToShortDateString()</td>
-                <td style="font-size: 15px;">@registrering.AntallTimerUtført</td>
                 <td style="font-size: 15px;">@registrering.OrdreNr</td>
                 <td style="font-size: 15px;">@registrering.ServiceSkjema</td>
                 <td>

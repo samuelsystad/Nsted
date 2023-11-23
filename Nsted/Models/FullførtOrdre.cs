@@ -25,6 +25,5 @@ namespace Nsted.Models
         public string KundeSignatur { get; set; }
         public string MekanikerSignatur { get; set; }
 
-        // Metode for å fullføre en tjeneste og lagre den som en FullførtOrdre
     }
 }

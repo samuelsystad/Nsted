@@ -3,6 +3,7 @@
     ViewData["Title"] = "Rediger Registrering";
 }
 <link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
+<link rel="stylesheet" href="~/css/AvbrytKnappStyle.css" />
 
 <h1>Oversikt Registrering @Model.RegistreringId</h1>
 
@@ -27,6 +28,9 @@
             <div class="col-md-6"><p>Service Skjema: <br /><span>@Model.ServiceSkjema</span></p></div>
             <!-- Edit button (initially visible) -->
             <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+
+                <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
+
         </div>
     </div>
 

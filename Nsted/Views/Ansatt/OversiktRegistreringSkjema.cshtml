@@ -28,8 +28,7 @@
             <div class="col-md-6"><p>Service Skjema: <br /><span>@Model.ServiceSkjema</span></p></div>
             <!-- Edit button (initially visible) -->
             <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
-
-                <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
+            <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListRegistrering", "Ansatt")'">Avbryt</button>
 
         </div>
     </div>

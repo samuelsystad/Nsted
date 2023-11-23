@@ -180,8 +180,21 @@ namespace Nsted.Controllers
             return View(registreringSkjema); 
         }
 
- 
-            [HttpPost]
+        [HttpPost]
+        public IActionResult OversiktFullførteOrdre(int id)
+        {
+            var fullførtOrdre = nstedDbContext.FullførteOrdrer // Ensure the correct DbSet name
+                .FirstOrDefault(s => s.ServiceSkjemaId == id); // Assuming FullførtOrdreId is the primary key property
+
+            if (fullførtOrdre == null)
+            {
+                return NotFound();
+            }
+
+            return View(fullførtOrdre);
+        }
+
+        [HttpPost]
             public IActionResult UpdateRegistrering(Registrering updatedRegistrering)
             {
                 try

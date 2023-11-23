@@ -1,5 +1,6 @@
 ﻿@model List<FullførtOrdre>
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
+<link rel="stylesheet" href="~/css/NoUnderline.css" />
 
 <h1> Oversikt over fullførte ordrer</h1>
 
@@ -30,14 +31,15 @@
         @foreach (var fullførtOrdre in Model)
         {
             <tr>
-                <td>
-                    @fullførtOrdre.ServiceSkjemaId
-                </td>
-                <td>
-                    <a href="@Url.Action("Edit", "Kunde", new { id = fullførtOrdre.KundeId })" class="no-underline">
-                            @fullførtOrdre.KundeId
+                <td style="text-align: center;">
+                    <a href="@Url.Action("OversiktFullførteOrdre", "Ansatt", new { id = fullførtOrdre.ServiceSkjemaId})" class="no-underline">
+                        @fullførtOrdre.ServiceSkjemaId
                     </a>
-                    @fullførtOrdre.KundeId
+                </td>
+                <td style="text-align: center;">
+                    <a href="@Url.Action("Edit", "Kunde", new { id = fullførtOrdre.KundeId })" class="no-underline">
+                        @fullførtOrdre.KundeId
+                    </a>
                 </td>
                 <td>@fullførtOrdre.MottattDato.ToShortDateString()</td>
                 <td>@fullførtOrdre.OrdreNr</td>
@@ -54,7 +56,7 @@
                 <td>@fullførtOrdre.ForsendelsesMåte</td>
                 <td>@fullførtOrdre.KundeSignatur</td>
                 <td>@fullførtOrdre.MekanikerSignatur</td>
-                
+
             </tr>
         }
     </tbody>

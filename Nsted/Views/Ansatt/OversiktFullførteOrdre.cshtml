@@ -1,0 +1,29 @@
+﻿@model Nsted.Models.FullførtOrdre
+@{
+    ViewData["Title"] = "Fullført Ordre";
+}
+<link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
+
+<h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
+
+    <input type="hidden" asp-for="ServiceSkjemaId" />
+    <input type="hidden" asp-for="KundeId" />
+
+        <div class="row">
+            <div class="col-md-6"><p>Mottatt Dato: <br /><span>@Model.MottattDato.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Ordre Nr: <br /><span>@Model.OrdreNr</span></p></div>
+            <div class="col-md-6"><p>Produkt Type: <br /><span>@Model.ProduktType</span></p></div>
+            <div class="col-md-6"><p>Årsmodell: <br /><span>@Model.ÅrsModell</span></p></div>
+            <div class="col-md-6"><p>Servicetype: <br /><span>@Model.Servicetype</span></p></div>
+            <div class="col-md-6"><p>Serienummer:<br /> <span>@Model.SerieNummer</span></p></div>
+            <div class="col-md-6"><p>Avtalt med Kunde: <br /><span>@Model.AvtaltMedKunden</span></p></div>
+            <div class="col-md-6"><p>Reparasjonsbeskrivelse:<br /> <span>@Model.Reparasjonsbeskrivelse</span></p></div>
+            <div class="col-md-6"><p>Brukte Deler: <br /><span>@Model.BrukteDeler</span></p></div>
+            <div class="col-md-6"><p>Arbeidstimer: <br /><span>@Model.Arbeidstimer</span></p></div>
+            <div class="col-md-6"><p>Ferdigstilt Dato: <br /><span>@Model.FerdigstiltDato.ToString("yyyy-MM-dd")</span></p></div>
+            <div class="col-md-6"><p>Retur Deler: <br /><span>@Model.ReturDeler</span></p></div>
+            <div class="col-md-6"><p>Forsendelsesmåte: <br /><span>@Model.ForsendelsesMåte</span></p></div>
+            <div class="col-md-6"><p>Kunde Signatur: <br /><span>@Model.KundeSignatur</span></p></div>
+            <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
+        </div>
+

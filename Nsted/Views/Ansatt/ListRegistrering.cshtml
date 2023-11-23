@@ -22,12 +22,12 @@
         @foreach (var registrering in Model)
         {
             <tr>
-               <td style="font-size: 25px; text-align: center;">
+               <td style="font-size: 20px; text-align: center;">
                    <a href="@Url.Action("OversiktRegistreringSkjema", "Ansatt", new { id = registrering.RegistreringId })" class="no-underline">
                        @registrering.RegistreringId
                    </a>
                </td>
-                <td style="font-size: 25px;">
+                <td style="font-size: 20px;">
                     <a href="@Url.Action("Edit", "Kunde", new { id = registrering.KundeId })" class="no-underline">
                         @registrering.KundeId
                     </a>

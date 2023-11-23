@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="~/css/AvbrytKnappStyle.css" />
 
 <h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
-
+<form asp-controller="Ansatt" asp-action="OversiktFullførteOrdre" method="post">
     <input type="hidden" asp-for="ServiceSkjemaId" />
     <input type="hidden" asp-for="KundeId" />
 
@@ -26,6 +26,7 @@
         <div class="col-md-6"><p>Forsendelsesmåte: <br /><span>@Model.ForsendelsesMåte</span></p></div>
         <div class="col-md-6"><p>Kunde Signatur: <br /><span>@Model.KundeSignatur</span></p></div>
         <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
-        <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
     </div>
+        <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
+    </form>
 

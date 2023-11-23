@@ -8,13 +8,17 @@ h1 {
 
 
 
+
 .table {
     margin-top: 60px;
-    position: fixed;
     left: 0;
     width: 100%;
     border-collapse: collapse;
     border-bottom: 2px solid white;
+    position: fixed;
+
+   
+    
 }
 
 .table tr {

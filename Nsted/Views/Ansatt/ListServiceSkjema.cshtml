@@ -20,12 +20,12 @@
         @foreach (var serviceskjema in Model)
         {
             <tr>
-                <td style="font-size: 25px; text-align: center;">
+                <td style="font-size: 20px; text-align: center;">
                     <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })" class="no-underline">
                  @serviceskjema.ServiceSkjemaId
                     </a>
                 </td>
-                <td style="font-size: 25px; text-align: center;">
+                <td style="font-size: 20px; text-align: center;">
                     <a href="@Url.Action("Edit", "Kunde", new { id = serviceskjema.KundeId })" class="no-underline">
                         @serviceskjema.KundeId
                     </a>

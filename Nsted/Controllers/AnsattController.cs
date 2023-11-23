@@ -253,7 +253,7 @@ namespace Nsted.Controllers
 
                 nstedDbContext.SaveChanges();
 
-                return RedirectToAction("ListRegistrering", "Ansatt");
+                return View("OversiktRegistreringSkjema", updatedRegistrering);
             }
 
             catch (Exception ex)
@@ -331,7 +331,7 @@ namespace Nsted.Controllers
 
             nstedDbContext.SaveChanges();
 
-            return RedirectToAction("ListServiceSkjema");
+            return View("OversiktServiceSkjema", updatedServiceSkjema);
         }
 
         public IActionResult FullførService(int id)

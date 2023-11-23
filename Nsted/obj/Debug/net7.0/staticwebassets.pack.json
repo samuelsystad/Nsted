@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/css/AddKundeStyle.css"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/AvbrytKnappStyle.css",
+      "PackagePath": "staticwebassets/css/AvbrytKnappStyle.css"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/css/Homestyle.css",
       "PackagePath": "staticwebassets/css/Homestyle.css"
     },

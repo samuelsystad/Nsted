@@ -1,17 +1,21 @@
-﻿@model Nsted.Models.Registrering
+﻿<!-- Oversikt over registreringsskjema når man trykker på en registreringsId i listen over registreringsskjemaet -->
+
+@model Nsted.Models.Registrering
 @{
     ViewData["Title"] = "Rediger Registrering";
 }
+<!-- Link til stylesheetene siden bruker. -->
 <link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
 <link rel="stylesheet" href="~/css/AvbrytKnappStyle.css" />
 
 <h1>Oversikt Registrering @Model.RegistreringId</h1>
 
+<!-- Formen blir utført av funksjonen "UpdateRegistrering"" i Ansattkontrolleren.-->
 <form asp-controller="Ansatt" asp-action="UpdateRegistrering" method="post">
     <input type="hidden" asp-for="RegistreringId" />
     <input type="hidden" asp-for="KundeId" />
 
-    <!-- Read-only Display -->
+    <!-- Informasjon som KUN kan leses fra skjema -->
     <div class="view-only">
         <div class="row">
             <div class="col-md-6"><p>Booking Til Uke: <br /><span>@Model.BookingTilUke</span></p></div>
@@ -26,8 +30,9 @@
             <div class="col-md-6"><p>Antall Timer Utført: <br /><span>@Model.AntallTimerUtført</span></p></div>
             <div class="col-md-6"><p>Ordre Nr: <br /><span>@Model.OrdreNr</span></p></div>
             <div class="col-md-6"><p>Service Skjema: <br /><span>@Model.ServiceSkjema</span></p></div>
-            <!-- Edit button (initially visible) -->
+            <!-- Redigerings knapp som gjør det mulig å redigere på skjemaet. -->
             <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+            <!-- Avbryt knapp hvis man ikke vil redigere allikevel. -->
             <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListRegistrering", "Ansatt")'">Avbryt</button>
 
         </div>
@@ -36,12 +41,12 @@
     <!-- Editable Fields -->
     <div class="editable-field" style="display: none;">
         <div class="row">
-            <!-- Editable input fields for each property -->
+            <!-- De ulike feltene man kan redigere på i skjemaet. -->
             <div class="col-md-6">
                 <label>Booking Til Uke:</label>
                 <input type="number" asp-for="BookingTilUke" class="form-control readonly-input" />
             </div>
-            <!-- ... other editable fields ... -->
+            
             <div class="col-md-6">
                 <label>Henvendelse Mottatt:</label>
                 <input type="date" asp-for="HenvendelseMottatt" class="form-control readonly-input" />
@@ -90,7 +95,7 @@
                 <input type="text" asp-for="ServiceSkjema" class="form-control readonly-input" />
             </div>
 
-            <!-- Submit button -->
+            <!-- Knapp for å bekrefte endringene og oppdaterer informasjonen på skjema -->
             <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
         </div>
     </div>
@@ -101,19 +106,23 @@
 </div>
 
 <script>function enableEditing() {
+        // Finn HTML-elementer med klassen 'view-only' og 'editable-field'
         var viewOnlyFields = document.querySelector('.view-only');
         var editableFields = document.querySelector('.editable-field');
 
+        // Endrer visningsstilene for å bytte fra visnings- til redigeringsmodus
         viewOnlyFields.style.display = 'none';
         editableFields.style.display = 'block';
 
-        // Remove the 'readonly' attribute from each input field
+        // Fjerner 'readonly' attributtet fra inndatalinjene med klassen 'readonly-input'
         var inputs = document.querySelectorAll('.editable-field .readonly-input');
         inputs.forEach(function (input) {
             input.removeAttribute('readonly');
         });
 
+        // Viser varselen med ID 'editAlert'
         document.getElementById('editAlert').style.display = 'block';
+        // Skjuler redigeringsknappen ('editButton') og viser oppdateringsknappen ('updateButton')
         document.getElementById('editButton').style.display = 'none';
         document.getElementById('updateButton').style.display = 'block';
     }</script>

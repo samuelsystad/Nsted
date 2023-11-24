@@ -1,18 +1,22 @@
-﻿@model List<Nsted.Models.Registrering>
+﻿<!-- Nytt serviceskjema side for en eksisterende kunde.-->
+
+@model List<Nsted.Models.Registrering>
 @{
+    <!-- Denne koden henter data fra 'ViewBag.CustomerList' og lagrer dem i variabelen customerList som en liste av Kunde-objekter -->
     var customerList = ViewBag.CustomerList as List<Nsted.Models.Kunde>;
     ViewData["Title"] = "Ny Service";
 }
 
+<!-- Link til stylesheeten siden bruker-->
 <link rel="stylesheet" href="~/css/NyServicestyle.css" />
 
 <h1>Nytt Serviceskjema</h1>
 
 
 <div class="container">
-    <!-- Customer Selection Section -->
+    
     <div class="row mb-3">
-        <!-- New Customer Link/Button -->
+        <!-- Knapp for å bli dirigert til en annen form der man legger inn både ny kunde og et nytt serviceskjema. -->
         <div class="col-12 mb-3 text-center">
             <a asp-controller="Ansatt" asp-action="NyKundeService" class="btn btn-outline-secondary">Legg til en ny kunde</a>
         </div>
@@ -20,7 +24,7 @@
 
     </div>
 
-
+    <!-- Funksjon for at man kan kunne velge ut en eksisterende kunde fra systemet og bruke den eksisterende kunde informasjonen. -->
     <div class="col-md-6" id="existingCustomerSection">
         <label for="customerInput" class="form-label">Søk og velg en eksisterende kunde:</label>
         <input class="form-control" list="customers" id="customerInput" placeholder="Skriv for å søke...">
@@ -31,6 +35,7 @@
             }
         </datalist>
     </div>
+    <!-- Formen blir utført av funksjonen "CreateServiceSkjema" i Ansattkontrolleren. -->
 <form asp-controller="Ansatt" asp-action="CreateServiceSkjema" method="post">
     <!-- Skjult felt for KundeId -->
     <input type="hidden" id="kundeId" name="KundeId">
@@ -150,24 +155,29 @@
             </div>
         </div>
     </div>
-
+    <!-- Knapp for å sende inn skjemaet. -->
     <button type="submit" class="btn btn-primary">Send inn</button>
 </form>
-
-
-
+</div>
 
 <script>
     function updateSelectedCustomer() {
+         // Henter referansen til HTML-elementet med id 'customerInput' 
         var customerInput = document.getElementById('customerInput');
+
+        // Finner den valgte kunden i dropdown-menyen med id 'customers' som har verdien som samsvarer med customerInput-verdien
         var selectedOption = document.querySelector(`#customers option[value="${customerInput.value}"]`);
+
+        // Henter referansen til HTML-elementet med id 'kundeId'
         var kundeIdField = document.getElementById('kundeId');
 
+        // Sjekker om det valgte alternativet ble funnet
         if (selectedOption) {
+             // Henter verdien av 'data-value' attributtet fra det valgte alternativet
             kundeIdField.value = selectedOption.getAttribute('data-value');
         }
     }
-
+    //Legger til en 'change' hendelseslytter på HTML-elementet med id 'customerInput'
     document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
 </script>
 

@@ -1,12 +1,18 @@
-﻿@model List<Nsted.Models.Kunde>
+﻿<!-- Kundeoversikt siden -->
 
+<!-- Definerer modellen for dette Razor-viewet som en liste av Kunde-objekter. -->
+@model List<Nsted.Models.Kunde>
+
+    <!-- Linker til stylesheetet som blir brukt for å style siden. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 
 <h1>Kundeoversikt</h1>
 
+<!--  Oppretter en HTML-tabell -->
 <table class="table">
     <thead>
         <tr>
+            <!-- Definerer overskriftscellene med spesifike stiler. -->
             <th style="font-size: 20px; text-align: center;">Kundenr</th>
             <th style="font-size: 20px; text-align: center;">Fornavn</th>
             <th style="font-size: 20px; text-align: center;">Etternavn</th>
@@ -18,10 +24,14 @@
             
         </tr>
     </thead>
+
+    <!-- Definerer tabellens body (innhold). -->
     <tbody>
+        <!-- Itererer gjennom hvert Kunde-objekt i modellen. -->
         @foreach (var kunde in Model)
         {
             <tr>
+                <!-- Setter verdier i cellene basert på Kunde-objektets egenskaper. -->
                 <td style="font-size: 20px;">@kunde.KundeId </td>
                 <td style="font-size: 15px;">@kunde.Fornavn</td>
                 <td style="font-size: 15px;">@kunde.Etternavn</td>
@@ -30,6 +40,7 @@
                 <td style="font-size: 15px;">@kunde.Adresse</td>
                 <td style="font-size: 15px;">@kunde.Registrert</td>
                 <td style="text-align: center;">
+                    <!-- Oppretter lenker/knapper for å redigere og slette Kunde-objekt fra tabellen.  -->
                     <a href="@Url.Action("Edit", "Kunde", new { id = kunde.KundeId })" class="btn btn-primary">Rediger</a>
                     <a href="@Url.Action("Delete", "Kunde", new { id = kunde.KundeId })" class="btn btn-danger"
                        onclick="return confirmDeletion('@kunde.Fornavn','@kunde.Etternavn');">Slett</a>
@@ -38,6 +49,7 @@
         }
     </tbody>
 </table>
+<!-- Funksjon for å bekrefte sletting av Kunde-objektet. -->
 <script>
     function confirmDeletion(firstName, lastName) {
         return confirm("Er du sikker på at du vil slette " + firstName + " " + lastName + "?");

@@ -64,7 +64,7 @@ namespace Nsted.Controllers
             existingKunde.Email = kunde.Email;
             existingKunde.Adresse = kunde.Adresse;
             existingKunde.Registrert = kunde.Registrert;
-            // Update other fields as necessary
+           
 
             nstedDbContext.SaveChanges();
 

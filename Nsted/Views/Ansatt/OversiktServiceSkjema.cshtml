@@ -1,18 +1,22 @@
-﻿@model Nsted.Models.ServiceSkjema
+﻿<!-- Oversikt over serviceskjema når man trykker på en serviceskjemaId i listen over serviceskjema -->
+
+@model Nsted.Models.ServiceSkjema
 @{
     ViewData["Title"] = "Rediger ServiceSkjema";
 }
+<!-- Link til stylesheetene siden bruker. -->
 <link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
 <link rel="stylesheet" href="~/css/AvbrytKnappStyle.css" />
 
 <h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
 
+<!-- Formen blir utført av funksjonen "UpdateServiceSkjema" i Ansattkontrolleren.-->
 <form asp-controller="Ansatt" asp-action="UpdateServiceSkjema" method="post">
 
         <input type="hidden" asp-for="ServiceSkjemaId" />
         <input type="hidden" asp-for="KundeId" />
 
-        <!-- Read-only Display -->
+        <!-- Informasjon som KUN kan leses fra skjema -->
         <div class="view-only">
             <div class="row">
                 <div class="col-md-6"><p>Mottatt Dato: <br /><span>@Model.MottattDato.ToString("yyyy-MM-dd")</span></p></div>
@@ -32,12 +36,14 @@
                 <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
             </div>
 
-            <!-- Edit button (initially visible) -->
+            <!-- Redigerings knapp som gjør det mulig å redigere på skjemaet. -->
             <button type="button" onclick="enableEditing()" class="btn btn-secondary" id="editButton">Rediger skjema</button>
+            <!-- Avbryt knapp hvis man ikke vil redigere allikevel. -->
             <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListServiceSkjema", "Ansatt")'">Avbryt</button>
         </div>
             <div class="editable-field" style="display: none;">
                 <div class="row">
+                    <!-- De ulike feltene man kan redigere på i skjemaet. -->
                     <div class="col-md-6">
                         <label>Mottatt Dato:</label>
                         <input type="date" asp-for="MottattDato" class="form-control readonly-input" />
@@ -99,28 +105,35 @@
                         <input type="text" asp-for="MekanikerSignatur" class="form-control readonly-input" />
                         </div>
                     </div>
-                    <!-- Submit button -->
+                    <!-- Knapp for å bekrefte endringene og oppdaterer informasjonen på skjema -->
                     <button type="submit" class="btn btn-primary" style="display:none;" id="updateButton">Bekreft</button>
                 </div>
 </form>
 <div id="editAlert" style="display:none;" class="alert alert-info">
     Du kan nå redigere skjemaet.
 </div>
-<script>function enableEditing() {
+
+<script>
+    function enableEditing() {
+        // Finn HTML-elementer med klassen 'view-only' og 'editable-field'
         var viewOnlyFields = document.querySelector('.view-only');
         var editableFields = document.querySelector('.editable-field');
 
+        // Endrer visningsstilene for å bytte fra visnings- til redigeringsmodus
         viewOnlyFields.style.display = 'none';
         editableFields.style.display = 'block';
 
-        // Remove the 'readonly' attribute from each input field
+        // Fjerner 'readonly' attributtet fra inndatalinjene med klassen 'readonly-input'
         var inputs = document.querySelectorAll('.editable-field .readonly-input');
         inputs.forEach(function (input) {
             input.removeAttribute('readonly');
         });
 
+        // Viser varselen med ID 'editAlert'
         document.getElementById('editAlert').style.display = 'block';
+
+        // Skjuler redigeringsknappen ('editButton') og viser oppdateringsknappen ('updateButton')
         document.getElementById('editButton').style.display = 'none';
         document.getElementById('updateButton').style.display = 'block';
     }
-    </script>
+</script>

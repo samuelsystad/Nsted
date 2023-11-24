@@ -1,47 +1,57 @@
-﻿@model List<Nsted.Models.ServiceSkjema>
+﻿<!-- Nytt Serviceskjema siden der man legger til en ny kunde OG service. -->
+
+@model List<Nsted.Models.ServiceSkjema>
 
 @{
     ViewData["Title"] = "Legg Til Ny Kunde for Service";
 }
-
+<!-- Link til stylesheeten siden bruker. -->
 <link rel="stylesheet" href="~/css/NyServicestyle.css" />
 
 <h1>Nytt Serviceskjema</h1>
 
 <div class="col-12 mb-3 text-center">
+    <!-- Knapp man kan trykke på for å bli dirigert til et nytt serviceskjema form der man har en eksisterende bruker. -->
     <a asp-controller="Ansatt" asp-action="NyService" class="btn btn-outline-secondary">Velg en eksisterende kunde</a>
 </div>
 
+ <!-- Formen blir utført av funksjonen "NyKundeOgService" i Ansattkontrolleren. -->
     <form asp-controller="Ansatt" asp-action="NyKundeOgService" method="post">
     <div class="row mb-3">
         <div class="col-12">
+            <!-- De forskjellige feltene til skjemaet"-->
             <label class="form-label">Kundeinformasjon:</label>
         </div>
         <div class="col-md-6">
+            <!-- Fornavn -->
             <div class="form-floating">
                 <input type="text" class="form-control" name="kunde.Fornavn" placeholder="Fornavn" required>
                 <label for="fornavn">Fornavn</label>
             </div>
         </div>
         <div class="col-md-6">
+            <!-- Etternavn -->
             <div class="form-floating">
                 <input type="text" class="form-control" name="kunde.Etternavn" placeholder="Etternavn" required>
                 <label for="etternavn">Etternavn</label>
             </div>
         </div>
         <div class="col-md-6">
+            <!-- Adresse -->
             <div class="form-floating">
                 <input type="text" class="form-control" name="kunde.Adresse" placeholder="Adresse" required>
                 <label for="adresse">Adresse</label>
             </div>
         </div>
         <div class="col-md-6">
+            <!-- Email -->
             <div class="form-floating">
                 <input type="email" class="form-control" name="kunde.Email" placeholder="navn@eksempel.no" required>
                 <label for="email">Email addresse</label>
             </div>
         </div>
         <div class="col-md-6">
+            <!-- Telefon -->
             <div class="form-floating">
                 <input type="number" class="form-control" name="kunde.Telefon" placeholder="Telefon" required>
                 <label for="telefonNummer">Telefon</label>
@@ -148,11 +158,11 @@
                 </div>
             </div>
 
+           <!-- Knapp for å sende inn skjemaet. -->
             <button type="submit" class="btn btn-primary">Send inn</button>
         </form>
-<<<<<<< HEAD:Nsted/Views/Ansatt/NyKundeOgService.cshtml
-</div>
-=======
 
 
->>>>>>> origin:Nsted/Views/Ansatt/NyKundeService.cshtml
+
+
+

@@ -1,27 +1,29 @@
-﻿@model List<Nsted.Models.Registrering>
-    @{
-        ViewData["Title"] = "Registrering";
-        
-    }
+﻿<!-- Registreringskjema siden med en ny kunde -->
 
-    <link rel="stylesheet" href="~/css/Registreringstyle.css" />
+@model List<Nsted.Models.Registrering>
+@{
+    ViewData["Title"] = "Registrering";
+}
 
-    <h1>Registrering</h1>
+<link rel="stylesheet" href="~/css/Registreringstyle.css" />
 
+<h1>Registrering</h1>
 
 <div class="container">
-    <!-- Customer Selection Section -->
+   
     <div class="row mb-3">
-        <!-- New Customer Link/Button -->
+        <!-- Knapp for eksisterende kunde, hvis man har en kunde i systemet og vil bruke samme kunde, 
+            kan man trykke på denne knappen og bli dirigert til en ny side der man ikke trenger å fylle ut kundeinformasjon.  -->
         <div class="col-12 mb-3 text-center">
             <a asp-controller="Ansatt" asp-action="EksisterendeKunde" class="btn btn-outline-secondary">Velg en eksisterende kunde</a>
         </div>
+    </div>
 
-            
-</div>
-        <form asp-controller="Ansatt" asp-action="HandleFormSubmission" method="post">
-
+    <!-- Skjema for registrering og felt innenfor skjemaet. -->
+    <!-- Formen blir utført av funksjonen "HandleFormSubmission" i Ansatt kontrolleren.-->
+    <form asp-controller="Ansatt" asp-action="HandleFormSubmission" method="post">
         <div class="row mb-3">
+            <!-- De forskjellige inputfeltene til formen-->
             <div class="col-12">
                 <label class="form-label">Kundeinformasjon:</label>
             </div>
@@ -56,100 +58,101 @@
                 </div>
             </div>
         </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Første Rad -->
-                    <label for="bookingTilUke" class="form-label">Booket Service Til Uke</label>
-                    <input type="number" class="form-control" name="registrering.BookingTilUke" placeholder="Uke nr" aria-label="Booket Service Til Uke:" max="52" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Første rad -->
-                    <label for="henvendelseMottatt" class="form-label">Henvendelse mottatt og registrert</label>
-                    <input type="date" class="form-control" name="registrering.HenvendelseMottatt" required>
-                </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Første rad -->
+                <label for="bookingTilUke" class="form-label">Booket Service Til Uke</label>
+                <input type="number" class="form-control" name="registrering.BookingTilUke" placeholder="Uke nr" aria-label="Booket Service Til Uke:" max="52" required>
             </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Andre rad -->
-                    <label for="caseFerdig" class="form-label">Case ferdig?</label>
-                    <select class="form-select" name="registrering.CaseFerdig" required>
-                        <option disabled selected>Velg et alternativ</option>
-                        <option value="true">Ja</option>
-                        <option value="false">Nei</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <!-- Andre rad -->
-                    <label for="produktType" class="form-label">Produkt type</label>
-                    <input type="text" class="form-control" name="registrering.ProduktType" placeholder="Produkttype" required>
-                </div>
+            <div class="col-md-6">
+                <!-- Første rad -->
+                <label for="henvendelseMottatt" class="form-label">Henvendelse mottatt og registrert</label>
+                <input type="date" class="form-control" name="registrering.HenvendelseMottatt" required>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-20">
-                    <!-- Tredje rad -->
-                    <label for="feilbeskrivelse" class="form-label">Bestilling / Feilbeskrivelse Fra Kunde</label>
-                    <textarea class="form-control" name="registrering.Feilbeskrivelse" placeholder="Feilbeskrivelse" required></textarea>
-                </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Andre rad -->
+                <label for="caseFerdig" class="form-label">Case ferdig?</label>
+                <select class="form-select" name="registrering.CaseFerdig" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
             </div>
-
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Fjerde rad -->
-                    <label for="avtaltLevering" class="form-label">Avtalt levering</label>
-                    <input type="date" class="form-control" name="registrering.AvtaltLevering" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Fjerde rad -->
-                    <label for="produktMottatt" class="form-label">Produkt mottatt</label>
-                    <input type="date" class="form-control" name="registrering.ProduktMottatt" required>
-                </div>
+            <div class="col-md-6">
+                <!-- Andre rad -->
+                <label for="produktType" class="form-label">Produkt type</label>
+                <input type="text" class="form-control" name="registrering.ProduktType" placeholder="Produkttype" required>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Femte rad -->
-                    <label for="avtaltFerdigstillelseInnen" class="form-label">Avtalt ferdigstillelse innen</label>
-                    <input type="date" class="form-control" name="registrering.AvtaltFerdigstillelseInnen" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Femte rad -->
-                    <label for="serviceFerdig" class="form-label">Service ferdig</label>
-                    <input type="date" class="form-control" name="registrering.ServiceFerdig" required>
-                </div>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <!-- Tredje rad -->
+                <label for="feilbeskrivelse" class="form-label">Bestilling / Feilbeskrivelse Fra Kunde</label>
+                <textarea class="form-control" name="registrering.Feilbeskrivelse" placeholder="Feilbeskrivelse" required></textarea>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Sjette rad -->
-                    <label for="antallTimerUtført" class="form-label">Antall timer på utført service</label>
-                    <input type="number" class="form-control" name="registrering.AntallTimerUtført" placeholder="Antall timer" required>
-                </div>
-                <div class="col-md-3">
-                    <!-- Sjette rad -->
-                    <label for="ordreNr" class="form-label">Ordrenr?</label>
-                    <select class="form-select" name="registrering.OrdreNr" required>
-                        <option disabled selected>Velg et alternativ</option>
-                        <option value="true">Ja</option>
-                        <option value="false">Nei</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <!-- Sjette rad -->
-                    <label for="serviceSkjema" class="form-label">Service skjema?</label>
-                    <select class="form-select" name="registrering.ServiceSkjema" required>
-                        <option disabled selected>Velg et alternativ</option>
-                        <option value="true">Ja</option>
-                        <option value="false">Nei</option>
-                    </select>
-                </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Fjerde rad -->
+                <label for="avtaltLevering" class="form-label">Avtalt levering</label>
+                <input type="date" class="form-control" name="registrering.AvtaltLevering" required>
             </div>
+            <div class="col-md-6">
+                <!-- Fjerde rad -->
+                <label for="produktMottatt" class="form-label">Produkt mottatt</label>
+                <input type="date" class="form-control" name="registrering.ProduktMottatt" required>
+            </div>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Send inn</button>
-        </form>
-    </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Femte rad -->
+                <label for="avtaltFerdigstillelseInnen" class="form-label">Avtalt ferdigstillelse innen</label>
+                <input type="date" class="form-control" name="registrering.AvtaltFerdigstillelseInnen" required>
+            </div>
+            <div class="col-md-6">
+                <!-- Femte rad -->
+                <label for="serviceFerdig" class="form-label">Service ferdig</label>
+                <input type="date" class="form-control" name="registrering.ServiceFerdig" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <!-- Sjette rad -->
+                <label for="antallTimerUtført" class="form-label">Antall timer på utført service</label>
+                <input type="number" class="form-control" name="registrering.AntallTimerUtført" placeholder="Antall timer" required>
+            </div>
+            <div class="col-md-3">
+                <!-- Sjette rad -->
+                <label for="ordreNr" class="form-label">Ordrenr?</label>
+                <select class="form-select" name="registrering.OrdreNr" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <!-- Sjette rad -->
+                <label for="serviceSkjema" class="form-label">Service skjema?</label>
+                <select class="form-select" name="registrering.ServiceSkjema" required>
+                    <option disabled selected>Velg et alternativ</option>
+                    <option value="true">Ja</option>
+                    <option value="false">Nei</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Knapp som sender inn skjemaet når formen er riktig utfylt med tilfredstillende informasjon. -->
+        <button type="submit" class="btn btn-primary">Send inn</button>
+    </form>
+</div>
 
 
  

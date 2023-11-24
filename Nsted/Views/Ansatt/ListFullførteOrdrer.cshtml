@@ -1,12 +1,17 @@
-﻿@model List<FullførtOrdre>
+﻿<!-- Listet oversikt av fullførteordre siden.-->
+
+@model List<FullførtOrdre>
+<!-- Link til stylesheetsene siden bruker. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
 
 <h1> Oversikt over fullførte ordrer</h1>
 
+<!-- Tabell for visning av fullførte serviceskjemaer. -->
 <table class="table">
     <thead>
         <tr>
+            <!-- De forskjellige kolonne-titlene som vises på oversikten. -->
             <th>Service Skjema ID</th>
             <th>Kunde Nr</th>
             <th>Mottatt Dato</th>
@@ -18,15 +23,19 @@
         </tr>
     </thead>
     <tbody>
+        <!-- Itererer gjennom hvert fullførtOrdre-objekt i modellen. -->
         @foreach (var fullførtOrdre in Model)
         {
             <tr>
+                <!-- Informasjonen om hva kolonnene skal inneholde. -->
                 <td style="font-size: 20px; text-align: center;">
+                    <!-- Oppretter en lenke for en detaljert visning av serviceskjemaet. -->
                     <a href="@Url.Action("OversiktFullførteOrdreSide", "Ansatt", new { id = fullførtOrdre.ServiceSkjemaId})" class="no-underline">
                         @fullførtOrdre.ServiceSkjemaId
                     </a>
                 </td>
                 <td style=" font-size: 20px; text-align: center;">
+                    <!-- Oppretter en lenke til Kunde-redigeringsvisningen. -->
                     <a href="@Url.Action("Edit", "Kunde", new { id = fullførtOrdre.KundeId })" class="no-underline">
                         @fullførtOrdre.KundeId
                     </a>

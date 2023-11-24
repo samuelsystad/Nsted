@@ -1,53 +1,63 @@
-﻿@model Nsted.Models.Kunde
+﻿<!-- Redigering av kundeinformasjon siden. -->
+
+<!-- Definerer modellen for dette Razor-viewet som et Kunde-objekt. -->
+@model Nsted.Models.Kunde 
 
 @{
-    ViewData["Title"] = "Edit Customer";
+    <!-- Setter tittelvisningen til "Rediger kunde". -->
+    ViewData["Title"] = "Edit Customer"; 
 }
-<link rel="stylesheet" href="~/css/AddKundeStyle.css" />
-<h2>Rediger Kunde</h2>
+<!-- Link til stylesheeten siden bruker -->
+<link rel="stylesheet" href="~/css/AddKundeStyle.css" /> 
+<h2>Rediger Kunde</h2> 
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="KundeId" />
+<!-- HTML-skjema for redigering av kundeinformasjon, som sender data til "Edit" metoden i Kundekontrolleren. -->
+<form asp-action="Edit" method="post"> 
 
+    <!-- Skjult inputfelt for KundeId. -->
+    <input type="hidden" asp-for="KundeId" /> 
+
+    <!-- Definisjoner for flere form-grupper som inneholder inndatafelt for kundeegenskaper. -->
     <div class="form-group">
-        <label asp-for="Fornavn" class="control-label"></label>
-        <input asp-for="Fornavn" class="form-control" />
-        <span asp-validation-for="Fornavn" class="text-danger"></span>
+        <label asp-for="Fornavn" class="control-label"></label> <!-- Etiketten for Fornavn-inputfeltet. -->
+        <input asp-for="Fornavn" class="form-control" /> <!-- Inputfeltet for Fornavn med CSS-klassen "form-control". -->
+        <span asp-validation-for="Fornavn" class="text-danger"></span> <!-- Viser valideringsfeil for Fornavn, hvis noen. -->
     </div>
 
     <div class="form-group">
-        <label asp-for="Etternavn" class="control-label"></label>
-        <input asp-for="Etternavn" class="form-control" />
-        <span asp-validation-for="Etternavn" class="text-danger"></span>
+        <label asp-for="Etternavn" class="control-label"></label> <!-- Etiketten for Etternavn-inputfeltet. -->
+        <input asp-for="Etternavn" class="form-control" /> <!-- Inputfeltet for Etternavn med CSS-klassen "form-control". -->
+        <span asp-validation-for="Etternavn" class="text-danger"></span> <!-- Viser valideringsfeil for Etternavn, hvis noen. -->
     </div>
 
     <div class="form-group">
-        <label asp-for="Telefon" class="control-label"></label>
-        <input asp-for="Telefon" class="form-control" />
-        <span asp-validation-for="Telefon" class="text-danger"></span>
+        <label asp-for="Telefon" class="control-label"></label> <!-- Etiketten for Telefon-inputfeltet. -->
+        <input asp-for="Telefon" class="form-control" /> <!-- Inputfeltet for Telefon med CSS-klassen "form-control". -->
+        <span asp-validation-for="Telefon" class="text-danger"></span> <!-- Viser valideringsfeil for Telefon, hvis noen. -->
     </div>
 
     <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+        <label asp-for="Email" class="control-label"></label> <!-- Etiketten for Email-inputfeltet. -->
+        <input asp-for="Email" class="form-control" /> <!-- Inputfeltet for Email med CSS-klassen "form-control". -->
+        <span asp-validation-for="Email" class="text-danger"></span> <!-- Viser valideringsfeil for Email, hvis noen. -->
     </div>
 
     <div class="form-group">
-        <label asp-for="Adresse" class="control-label"></label>"
-        <input asp-for="Adresse" class="form-control" />
-        <span asp-validation-for="Adresse" class="text-danger"></span>
-    </div>
-
-
-    <div class="form-group">
-        <label asp-for="Registrert" class="control-label"></label>
-        <input asp-for="Registrert" class="form-control" />
-        <span asp-validation-for="Registrert" class="text-danger"></span>
+        <label asp-for="Adresse" class="control-label"></label> <!-- Etiketten for Adresse-inputfeltet. -->
+        <input asp-for="Adresse" class="form-control" /> <!-- Inputfeltet for Adresse med CSS-klassen "form-control". -->
+        <span asp-validation-for="Adresse" class="text-danger"></span> <!-- Viser valideringsfeil for Adresse, hvis noen. -->
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Lagre" class="btn btn-primary" />
-        <button type="button" class="btn btn-secondary" onclick="history.back()">Avbryt</button>
+        <label asp-for="Registrert" class="control-label"></label> <!-- Etiketten for Registrert-inputfeltet. -->
+        <input asp-for="Registrert" class="form-control" /> <!-- Inputfeltet for Registrert med CSS-klassen "form-control". -->
+        <span asp-validation-for="Registrert" class="text-danger"></span> <!-- Viser valideringsfeil for Registrert, hvis noen. -->
+    </div>
+
+    <div class="form-group">
+        <!-- Knapp for å lagre kundeinformasjonen. -->
+        <input type="submit" value="Lagre" class="btn btn-primary" /> 
+        <!-- Knapp for å avbryte redigeringen og gå tilbake til forrige side. -->
+        <button type="button" class="btn btn-secondary" onclick="history.back()">Avbryt</button> 
     </div>
 </form>

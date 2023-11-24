@@ -1,15 +1,20 @@
-﻿@model Nsted.Models.FullførtOrdre
+﻿<!-- Oversikt over fullførteordre-skjema når man trykker på en serviceskjemaId i listen over fullførteordre-skjema -->
+
+@model Nsted.Models.FullførtOrdre
 @{
     ViewData["Title"] = "Fullført Ordre";
 }
+<!-- Link til stylesheetene siden bruker. -->
 <link rel="stylesheet" href="~/css/ServiceSkjemaDetails.css" />
 <link rel="stylesheet" href="~/css/AvbrytKnappStyle.css" />
 
 <h1>Oversikt Serviceskjema @Model.ServiceSkjemaId</h1>
+<!-- Formen blir utført av funksjonen "OversiktFullførteOrdre"" i Ansattkontrolleren.-->
 <form asp-controller="Ansatt" asp-action="OversiktFullførteOrdre" method="post">
     <input type="hidden" asp-for="ServiceSkjemaId" />
     <input type="hidden" asp-for="KundeId" />
 
+    <!-- Informasjon som KUN kan leses fra skjema -->
     <div class="row">
         <div class="col-md-6"><p>Mottatt Dato: <br /><span>@Model.MottattDato.ToString("yyyy-MM-dd")</span></p></div>
         <div class="col-md-6"><p>Ordre Nr: <br /><span>@Model.OrdreNr</span></p></div>
@@ -27,7 +32,8 @@
         <div class="col-md-6"><p>Kunde Signatur: <br /><span>@Model.KundeSignatur</span></p></div>
         <div class="col-md-6"><p>Mekaniker Signatur: <br /><span>@Model.MekanikerSignatur</span></p></div>
     </div>
-    <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListFullførteOrdrer", "Ansatt")'">Avbryt</button>
+    <!-- Knapp for å gå tilbake ut av skjema. -->
+    <button type="button" id="avbrytKnapp" class="btn btn-secondary" onclick="window.location.href='@Url.Action("ListFullførteOrdrer", "Ansatt")'">Tilbake</button>
 
 
 </form>

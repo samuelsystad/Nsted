@@ -8,6 +8,7 @@ using Nsted.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System;
+using Microsoft.Extensions.Primitives;
 
 namespace Nsted
 {
@@ -20,16 +21,21 @@ namespace Nsted
             Configuration = configuration;
         }
 
+        // Konfigurerer tjenester som brukes i applikasjonen.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Legger til MVC-rammeverket for kontroller og visninger.
             services.AddControllersWithViews();
 
+            // Legger til UserService som en Scoped-tjeneste.
             services.AddScoped<UserService>();
 
+            // Konfigurerer og legger til Entity Framework DbContext med MySQL-database.
             services.AddDbContext<NstedDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
                     ServerVersion.AutoDetect(Configuration.GetConnectionString("DefaultConnection"))));
 
+            // Legger til autentisering med informasjonskapsler (cookies).
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
@@ -37,32 +43,60 @@ namespace Nsted
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
                 });
 
+            // Legger til autorisasjonstjenester.
             services.AddAuthorization();
-
-           
         }
 
+        // Konfigurerer HTTP-request-pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Sikkerhetsheadere
-            
-            if (env.IsDevelopment())
+            // Oppsett av sikkerhetsheadere.
+            if (!env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.Use(async (context, next) =>
+                {
+                    // Legger til sikkerhetsheadere for beskyttelse mot webangrep.
+                    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+                    context.Response.Headers.Add(
+                        "Content-Security-Policy",
+                        "default-src 'self'; " +
+                        "img-src 'self'; " +
+                        "font-src 'self'; " +
+                        "style-src 'self'; " +
+                        "script-src 'self'; " +
+                        "frame-src 'self'; " +
+                        "connect-src 'self';");
+                    await next();
+                });
+
+                // Håndterer feil og unntak, og omdiriger til feilsiden.
+                app.UseExceptionHandler("/Home/Error");
+
+                // Aktiverer HSTS (HTTP Strict Transport Security) for sikrere kommunikasjon over HTTPS.
+                app.UseHsts();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
+                // Viser detaljerte feilmeldinger under utviklingsmiljøet.
+                app.UseDeveloperExceptionPage();
             }
 
+            // Utfører HTTPS-omdirigering.
             app.UseHttpsRedirection();
+
+            // Aktiverer støtte for statiske filer som CSS, JavaScript, bilder, etc.
             app.UseStaticFiles();
 
+            // Setter opp ruting for applikasjonen.
             app.UseRouting();
+
+            // Aktiverer autentisering og autorisasjon.
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // Konfigurerer endepunkter for MVC-kontroller og aksjoner.
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -72,4 +106,3 @@ namespace Nsted
         }
     }
 }
-

@@ -1,41 +1,50 @@
 ﻿@model ErrorViewModel
 @{
-    ViewData["Title"] = "Error";
+    // Setter sidetittelen til "Feil"
+    ViewData["Title"] = "Feil";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<!-- Viser en overskrift for feilen -->
+<h1 class="text-danger">Feil.</h1>
+<h2 class="text-danger">Det oppstod en feil under behandlingen av forespørselen din.</h2>
 
+<!-- Viser feildetaljer hvis tilgjengelig -->
 @if (!string.IsNullOrEmpty(Model.ErrorMessage))
 {
-    <h3>Error Details</h3>
-    <p><strong>Message:</strong> @Model.ErrorMessage</p>
+    <h3>Feildetaljer</h3>
+    <p><strong>Melding:</strong> @Model.ErrorMessage</p>
 }
 
+<!-- Viser stakkspor hvis tilgjengelig -->
 @if (!string.IsNullOrEmpty(Model.StackTrace))
 {
-    <p><strong>Stack Trace:</strong></p>
+    <p><strong>Stakkspor:</strong></p>
     <pre>@Model.StackTrace</pre>
 }
 
+<!-- Viser forespørsels-ID hvis tilgjengelig -->
 @if (Model.ShowRequestId)
 {
     <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        <strong>Forespørsels-ID:</strong> <code>@Model.RequestId</code>
     </p>
 }
+
+<!-- Viser melding om indre unntak hvis tilgjengelig -->
 @if (!string.IsNullOrEmpty(Model.InnerExceptionMessage))
 {
-    <p><strong>Inner Exception Message:</strong> @Model.InnerExceptionMessage</p>
+    <p><strong>Melding om indre unntak:</strong> @Model.InnerExceptionMessage</p>
 }
 
-<h3>Development Mode</h3>
+<!-- Viser informasjon om utviklingsmodus -->
+<h3>Utviklingsmodus</h3>
 <p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+    Å bytte til <strong>Utviklings</strong> miljø vil vise mer detaljert informasjon om feilen som oppstod.
 </p>
 <p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
+    <strong>Utviklingsmiljøet bør ikke aktiveres for distribuerte applikasjoner.</strong>
+    Det kan føre til at sensitive opplysninger fra unntak blir vist for sluttbrukere.
+    For lokal feilsøking, aktiver <strong>Utviklings</strong> miljøet ved å sette miljøvariabelen <strong>ASPNETCORE_ENVIRONMENT</strong> til <strong>Utvikling</strong>
+    og start appen på nytt.
 </p>
+

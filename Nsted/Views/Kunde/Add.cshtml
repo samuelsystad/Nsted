@@ -1,55 +1,69 @@
-﻿@model Nsted.Models.Kunde
+﻿<!-- Legge til ny kunde siden. -->
+
+<!-- Definerer modellen for dette Razor-viewet som et Kunde-objekt. -->
+@model Nsted.Models.Kunde 
 
 @{
-    ViewData["Title"] = "Legg til kunde";
+    <!-- Setter tittelvisningen til "Legg til kunde". -->
+    ViewData["Title"] = "Legg til kunde"; 
 }
+<!-- Link til stylesheeten siden bruker. -->
+<link rel="stylesheet" href="~/css/AddKundeStyle.css" /> 
 
-<link rel="stylesheet" href="~/css/AddKundeStyle.css" />
-
-<h2>Legg til kunde</h2>
+<!-- Overskrift for siden som viser "Legg til kunde". -->
+<h2>Legg til kunde</h2> 
 
 <div class="container">
-    <form asp-action="Add" method="post">
+    <!-- HTML-skjema for å legge til ny kunde, som sender data til "Add" metoden i Kundekontrolleren ved innsending. -->
+    <form asp-action="Add" method="post"> 
         <div class="row mb-3">
             <div class="col-md-6">
-                <label for="Fornavn" class="form-label">Fornavn:</label>
-                <input asp-for="Fornavn" class="form-control" id="Fornavn" required />
+                <label for="Fornavn" class="form-label">Fornavn:</label> <!-- Etiketten for Fornavn-inputfeltet. -->
+                <!-- Inputfeltet for Fornavn med CSS-klassen "form-control". -->
+                <input asp-for="Fornavn" class="form-control" id="Fornavn" required />  <!-- Required attributtet sørger for at feltet ikke kan være tomt når det sendes inn. -->
             </div>
             <div class="col-md-6">
-                <label for="Etternavn" class="form-label">Etternavn:</label>
-                <input asp-for="Etternavn" class="form-control" id="Etternavn" required />
+                <label for="Etternavn" class="form-label">Etternavn:</label> <!-- Etiketten for Etternavn-inputfeltet. -->
+                <!-- Inputfeltet for Etternavn. -->
+                <input asp-for="Etternavn" class="form-control" id="Etternavn" required />  
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-6">
-                <label for="Telefon" class="form-label">Telefon:</label>
-                <input asp-for="Telefon" class="form-control" id="Telefon" required />
+                <label for="Telefon" class="form-label">Telefon:</label> <!-- Etiketten for Telefon-inputfeltet. -->
+                <!-- Inputfeltet for Telefon.  -->
+                <input asp-for="Telefon" class="form-control" id="Telefon" required /> 
             </div>
             <div class="col-md-6">
-                <label for="Email" class="form-label">Email:</label>
-                <input asp-for="Email" class="form-control" id="Email" required />
+                <label for="Email" class="form-label">Email:</label> <!-- Etiketten for Email-inputfeltet. -->
+                <!-- Inputfeltet for Email. -->
+                <input asp-for="Email" class="form-control" id="Email" required /> 
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-12">
-                <label for="Adresse" class="form-label">Adresse:</label>
-                <input asp-for="Adresse" class="form-control" id="Adresse" required />
+                <label for="Adresse" class="form-label">Adresse:</label> <!-- Etiketten for Adresse-inputfeltet. -->
+                <!-- Inputfeltet for Adresse -->
+                <input asp-for="Adresse" class="form-control" id="Adresse" required /> 
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-12">
-                <label for="Registrert" class="form-label">Registrert:</label>
+                <label for="Registrert" class="form-label">Registrert:</label> <!-- Etiketten for Registrert-inputfeltet. -->
+                <!-- Inputfeltet for Registrert. -->
                 <input asp-for="Registrert" class="form-control" id="Registrert" required />
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-12">
-                <input type="submit" value="Registrer" class="btn btn-primary" />
+                <!-- Knapp for å registrere en ny kunde. -->
+                <input type="submit" value="Registrer" class="btn btn-primary" /> 
             </div>
         </div>
     </form>
 </div>
+

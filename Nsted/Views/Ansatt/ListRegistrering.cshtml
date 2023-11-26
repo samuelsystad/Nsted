@@ -50,8 +50,8 @@
                 <td style="font-size: 15px;">@registrering.ServiceSkjema</td>
                 <td style="text-align: center;">
                     <!-- Knapp som sletter registreringsskjema fra systemet.-->
-                    <a href="@Url.Action("Delete", "Ansatt", new { id = registrering.RegistreringId })" class="btn btn-danger"
-                       onclick="return confirmDeletion('@registrering.Kunde.Fornavn','@registrering.Kunde.Etternavn');">Slett</a>
+                    <a href="@Url.Action("DeleteRegistrering", "Ansatt", new { id = registrering.RegistreringId })" class="btn btn-danger"
+                       onclick="return confirmDeletion('@registrering.RegistreringId');">Slett</a>
                 </td>
             </tr>
         }
@@ -60,8 +60,8 @@
 
 <!-- Funksjon for å bekrefte slettingen av registreringsskjemaet og kunden fra systemet. -->
 <script>
-    function confirmDeletion(firstName, lastName) {
-        return confirm("Er du sikker på at du vil slette " + firstName + " " + lastName + "?");
+    function confirmDeletion(RegistreringId) {
+        return confirm("Er du sikker på at du vil slette Registrerings Skjema" + RegistreringId+ "?");
     }
 </script>
 

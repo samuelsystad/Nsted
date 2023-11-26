@@ -1,7 +1,6 @@
 ﻿<!-- Listet oversikt av serviceskjema siden.-->
 
 @model List<ServiceSkjema>
-
 <!-- Link til stylesheetsene siden bruker. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
@@ -31,7 +30,7 @@
                 <td style="font-size: 20px; text-align: center;">
                     <!-- Oppretter en lenke for en detaljert visning av Serviceskjemaet. -->
                     <a href="@Url.Action("OversiktServiceSkjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })" class="no-underline">
-                 @serviceskjema.ServiceSkjemaId
+                        @serviceskjema.ServiceSkjemaId
                     </a>
                     <!-- Oppretter en lenke til Kunde-redigeringsvisningen. -->
                 </td>
@@ -46,9 +45,14 @@
                 <td style="font-size: 15px;">@serviceskjema.OrdreNr</td>
                 <!-- Serienummer -->
                 <td style="font-size: 15px;">@serviceskjema.SerieNummer</td>
-               <!-- FerdigstiltDato -->
+                <!-- FerdigstiltDato -->
                 <td style="font-size: 15px;">@serviceskjema.FerdigstiltDato.ToShortDateString()</td>
                 <td style="text-align: center;">
+                    <!-- Knapp som sletter registreringsskjema fra systemet.-->
+                    <a href="@Url.Action("DeleteServiceskjema", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })" class="btn btn-danger"
+                       onclick="return confirmDeletion('@serviceskjema.ServiceSkjemaId');">Slett</a>
+
+
                     <!-- Skjema for å fullføre servicen. -->
                     <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })"
                           onsubmit="return confirmCompletion();">
@@ -56,11 +60,16 @@
                         <button type="submit" class="btn btn-success">Fullfør</button>
                     </form>
                     <!-- Funksjon for å bekrefte fullføringen av servicen. -->
-                    <script>function confirmCompletion() {
-                            return confirm("Er du sikker på at du vil fullføre servicen?");
-                        }</script>
                 </td>
+
             </tr>
         }
+
+
     </tbody>
+
 </table>
+
+<script>function confirmDeletion(ServiceSkjemaId) {
+        return confirm("Er du sikker på at du vil slette Serviceskjema " + ServiceSkjemaId + "?");
+    }</script>

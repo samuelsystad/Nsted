@@ -8,6 +8,7 @@ using Nsted.Services;
 using System.Security.Claims;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 public class AccountController : Controller
 {
@@ -25,33 +26,37 @@ public class AccountController : Controller
     [HttpGet]
     public IActionResult Login()
     {
+        // Vis innloggingsvisningen
         return View();
     }
+
     [HttpPost]
     public async Task<IActionResult> Login(UserLoginModel model)
     {
         if (ModelState.IsValid)
         {
+            // Hent brukeren med e-posten fra databasen
             var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
             if (user != null && _userService.VerifyPassword(model.Password, user.PasswordHash))
             {
+                // Opprett en Claims-principal for innlogging
                 var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.Email),
-                // Add other claims as needed
-            };
+                {
+                    new Claim(ClaimTypes.Name, user.Email),
+                };
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
+                // Logg inn brukeren
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                // Redirect to the desired page (Homepage in this case)
+                // Redirect til hjemmesiden etter vellykket innlogging
                 return RedirectToAction("Homepage", "Home");
             }
             else
             {
-                // Set an error message when login fails
+                // Håndter feil innloggingsinformasjon
                 ModelState.AddModelError(string.Empty, "Brukernavnet eller passordet er feil, vennligst prøv igjen.");
             }
         }
@@ -63,49 +68,55 @@ public class AccountController : Controller
     [HttpGet]
     public IActionResult Register()
     {
+        // Vis registreringsvisningen med et tomt registreringsskjema
         return View(new UserRegistrationModel());
     }
+
     [AllowAnonymous]
     [HttpPost]
     public async Task<IActionResult> Register(UserRegistrationModel model)
     {
         if (ModelState.IsValid)
         {
+            // Sjekk om e-posten allerede eksisterer i databasen
             if (!_context.Users.Any(u => u.Email == model.Email))
             {
+                // Hash passordet før lagring
                 var hashedPassword = _userService.HashPassword(model.Password);
                 var newUser = new User { Email = model.Email, PasswordHash = hashedPassword };
+
+                // Legg til den nye brukeren i databasen
                 _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
 
-                // Create the claims for the user
+                // Opprett en Claims-principal for innlogging
                 var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, newUser.Email),
-                // Add other claims as needed
-            };
+                {
+                    new Claim(ClaimTypes.Name, newUser.Email),
+                };
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
-                // Sign in the user
+                // Logg inn den nye brukeren
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                // Redirect to the homepage or any other desired page
+                // Redirect til hjemmesiden etter vellykket registrering
                 return RedirectToAction("Homepage", "Home");
             }
             else
             {
-                ModelState.AddModelError("", "Email allerede i bruk.");
+                // Håndter feil hvis e-posten allerede er i bruk
+                ModelState.AddModelError("", "E-posten er allerede i bruk.");
             }
         }
 
         return View(model);
     }
 
-
     public async Task<IActionResult> Logout()
     {
+        // Logg ut brukeren og redirect til innloggingssiden
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         return RedirectToAction("Login");
     }

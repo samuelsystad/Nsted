@@ -1,10 +1,12 @@
-﻿body {
+﻿/* Grunnleggende stil for hele siden */
+body {
     justify-content: center;
     align-items: center;
     margin: 0;
     overflow: scroll;
 }
 
+/* Stil for hovedcontaineren */
 .container {
     margin-top: 15px;
     background-color: #ffffff;
@@ -12,25 +14,28 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 900px; /* Set a max-width for larger screens */
-    margin: 30px auto; /* Center the container */
+    max-width: 900px;
+    margin: 30px auto;
 }
 
+/* Stil for hovedoverskrift */
 h1 {
     color: #e7792c;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 30px; /* Add space below the header */
+    margin-bottom: 30px;
 }
 
+/* Stil for formetiketter */
 .form-label {
     color: #333;
     font-weight: bold;
-    margin-bottom: 10px; /* Space between label and input */
+    margin-bottom: 10px;
 }
 
+/* Stil for inndatafelt og rullegardinmenyer */
 .form-control, .form-select {
-    width: 100%; /* Full width of parent */
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -38,18 +43,21 @@ h1 {
     font-size: 16px;
 }
 
+/* Stil for sekundærknapp */
 .btn-outline-secondary {
     color: #333;
     border-color: #e7792c;
     background-color: transparent;
 }
 
+    /* Hover-effekt for sekundærknapp */
     .btn-outline-secondary:hover {
         color: #fff;
         background-color: #e7792c;
         border-color: #e7792c;
     }
 
+/* Stil for primærknapp */
 .btn-primary {
     background-color: #e7792c;
     color: #fff;
@@ -61,15 +69,17 @@ h1 {
     width: 100%;
 }
 
+    /* Hover-effekt for primærknapp */
     .btn-primary:hover {
         background-color: #f0873e;
     }
 
-/* Additional styles */
+/* Stil for flytende formfelt */
 .form-floating {
     position: relative;
 }
 
+    /* Stil for etiketter i flytende formfelt */
     .form-floating label {
         position: absolute;
         top: 10px;
@@ -78,6 +88,7 @@ h1 {
         pointer-events: none;
     }
 
+/* Dynamisk stil for etiketter ved fokus eller når et felt ikke er tomt */
 .form-control:focus + label,
 .form-control:not(:placeholder-shown) + label {
     top: -10px;

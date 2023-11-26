@@ -1,7 +1,9 @@
 ﻿namespace Nsted.Models
 {
- 
-        public class Registrering
+    /// <summary>
+    /// Modell for registrering av henvendelser.
+    /// </summary>
+    public class Registrering
         {
             public int RegistreringId { get; set; }
             public int KundeId { get; set; } // Fremmednøkkel som peker til Kunder-tabellen
@@ -19,11 +21,9 @@
 
         public required int AntallTimerUtført { get; set; } 
 
-        public required bool OrdreNr { get; set; }
+        public required int OrdreNr { get; set; }
 
         public required bool ServiceSkjema { get; set; }
 
-
-        }
-    }
-
+     }
+ }

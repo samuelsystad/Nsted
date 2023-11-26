@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Nsted.Models
 {
+    /// <summary>
+    /// Modell som representerer en kunde. Inneholder kundens grunnleggende informasjon.
+    /// </summary>
+    /// 
     public class Kunde
     {
         public int KundeId { get; set; }

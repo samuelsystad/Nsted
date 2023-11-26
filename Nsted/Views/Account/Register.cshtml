@@ -1,4 +1,7 @@
-﻿<link rel="stylesheet" href="~/css/RegisterPage.css">
+﻿<!-- Registrerings siden man kommer til når man skal registrere en ny bruker -->
+
+<!-- Link til stylesheeten siden bruker. -->
+<link rel="stylesheet" href="~/css/RegisterPage.css">
 
 @model Nsted.Models.UserRegistrationModel
 
@@ -7,34 +10,35 @@
 <div class="register-container">
     <h3>Velkommen</h3>
     <h4>Lag en bruker hos Nosted& AS for å fortsette til den administrative siden.</h4>
+
+    <!-- Registration Form: Skjema for innsending av brukerregistreringsdata -->
     <form asp-action="Register" asp-controller="Account" method="post">
-        <!-- Email input -->
+
+        <!-- Email Input Field: Felt for brukerens e-postadresse -->
         <div class="form-outline mb-2">
-            <input asp-for="Email" type="email" class="form-input"
-                   placeholder="Oppgi en gyldig e-post adresse" />
+            <input asp-for="Email" type="email" class="form-input" placeholder="Oppgi en gyldig e-post adresse" />
         </div>
 
-        <!-- Password input -->
+        <!-- Password Input Field: Felt for brukerens passord -->
         <div class="form-outline mb-1">
-            <input asp-for="Password" type="password" class="form-input"
-                   placeholder="Enter password" />
+            <input asp-for="Password" type="password" class="form-input" placeholder="Oppgi Passord" />
         </div>
 
-        <!-- Confirm Password input -->
+        <!-- Bekreft Passord Input Felt: Felt for bekreftelse av passord -->
         <div class="form-outline mb-3">
-            <input asp-for="ConfirmPassword" type="password" class="form-input"
-                   placeholder="Confirm password" />
+            <input asp-for="ConfirmPassword" type="password" class="form-input" placeholder="Bekreft Passord" />
             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
         </div>
 
-        <!-- Registration Link -->
+        <!-- Lenke for hvis man allerede har en bruker -->
         <div class="text-center mt-2 pt-1">
             <a href="@Url.Action("Login", "Account")" class="additional-link">Eksisterende bruker?</a>
         </div>
 
-        <!-- Register Button -->
+        <!-- Registrerings Knapp: Knapp for å sende registreringsskjema -->
         <div class="text-center text-lg-start mt-2 pt-1">
             <button type="submit" class="register-button">Registrer deg</button>
         </div>
     </form>
+
 </div>

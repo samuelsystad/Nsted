@@ -1,22 +1,22 @@
-﻿/* Styling for navbar links */
+﻿/* Stil for navigasjonsbarlenker */
 .navbar-nav .nav-item .nav-link {
-    color: #9cb7c2 !important;
+    color: #9cb7c2;
     margin-right: 20px;
     margin-top: 10px;
     transition: color 0.3s ease;
 }
 
-/* Navbar links hover */
+/* Hover-effekt for navigasjonsbarlenker */
 .navbar-nav .nav-item:hover .nav-link {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
-/* Styling for navbar toggler ikon */
+/* Stil for navigasjonsbarknappens ikon */
 .navbar-toggler-icon {
-    background-color: #9cb7c2 !important;
+    background-color: #9cb7c2;
 }
 
-/* Styling for custom button */
+/* Stil for tilpasset knapp med bakgrunnsbilde */
 .custom-button {
     color: transparent;
     background: url('/images/Nostedlogo.png') no-repeat center center;
@@ -30,12 +30,12 @@
     margin-top: 10px;
 }
 
-
+/* Skjuler pilen for dropdown-toggle */
 .navbar-nav .nav-item .dropdown-toggle::after {
     display: none;
 }
 
-/* Styling for dropdown menu container */
+/* Stil for dropdown-menyens beholder */
 .navbar-nav .nav-item .dropdown-menu {
     border-top: solid 3px;
     border-top-color: #e7792c;
@@ -44,49 +44,44 @@
     display: none;
 }
 
-    /* Styling for spesifike dropdown menu items */
+    /* Stil for spesifikke dropdown-menyelementer */
     .navbar-nav .nav-item .dropdown-menu .nav-link {
         width: 85%;
-        color: #9cb7c2 !important;
+        color: #9cb7c2;
         font-size: 15px;
-        border-bottom: 1px solid #9cb7c2; 
-        padding: 8px 0; 
+        border-bottom: 1px solid #9cb7c2;
+        padding: 8px 0;
         margin: auto;
     }
 
-        
+        /* Siste dropdown-menyelementet */
         .navbar-nav .nav-item .dropdown-menu .nav-link:last-child {
             border-bottom: solid 1px;
         }
 
-    
+        /* Hover-effekt for dropdown-menyelementer */
         .navbar-nav .nav-item .dropdown-menu .nav-link:hover {
-            color: #ffffff !important;
+            color: #ffffff;
         }
 
-/* Vis dropdown menu on hover */
+/* Viser dropdown-meny ved hover */
 .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
 }
 
-/* Style the second dropdown-menu */
+/* Stil for den andre dropdown-menyen */
 .dropdown-menu[aria-labelledby="kundeDropdown"] {
-    /* Your styles for the second dropdown-menu */
     background-color: #101820;
-     /* Example background color */
-    border: 1px solid #ccc; /* Example border */
+    border: 1px solid #ccc;
 }
 
-    /* Style the items inside the second dropdown-menu */
+    /* Stil for elementer i den andre dropdown-menyen */
     .dropdown-menu[aria-labelledby="kundeDropdown"] .dropdown-item {
-        /* Your styles for the items in the second dropdown-menu */
-        color: #9cb7c2; /* Example text color */
+        color: #9cb7c2;
         font-size: 15px;
     }
 
-    /* Style the dividers inside the second dropdown-menu */
+    /* Stil for skillelinjer i den andre dropdown-menyen */
     .dropdown-menu[aria-labelledby="kundeDropdown"] .dropdown-divider {
-        /* Your styles for the dividers in the second dropdown-menu */
-        border-top: 1px solid #ccc; /* Example border color */
+        border-top: 1px solid #ccc;
     }
-

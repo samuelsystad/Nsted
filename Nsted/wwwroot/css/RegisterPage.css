@@ -1,15 +1,17 @@
-﻿.overlay-register {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-image: url('/images/backgroundhomepage.jpg') !important;
-    background-size: cover !important;
-    opacity: 0.15 !important;
-    z-index: -1 !important;
+﻿/* Stil for bakgrunns-overlay på registreringssiden */
+.overlay-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/backgroundhomepage.jpg');
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
 }
 
+/* Stil for overskrifter */
 h3 {
     font-size: 30px;
 }
@@ -18,64 +20,67 @@ h4 {
     font-size: 14px;
 }
 
-/* Registration container styling */
+/* Stil for registreringscontaineren */
 .register-container {
-    background-color: #fff !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    max-width: 360px !important;
-    margin: 40px auto !important;
-    padding: 20px !important;
-    text-align: center !important;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 360px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Form input styling */
+/* Stil for inndatafeltene i skjemaet */
 .form-input {
-    width: 100% !important;
-    padding: 5px !important;
-    margin: 5px 0 !important;
-    border-radius: 5px !important;
-    border: 1px solid #ddd !important;
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-/* Label styling */
+/* Stil for etiketter i skjemaet */
 .form-label {
-    display: block !important;
-    margin-bottom: 2px !important;
-    color: #333 !important;
+    display: block;
+    margin-bottom: 2px;
+    color: #333;
 }
 
-/* Button styling */
+/* Stil for registreringsknappen */
 .register-button {
-    width: 100% !important;
-    padding: 10px !important;
-    margin-top: 10px !important; /* Reduced margin */
-    border-radius: 5px !important;
-    border: none !important;
-    background-color: #007bff !important;
-    color: white !important;
-    cursor: pointer !important;
-    font-size: 16px !important;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
 }
 
+    /* Hover-effekt for registreringsknappen */
     .register-button:hover {
-        background-color: #0056b3 !important;
+        background-color: #0056b3;
     }
 
-/* Error message styling */
+/* Stil for feilmeldinger */
 .error-message {
-    color: red !important;
-    margin-bottom: 15px !important;
-    list-style-type: none !important; /* No bullets */
-    padding-left: 0 !important; /* Align with other elements */
+    color: red;
+    margin-bottom: 15px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
+/* Stil for ekstra linker, som 'allerede medlem?' */
 .additional-link {
-    color: #007bff !important;
-    text-decoration: none !important;
-    margin-right: 140px !important; /* Adjusted margin */
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 140px;
 }
 
+    /* Hover-effekt for ekstra linker */
     .additional-link:hover {
-        text-decoration: underline !important;
+        text-decoration: underline;
     }

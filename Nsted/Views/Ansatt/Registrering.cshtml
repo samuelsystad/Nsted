@@ -10,9 +10,9 @@
 <h1>Registrering</h1>
 
 <div class="container">
-   
+
     <div class="row mb-3">
-        <!-- Knapp for eksisterende kunde, hvis man har en kunde i systemet og vil bruke samme kunde, 
+        <!-- Knapp for eksisterende kunde, hvis man har en kunde i systemet og vil bruke samme kunde,
             kan man trykke på denne knappen og bli dirigert til en ny side der man ikke trenger å fylle ut kundeinformasjon.  -->
         <div class="col-12 mb-3 text-center">
             <a asp-controller="Ansatt" asp-action="EksisterendeKunde" class="btn btn-outline-secondary">Velg en eksisterende kunde</a>
@@ -131,15 +131,6 @@
             </div>
             <div class="col-md-3">
                 <!-- Sjette rad -->
-                <label for="ordreNr" class="form-label">Ordrenr?</label>
-                <select class="form-select" name="registrering.OrdreNr" required>
-                    <option disabled selected>Velg et alternativ</option>
-                    <option value="true">Ja</option>
-                    <option value="false">Nei</option>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <!-- Sjette rad -->
                 <label for="serviceSkjema" class="form-label">Service skjema?</label>
                 <select class="form-select" name="registrering.ServiceSkjema" required>
                     <option disabled selected>Velg et alternativ</option>
@@ -147,12 +138,27 @@
                     <option value="false">Nei</option>
                 </select>
             </div>
-        </div>
+            </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-secondary" style="margin-bottom: 5px;" onclick="generateOrderNumber()">Generer Ordrenummer</button>
+                <input type="text" class="form-control" id="orderNumberField" name="registrering.OrdreNr" placeholder="Order Number" readonly>
+            </div>
+            </div>
 
-        <!-- Knapp som sender inn skjemaet når formen er riktig utfylt med tilfredstillende informasjon. -->
-        <button type="submit" class="btn btn-primary">Send inn</button>
-    </form>
+            <!-- Knapp som sender inn skjemaet når formen er riktig utfylt med tilfredstillende informasjon. -->
+            <button type="submit" class="btn btn-primary">Send inn</button>
+</form>
 </div>
+<!-- Funksjon som genererer et tilfeldig og unikt Ordre Nr -->
+<script>
+    function generateOrderNumber() {
+        fetch('/Ansatt/GenerateUniqueOrderNumber')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('orderNumberField').value = data.uniqueOrderNumber;
+            })
+            .catch(error => console.error('Error:', error));
+    }
 
-
- 
+    </script>

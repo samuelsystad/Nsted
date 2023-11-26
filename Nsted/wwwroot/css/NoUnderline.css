@@ -1,3 +1,4 @@
-﻿.no-underline {
+﻿/* Fjerner underline fra klikkbare elementer */
+.no-underline {
     text-decoration: none;
 }

@@ -96,9 +96,9 @@ Koden bør være enkel å lese og forstå. Gruppen har prøvd å lage en kode so
 Gjenbrukbarhet:
 Skriv kode som kan gjenbrukes. Gruppen har prøvd å unngå dette med å passe på det ikk er  duplisering ved å strukturere logikken i funksjoner, klasser eller moduler.
 Skalerbarhet:
-Hvordan koden din vil håndtere vekst var et viktig punk for Nøsted &AS. Gruppen har prøvd å bruke skalerbare strukturer og teknikker for å støtte fremtidig utvidelse.
+Hvordan koden din vil håndtere vekst var et viktig punkt for Nøsted &AS. Gruppen har prøvd å bruke skalerbare strukturer og teknikker for å støtte fremtidig utvidelse.
 Modularitet:
-Det går ut på å unngå store og komplekse struktur. Derfor har gruppen til best evne prøvd lagd koden inn i moduler eller komponenter for enklere håndtering og gjenbruk.
+Det går ut på å unngå store og komplekse struktur. Derfor har gruppen etter best evne prøvd å legge koden inn i moduler eller komponenter for enklere håndtering og gjenbruk.
 Versjonskontroll og dokumentasjon:
 Dette prinsippet går ut på å bruk versjonskontroll for å spore endringer og samarbeide med andre utviklere.  Gruppen har dokumentert koden godt for å lette forståelsen for andre og for fremtidig referanse.
 Disse kriteriene danner grunnlaget for å skrive kvalitetskode. Å følge disse prinsippene bidrar til å skape en mer vedlikeholdbar, sikker og effektiv applikasjon samtidig som det gjør det enklere for andre utviklere å samarbeide og forstå koden.

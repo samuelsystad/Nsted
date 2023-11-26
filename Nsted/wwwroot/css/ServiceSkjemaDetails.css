@@ -1,33 +1,39 @@
-﻿body {
+﻿/* Grunnleggende stil for siden */
+body {
     justify-content: center;
     align-items: center;
     margin: 0;
     overflow: scroll;
 }
+
+/* Hovedcontainerens stil */
 .container {
     width: 100%;
-    height: calc(100% - 40px); /* Adjust height */
+    height: calc(100% - 40px);
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow-y: auto; /* Enable vertical scroll */
+    overflow-y: auto;
 }
 
+/* Stil for hovedoverskrift */
 h1 {
     color: #e7792c;
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Generell stil for etiketter */
 label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
 }
 
+/* Stil for tekst- og datofelt, samt tekstområder */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -40,11 +46,13 @@ textarea {
     font-size: 16px;
 }
 
+/* Spesifikk stil for tekstområder */
 textarea {
     height: 80px;
     resize: vertical;
 }
 
+/* Stil for knapper */
 button {
     display: block;
     width: 100%;
@@ -58,46 +66,49 @@ button {
     font-size: 18px;
 }
 
+    /* Hover-effekt for knapper */
     button:hover {
         background-color: #218838;
     }
 
+/* Responsive stil for mindre skjermer */
 @media (max-width: 768px) {
     .container {
         width: 90%;
-        height: calc(100% - 20px); /* Adjust for smaller screens */
+        height: calc(100% - 20px);
     }
 
     input[type="text"],
     input[type="number"],
     input[type="date"],
-    textarea {
-        font-size: 14px;
-    }
-
+    textarea,
     button {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
+/* Stil for paragrafer i kolonner */
 .col-md-6 p {
-    color: #000000; /* Dark gray text color */
-    font-size: 20px; /* Adjust the font size as needed */
-    margin-bottom: 10px; /* Space below each paragraph */
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
+    /* Stil for span innenfor kolonne-paragrafer */
     .col-md-6 p span {
-        color:  black; /* Bootstrap primary color, or choose your own */
+        color: black;
         font-weight: normal;
         font-size: 16px;
     }
 
+/* Stil for sekundærknapp */
 .btn-secondary {
     background-color: blue;
     color: white;
 }
 
-.btn-secondary:hover {
-    background-color: darkblue;
-}
+    /* Hover-effekt for sekundærknapp */
+    .btn-secondary:hover {
+        background-color: darkblue;
+    }

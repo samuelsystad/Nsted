@@ -1,13 +1,16 @@
+/* Basisstil for HTML, definerer skriftstørrelsen */
 html {
     font-size: 14px;
 }
 
+/* Stil for HTML på større skjermer */
 @media (min-width: 768px) {
     html {
         font-size: 18px;
     }
 }
 
+/* Stil for stort displayelement 1 */
 .display-1 {
     color: #9cb7c2;
     text-align: left;
@@ -16,6 +19,7 @@ html {
     font-size: 80px;
 }
 
+/* Stil for stort displayelement 2 */
 .display-2 {
     color: #FFFFFF;
     text-align: left;
@@ -24,6 +28,7 @@ html {
     font-size: 80px;
 }
 
+/* Stil for periodetekst */
 .period {
     color: #e7792c;
     text-align: left;
@@ -32,6 +37,7 @@ html {
     margin-left: 440px;
 }
 
+/* Stil for displayelement 3 */
 .display-3 {
     color: #c2c2c2;
     font-size: 25px;
@@ -40,28 +46,31 @@ html {
     margin-top: 25px;
 }
 
+/* Stil for displayelement 4 */
 .display-4 {
     text-align: right;
     color: #e7792c;
     font-size: 45px;
     opacity: 0.7;
-    
 }
 
+/* Stil for fokus på knapper og formelementer */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+/* Bakgrunnsfarge for tilpassede elementer */
 .bg-custom-color {
     background-color: #101820;
 }
 
-
+/* Positionering og høyde for HTML */
 html {
     position: relative;
     min-height: 100%;
 }
 
+/* Stil for body, inkludert margin og bakgrunnsfarge */
 body {
     margin-bottom: 60px;
     background-color: #101820;

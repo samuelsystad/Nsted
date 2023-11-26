@@ -1,32 +1,36 @@
-﻿body {
+﻿/* Grunnleggende side layout */
+body {
     justify-content: center;
     align-items: center;
     margin: 0;
     overflow: scroll;
 }
 
+/* Stil for overskrifter */
 h2 {
     color: #e7792c;
     text-align: center;
     margin-top: 20px;
 }
 
-
+/* Stil for hovedcontainer, brukt til innholdsstyring */
 .container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 1000px; /* Adjust width as necessary */
-    margin: auto; /* Center the form in the page */
+    max-width: 1000px;
+    margin: auto;
     margin-top: 10px;
 }
 
+/* Stildefinisjoner for formetiketter */
 .form-label, label {
     color: #333;
     font-weight: bold;
 }
 
+/* Stil for primærknapper */
 .btn-primary {
     background-color: #e7792c;
     color: #fff;
@@ -38,6 +42,7 @@ h2 {
     width: 100%;
 }
 
+    /* Hover-effekt for primærknapper */
     .btn-primary:hover {
         background-color: #f0873e;
     }

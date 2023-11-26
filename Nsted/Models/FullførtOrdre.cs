@@ -3,6 +3,10 @@ using Nsted.Models;
 using System.ComponentModel.DataAnnotations;
 namespace Nsted.Models
 {
+    /// <summary>
+    /// Modell som representerer en fullført ordre.
+    /// </summary>
+
     public class FullførtOrdre
     {
         [Key]

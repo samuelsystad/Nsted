@@ -1,37 +1,35 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Nsted.Models; // Assuming User is within this namespace
-
+using Nsted.Models;
 
 namespace Nsted.Data
 {
+    // Databasekontekst for Nsted-applikasjonen, håndterer interaksjonen med databasen.
     public class NstedDbContext : DbContext
     {
+        // Konstruktør som konfigurerer konteksten med gitte alternativer.
         public NstedDbContext(DbContextOptions<NstedDbContext> options) : base(options)
         {
-
         }
 
-        // Existing DbSets
+        // DbSet som representerer kunder i databasen.
         public DbSet<Kunde> Kunder { get; set; }
+
+        // DbSet som representerer registreringer i databasen.
         public DbSet<Registrering> Registreringer { get; set; }
 
-
-        // Add DbSet for User
+        // DbSet som representerer brukere i databasen.
         public DbSet<User> Users { get; set; }
 
+        // DbSet som representerer serviceskjemaer i databasen.
         public DbSet<ServiceSkjema> ServiceSkjemas { get; set; }
 
+        // DbSet som representerer fullførte ordrer i databasen.
         public DbSet<FullførtOrdre> FullførteOrdrer { get; set; }
 
-
+        // Lagrer endringer i databasen.
         public override int SaveChanges()
         {
-            // Custom logic before saving changes...
-
-
-            return base.SaveChanges(); // Persist changes to the database.
+            return base.SaveChanges();
         }
-
-        // Other DbContext configuration...
     }
 }

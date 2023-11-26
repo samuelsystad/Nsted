@@ -1,4 +1,5 @@
-﻿#avbrytKnapp {
+﻿/* Styling av avbryt knappen, slik at den ser finere ut */
+#avbrytKnapp {
     background-color: #808080;
     color: #fff;
     padding: 12px 20px;

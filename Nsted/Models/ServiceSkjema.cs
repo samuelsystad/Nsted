@@ -3,10 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Nsted.Models
 {
+    /// <summary>
+    /// Modell for et serviceskjema. Representerer detaljer om en serviceordre.
+    /// </summary>
     public class ServiceSkjema
     {
         public int ServiceSkjemaId { get; set; }
-        public int KundeId { get; set; } // Foreign key referencing the Kunder table
+        public int KundeId { get; set; } // Fremmednøkkel som refererer til Kunder tabellen
 
         public Kunde Kunde { get; set; } // Navigation property to Kunde
 

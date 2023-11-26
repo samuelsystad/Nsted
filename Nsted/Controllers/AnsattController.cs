@@ -125,15 +125,24 @@ namespace Nsted.Controllers
 
                 nstedDbContext.Registreringer.Remove(registrering);
 
-                if (kunde != null)
-                {
-                    nstedDbContext.Kunder.Remove(kunde);
-                }
-
                 nstedDbContext.SaveChanges();
             }
 
             return RedirectToAction("ListRegistrering");
+        }
+
+        public IActionResult DeleteServiceskjema(int id)
+        {
+            var serviceSkjema = nstedDbContext.ServiceSkjemas.FirstOrDefault(s => s.ServiceSkjemaId == id);
+
+            if (serviceSkjema != null)
+            {
+                nstedDbContext.ServiceSkjemas.Remove(serviceSkjema);
+
+                nstedDbContext.SaveChanges();
+            }
+
+            return RedirectToAction("ListServiceSkjema");
         }
 
         public IActionResult ListRegistrering()

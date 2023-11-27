@@ -70,7 +70,6 @@ app.MapControllerRoute(
     pattern: "{controller=Account}/{action=Login}/{id?}");
 
 
-
 // Starter applikasjonen.
 app.Run();
 

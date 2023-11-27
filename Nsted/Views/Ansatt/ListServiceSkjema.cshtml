@@ -55,7 +55,7 @@
 
                     <!-- Skjema for å fullføre servicen. -->
                     <form method="post" action="@Url.Action("FullførService", "Ansatt", new { id = serviceskjema.ServiceSkjemaId })"
-                          onsubmit="return confirmCompletion();">
+                          onsubmit="return confirmCompletion('@serviceskjema.ServiceSkjemaId');">
                         <!-- Knapp for å sette servicen som fullført. -->
                         <button type="submit" class="btn btn-success">Fullfør</button>
                     </form>
@@ -70,6 +70,10 @@
 
 </table>
 
-<script>function confirmDeletion(ServiceSkjemaId) {
+<script>
+    function confirmCompletion(ServiceSkjemaId) {
+        return confirm("Er du sikker på at du vil fullføre servicen på Serviceskjema " + ServiceSkjemaId + "?");
+    }
+    function confirmDeletion(ServiceSkjemaId) {
         return confirm("Er du sikker på at du vil slette Serviceskjema " + ServiceSkjemaId + "?");
     }</script>

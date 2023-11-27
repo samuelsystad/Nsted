@@ -1,6 +1,6 @@
 ﻿/* Stil for navigasjonsbarlenker */
 .navbar-nav .nav-item .nav-link {
-    color: #9cb7c2;
+    color: #9cb7c2 !important;
     margin-right: 20px;
     margin-top: 10px;
     transition: color 0.3s ease;
@@ -8,12 +8,12 @@
 
 /* Hover-effekt for navigasjonsbarlenker */
 .navbar-nav .nav-item:hover .nav-link {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 /* Stil for navigasjonsbarknappens ikon */
 .navbar-toggler-icon {
-    background-color: #9cb7c2;
+    background-color: #9cb7c2 !important;
 }
 
 /* Stil for tilpasset knapp med bakgrunnsbilde */
@@ -47,7 +47,7 @@
     /* Stil for spesifikke dropdown-menyelementer */
     .navbar-nav .nav-item .dropdown-menu .nav-link {
         width: 85%;
-        color: #9cb7c2;
+        color: #9cb7c2 !important;
         font-size: 15px;
         border-bottom: 1px solid #9cb7c2;
         padding: 8px 0;
@@ -61,7 +61,7 @@
 
         /* Hover-effekt for dropdown-menyelementer */
         .navbar-nav .nav-item .dropdown-menu .nav-link:hover {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
 /* Viser dropdown-meny ved hover */

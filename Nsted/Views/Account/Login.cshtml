@@ -12,11 +12,11 @@
 {
     <!-- Logged-in User Display: Viser en melding og utloggingsknapp når brukeren er logget inn -->
     <div class="logged-in-container">
-        <p class="logged-in-message">You are logged in as @User.Identity.Name!</p>
+        <p class="logged-in-message">Du er logget inn som @User.Identity.Name!</p>
 
         <!-- Logout Form: Sender brukeren til Logout handling i Account controlleren -->
         <form asp-action="Logout" asp-controller="Account" method="post">
-            <button type="submit" class="logout-button">Log Out</button>
+            <button type="submit" class="logout-button">Logg ut</button>
         </form>
     </div>
 }

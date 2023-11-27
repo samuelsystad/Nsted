@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OS1ju3HyPvIS5+mOJlKQlh66MUAVCWzCi1jH4D9OIMxtlGTL2rEp5otZ+4FaSeoMYq8GCPO+TkMeYxsLJMQaJQ==",
+  "dgSpecHash": "b3r09zYjzvAaawNP35cTPgMTmtEVFdrehEfROt4imjy/fN5u8kcLNbmrHX+rIRIFAlX1NqqtTt5Cm16mFvoYWA==",
   "success": true,
   "projectFilePath": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/Nsted.csproj",
   "expectedPackageFiles": [
@@ -116,10 +116,7 @@
     "/Users/andreasiversen/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/andreasiversen/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/andreasiversen/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/andreasiversen/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "/Users/andreasiversen/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "/Users/andreasiversen/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
-    "/Users/andreasiversen/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
+    "/Users/andreasiversen/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {

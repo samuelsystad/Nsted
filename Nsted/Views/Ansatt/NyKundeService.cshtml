@@ -16,7 +16,7 @@
 </div>
 
  <!-- Formen blir utført av funksjonen "NyKundeOgService" i Ansattkontrolleren. -->
-    <form asp-controller="Ansatt" asp-action="NyKundeOgService" method="post">
+<form asp-controller="Ansatt" asp-action="NyKundeOgService" method="post">
     <div class="row mb-3">
         <div class="col-12">
             <!-- De forskjellige feltene til skjemaet"-->
@@ -59,108 +59,124 @@
         </div>
     </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Mottatt dato -->
-                    <label for="mottattDato" class="form-label">Mottatt dato</label>
-                    <input type="date" class="form-control" name="serviceSkjema.MottattDato" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- OrdreNr -->
-                    <label for="ordreNr" class="form-label">OrdreNr</label>
-                    <input type="number" class="form-control" name="serviceSkjema.OrdreNr" required>
-                </div>
+  <div class="row mb-3">
+        <!-- MottattDato -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="date" class="form-control" name="serviceSkjema.MottattDato" placeholder="dd/mm/yyyy" required>
+                <label for="mottattDato">Mottatt dato</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Produkt type -->
-                    <label for="produktType" class="form-label">Produkt type</label>
-                    <input type="text" class="form-control" name="serviceSkjema.ProduktType" placeholder="Produkttype" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Årsmodell -->
-                    <label for="årsModell" class="form-label">Årsmodell</label>
-                    <input type="number" class="form-control" name="serviceSkjema.ÅrsModell" required>
-                </div>
+        <!-- OrdreNr -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control" name="serviceSkjema.OrdreNr" placeholder="OrdreNr" required>
+                <label for="ordreNr">OrdreNr</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Servicetype -->
-                    <label for="servicetype" class="form-label">Servicetype</label>
-                    <input type="text" class="form-control" name="serviceSkjema.Servicetype" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Serienummer -->
-                    <label for="serieNummer" class="form-label">Serienummer</label>
-                    <input type="number" class="form-control" name="serviceSkjema.SerieNummer" required>
-                </div>
+        <div class="col-12">
+            <label class="form-label">Service Informasjon:</label>
+        </div>
+        <!-- ProduktType -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="serviceSkjema.ProduktType" placeholder="ProduktType" required>
+                <label for="produktType">Produkttype</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Avtalt med kunden -->
-                    <label for="avtaltMedKunden" class="form-label">Avtalt med kunden</label>
-                    <input type="text" class="form-control" name="serviceSkjema.AvtaltMedKunden" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Reparasjonsbeskrivelse -->
-                    <label for="reparasjonsbeskrivelse" class="form-label">Reparasjonsbeskrivelse</label>
-                    <textarea class="form-control" name="serviceSkjema.Reparasjonsbeskrivelse" placeholder="Reparasjonsbeskrivelse" required></textarea>
-                </div>
+        <!-- ÅrsModell -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control"name="serviceSkjema.ÅrsModell" placeholder="Årsmodell" required>
+                <label for="aarsModell">Årsmodell</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Brukte deler -->
-                    <label for="brukteDeler" class="form-label">Brukte deler</label>
-                    <input type="text" class="form-control" name="serviceSkjema.BrukteDeler" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Arbeidstimer -->
-                    <label for="arbeidstimer" class="form-label">Arbeidstimer</label>
-                    <input type="number" class="form-control" name="serviceSkjema.Arbeidstimer" required>
-                </div>
+        <!-- Servicetype -->
+        <div class="col-md-6">
+            <label for="servicetype" class="form-label">Servicetype?</label>
+            <select class="form-select" name="serviceSkjema.Servicetype" aria-label="Servicetype" required>
+                <option disabled selected>Velg et alternativ</option>
+                <option value="1">Reparasjon</option>
+                <option value="2">Garanti</option>
+            </select>
+        </div>
+
+        <!-- SerieNummer -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="number" class="form-control" name="serviceSkjema.SerieNummer" placeholder="SerieNummer" required>
+                <label for="serieNummer">Serienummer</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Ferdigstilt dato -->
-                    <label for="ferdigstiltDato" class="form-label">Ferdigstilt dato</label>
-                    <input type="date" class="form-control" name="serviceSkjema.FerdigstiltDato" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Retur deler -->
-                    <label for="returDeler" class="form-label">Retur deler</label>
-                    <input type="text" class="form-control" name="serviceSkjema.ReturDeler" required>
-                </div>
+        <!-- AvtaltMedKunden -->
+        <div class="col-md-12">
+            <label for="avtaltMedKunden" class="form-label">Hva er avtalt med kunden?:</label>
+            <textarea class="form-control" name="serviceSkjema.AvtaltMedKunden" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- Reparasjonsbeskrivelse -->
+        <div class="col-md-12">
+            <label for="reparasjonsbeskrivelse" class="form-label">Reparasjonsbeskrivelse:</label>
+            <textarea class="form-control" name="serviceSkjema.Reparasjonsbeskrivelse" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- BrukteDeler -->
+        <div class="col-md-12">
+            <label for="brukteDeler" class="form-label">Brukte deler:</label>
+            <textarea class="form-control" name="serviceSkjema.BrukteDeler" placeholder="Kommentar" required></textarea>
+        </div>
+
+        <!-- Arbeidstimer -->
+        <div class="col-md-6">
+            <label for="arbeidstimer" class="form-label">Arbeidstimer:</label>
+            <input type="number" class="form-control" name="serviceSkjema.Arbeidstimer" placeholder="arbeidstimer" required>
+        </div>
+
+        <!-- FerdigstiltDato -->
+        <div class="col-md-6">
+            <label for="ferdigstiltDato" class="form-label">Ferdigstilt dato:</label>
+            <input type="date" class="form-control" name="serviceSkjema.FerdigstiltDato" placeholder="dd/mm/yyyy" required>
+        </div>
+        <!-- ReturDeler -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="serviceSkjema.ReturDeler" placeholder="Utskiftet deler returnert" required>
+                <label for="returDeler">Returdeler</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Forsendelsesmåte -->
-                    <label for="forsendelsesMåte" class="form-label">Forsendelsesmåte</label>
-                    <input type="text" class="form-control" name="serviceSkjema.ForsendelsesMåte" required>
-                </div>
-                <div class="col-md-6">
-                    <!-- Kunde signatur -->
-                    <label for="kundeSignatur" class="form-label">Kunde signatur</label>
-                    <input type="text" class="form-control" name="serviceSkjema.KundeSignatur" required>
-                </div>
+        <!-- ForsendelsesMåte -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="serviceSkjema.ForsendelsesMåte" placeholder="Forsendelsesmåte" required>
+                <label for="forsendelsesMaate">Forsendelsesmåte</label>
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <!-- Mekaniker signatur -->
-                    <label for="mekanikerSignatur" class="form-label">Mekaniker signatur</label>
-                    <input type="text" class="form-control" name="serviceSkjema.MekanikerSignatur" required>
-                </div>
+        <!-- KundeSignatur -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="serviceSkjema.KundeSignatur" placeholder="Kunde signatur" required>
+                <label for="kundeSignatur">Kunde signatur</label>
             </div>
+        </div>
 
-           <!-- Knapp for å sende inn skjemaet. -->
-            <button type="submit" class="btn btn-primary">Send inn</button>
-        </form>
+        <!-- MekanikerSignatur -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="serviceSkjema.MekanikerSignatur" placeholder="Mekaniker signatur" required>
+                <label for="mekanikerSignatur">Mekaniker signatur</label>
+            </div>
+        </div>
+    </div>
+    <!-- Knapp for å sende inn skjemaet. -->
+    <button type="submit" class="btn btn-primary">Send inn</button>
+</form>
 
 
 

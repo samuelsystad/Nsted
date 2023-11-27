@@ -50,27 +50,10 @@ namespace Nsted
         // Konfigurerer HTTP-request-pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Oppsett av sikkerhetsheadere.
+            
             if (!env.IsDevelopment())
             {
-                app.Use(async (context, next) =>
-                {
-                    // Legger til sikkerhetsheadere for beskyttelse mot webangrep.
-                    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-                    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
-                    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
-                    context.Response.Headers.Add(
-                        "Content-Security-Policy",
-                        "default-src 'self'; " +
-                        "img-src 'self'; " +
-                        "font-src 'self'; " +
-                        "style-src 'self'; " +
-                        "script-src 'self'; " +
-                        "frame-src 'self'; " +
-                        "connect-src 'self';");
-                    await next();
-                });
-
+               
                 // Håndterer feil og unntak, og omdiriger til feilsiden.
                 app.UseExceptionHandler("/Home/Error");
 

@@ -41,6 +41,16 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+
+// Legger til sikkerhetsheadere for beskyttelse mot webangrep.
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
+    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+    
+    await next();
+});
 // Håndterer feil og unntak, og omdiriger til feilsiden.
 app.UseExceptionHandler("/Home/Error");
 

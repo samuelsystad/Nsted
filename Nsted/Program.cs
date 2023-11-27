@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Primitives;
 using System;
+using Microsoft.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -67,6 +68,8 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
+
+
 
 // Starter applikasjonen.
 app.Run();

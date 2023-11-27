@@ -50,14 +50,14 @@ namespace Nsted
         // Konfigurerer HTTP-request-pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Oppsett av sikkerhetsheadere.
-            if (!env.IsDevelopment())
-            {
+
+           
                 app.Use(async (context, next) =>
                 {
                     // Legger til sikkerhetsheadere for beskyttelse mot webangrep.
                     context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-                    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                    context.Response.Headers.Add("X-Frame-Options", "DENY");
+                    context.Response.Headers.Add("Referrer-Policy", "no-referrer");
                     context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
                     context.Response.Headers.Add(
                         "Content-Security-Policy",
@@ -76,12 +76,11 @@ namespace Nsted
 
                 // Aktiverer HSTS (HTTP Strict Transport Security) for sikrere kommunikasjon over HTTPS.
                 app.UseHsts();
-            }
-            else
-            {
+           
+            
                 // Viser detaljerte feilmeldinger under utviklingsmiljøet.
                 app.UseDeveloperExceptionPage();
-            }
+            
 
             // Utfører HTTPS-omdirigering.
             app.UseHttpsRedirection();

@@ -30,6 +30,7 @@
         {
             <tr>
                 <!-- Informasjonen om hva kolonnene skal inneholde. -->
+                <!-- Her måtte vi ha style direkte i tabellen for at det skulle funke -->
                 <td style="font-size: 20px; text-align: center;">
                     <!-- Oppretter en lenke for en detaljert visning av serviceskjemaet. -->
                     <a href="@Url.Action("OversiktFullførteOrdreSide", "Ansatt", new { id = fullførtOrdre.ServiceSkjemaId})" class="no-underline">

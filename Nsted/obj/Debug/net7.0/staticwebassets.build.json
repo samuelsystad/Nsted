@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7kEpPQM78z+jFfclhrgRt0YgBHUcFbdpzjkVR9GSLtY=",
+  "Hash": "7ruSNuFoKETj/VfiOnCshIpge+NPEFGPtAu/3hEn2OU=",
   "Source": "Nsted",
   "BasePath": "_content/Nsted",
   "Mode": "Default",
@@ -340,23 +340,6 @@
       "OriginalItemSpec": "wwwroot/images/Nostedlogo.png"
     },
     {
-      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/EksistKundeScript.js",
-      "SourceId": "Nsted",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
-      "BasePath": "_content/Nsted",
-      "RelativePath": "js/EksistKundeScript.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/js/EksistKundeScript.js"
-    },
-    {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/ListRegScript.js",
       "SourceId": "Nsted",
       "SourceType": "Discovered",
@@ -406,23 +389,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/ListServiceScript.js"
-    },
-    {
-      "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/NyServiceScript.js",
-      "SourceId": "Nsted",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/",
-      "BasePath": "_content/Nsted",
-      "RelativePath": "js/NyServiceScript.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/js/NyServiceScript.js"
     },
     {
       "Identity": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/OversiktRegScript.js",

@@ -1,71 +1,75 @@
 ﻿<Properties StartupConfiguration="{C76B95EF-46DE-4B71-880C-7BE64CEB3B58}|https">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Nsted PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/ListFullførteOrdrer.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Account/Register.cshtml">
     <Files>
       <File FileName="obj/Debug/net7.0/Nsted.AssemblyInfo.cs" />
-      <File FileName="appsettings.json" />
-      <File FileName="Program.cs" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
       <File FileName="Controllers/KundeController.cs" />
       <File FileName="Controllers/HomeController.cs" />
       <File FileName="Properties/launchSettings.json" />
-      <File FileName="Controllers/AnsattController.cs" />
+      <File FileName="Controllers/AnsattController.cs" Line="81" Column="1" />
       <File FileName="Data/NstedDbContext.cs" />
       <File FileName="Models/ErrorViewModel.cs" />
       <File FileName="Models/Kunde.cs" />
-      <File FileName="Views/Ansatt/Registrering.cshtml" />
-      <File FileName="Views/Home/Homepage.cshtml" />
+      <File FileName="Views/Ansatt/Registrering.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Homepage.cshtml" Line="1" Column="1" />
       <File FileName="Views/Home/Lagerbeholdning.cshtml" />
-      <File FileName="Views/Kunde/Add.cshtml" />
+      <File FileName="Views/Kunde/Add.cshtml" Line="1" Column="1" />
       <File FileName="Views/Kunde/Edit.cshtml" />
       <File FileName="Views/Kunde/List.cshtml" />
       <File FileName="Views/Shared/_Layout.cshtml" />
       <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="wwwroot/css/Homestyle.css" Line="1" Column="1" />
+      <File FileName="wwwroot/css/Homestyle.css" />
       <File FileName="Migrations/NstedDbContextModelSnapshot.cs" />
       <File FileName="Models/Registrering.cs" />
       <File FileName="Models/UserLoginModel.cs" />
       <File FileName="Models/User.cs" />
-      <File FileName="Startup.cs" />
+      <File FileName="Startup.cs" Line="76" Column="1" />
       <File FileName="Migrations/20231114164420_InitialCreate.cs" />
       <File FileName="wwwroot/css/Navbarstyle.css" />
-      <File FileName="Views/Ansatt/ListRegistrering.cshtml" Line="9" Column="54" />
+      <File FileName="Views/Ansatt/ListRegistrering.cshtml" Line="14" Column="12" />
       <File FileName="wwwroot/css/LoggedInAs.css" />
       <File FileName="Controllers/AccountController.cs" />
-      <File FileName="Views/Account/Register.cshtml" />
+      <File FileName="Views/Account/Register.cshtml" Line="1" Column="1" />
       <File FileName="wwwroot/css/LoginPage.css" />
       <File FileName="wwwroot/css/RegisterPage.css" />
       <File FileName="Views/Account/Login.cshtml" Line="18" Column="31" />
       <File FileName="Models/UserRegistrationModel.cs" />
       <File FileName="Data/SQL/Tables.sql" />
-      <File FileName="Views/Ansatt/NyService.cshtml" Line="159" Column="68" />
+      <File FileName="Views/Ansatt/NyService.cshtml" Line="165" Column="65" />
       <File FileName="Models/FullførtOrdre.cs" />
       <File FileName="Models/ServiceSkjema.cs" />
-      <File FileName="Views/Ansatt/ListFullførteOrdrer.cshtml" />
-      <File FileName="Views/Ansatt/ListServiceSkjema.cshtml" />
+      <File FileName="Views/Ansatt/ListFullførteOrdrer.cshtml" Line="33" Column="90" />
+      <File FileName="Views/Ansatt/ListServiceSkjema.cshtml" Line="18" Column="86" />
       <File FileName="Views/Ansatt/OversiktServiceSkjema.cshtml" Line="1" Column="1" />
       <File FileName="Services/UserService.cs" />
       <File FileName="Views/Shared/Error.cshtml" />
-      <File FileName="wwwroot/css/ServiceSkjemaDetails.css" Line="19" Column="1" />
+      <File FileName="wwwroot/css/ServiceSkjemaDetails.css" />
       <File FileName="wwwroot/css/site.css" />
       <File FileName="wwwroot/css/NoUnderline.css" />
-      <File FileName="Views/Ansatt/NyKundeService.cshtml" Line="179" Column="8" />
-      <File FileName="Views/Ansatt/OversiktRegistreringSkjema.cshtml" Line="14" Column="76" />
+      <File FileName="Views/Ansatt/NyKundeService.cshtml" Line="176" Column="15" />
+      <File FileName="Views/Ansatt/OversiktRegistreringSkjema.cshtml" Line="14" Column="61" />
       <File FileName="Views/Ansatt/OversiktFullførteOrdreSide.cshtml" Line="41" Column="1" />
       <File FileName="wwwroot/css/ListFullførteOrdrer.css" Line="1" Column="1" />
+      <File FileName="Views/Ansatt/EksisterendeKunde.cshtml" Line="138" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Nsted">
             <Node name="Nsted">
+              <Node name="Controllers" expanded="True" />
               <Node name="Views">
-                <Node name="Account" expanded="True" />
+                <Node name="Account" expanded="True">
+                  <Node name="Register.cshtml" selected="True" />
+                </Node>
+                <Node name="Ansatt" expanded="True" />
+                <Node name="Kunde" expanded="True" />
               </Node>
               <Node name="wwwroot">
-                <Node name="css">
-                  <Node name="ListFullførteOrdrer.css" selected="True" />
-                </Node>
+                <Node name="js" expanded="True" />
               </Node>
             </Node>
           </Node>

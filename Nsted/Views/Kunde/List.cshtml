@@ -3,9 +3,11 @@
 <!-- Definerer modellen for dette Razor-viewet som en liste av Kunde-objekter. -->
 @model List<Nsted.Models.Kunde>
 
+<head>
     <!-- Linker til stylesheetet som blir brukt for å style siden. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
-
+<script src="~/js/ListScript.js"></script>
+    </head>
 <h1>Kundeoversikt</h1>
 
 <!--  Oppretter en HTML-tabell -->
@@ -49,12 +51,3 @@
         }
     </tbody>
 </table>
-<!-- Funksjon for å bekrefte sletting av Kunde-objektet. -->
-<script>
-    function confirmDeletion(firstName, lastName) {
-        return confirm("Er du sikker på at du vil slette " + firstName + " " + lastName + "?");
-    }
-</script>
-
-
-

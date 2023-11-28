@@ -1,9 +1,12 @@
 ﻿<!-- Listet oversikt av registreringsskjema siden.-->
 
 @model List<Registrering>
-<!-- Link til stylesheetsene siden bruker. -->
+<head>
+<!-- Link til stylesheetsene og scriptet siden bruker. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
+<script src="~/js/ListRegScript.js"></script>
+    </head>
 <h1>Oversikt over registreringskjema</h1>
 
 <!-- Tabell for visning av registreringsskjemaer. -->
@@ -57,13 +60,3 @@
         }
     </tbody>
 </table>
-
-<!-- Funksjon for å bekrefte slettingen av registreringsskjemaet og kunden fra systemet. -->
-<script>
-    function confirmDeletion(RegistreringId) {
-        return confirm("Er du sikker på at du vil slette Registreringskjema " + RegistreringId+ "?");
-    }
-</script>
-
-
-                  

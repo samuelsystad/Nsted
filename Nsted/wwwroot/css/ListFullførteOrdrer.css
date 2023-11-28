@@ -13,7 +13,7 @@ h1 {
     width: 100%;
     border-collapse: collapse;
     border-bottom: 2px solid white;
-    position: fixed;
+    overflow-y: auto;
 }
 
     /* Stil for rader og celler i tabellen */

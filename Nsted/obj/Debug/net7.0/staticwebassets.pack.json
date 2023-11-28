@@ -77,6 +77,38 @@
       "PackagePath": "staticwebassets/images/backgroundhomepage.jpg"
     },
     {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/EksistKundeScript.js",
+      "PackagePath": "staticwebassets/js/EksistKundeScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/ListRegScript.js",
+      "PackagePath": "staticwebassets/js/ListRegScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/ListScript.js",
+      "PackagePath": "staticwebassets/js/ListScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/ListServiceScript.js",
+      "PackagePath": "staticwebassets/js/ListServiceScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/NyServiceScript.js",
+      "PackagePath": "staticwebassets/js/NyServiceScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/OversiktRegScript.js",
+      "PackagePath": "staticwebassets/js/OversiktRegScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/OversiktServiceScript.js",
+      "PackagePath": "staticwebassets/js/OversiktServiceScript.js"
+    },
+    {
+      "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/RegScript.js",
+      "PackagePath": "staticwebassets/js/RegScript.js"
+    },
+    {
       "Id": "/Users/andreasiversen/Dokumenter/BACIT Semester 3/IS-202/Nsted/Nsted/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

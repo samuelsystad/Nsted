@@ -6,9 +6,11 @@
     var customerList = ViewBag.CustomerList as List<Nsted.Models.Kunde>;
     ViewData["Title"] = "Ny Service";
 }
-
-<!-- Link til stylesheeten siden bruker-->
+<head>
+<!-- Link til stylesheeten og scriptet siden bruker-->
 <link rel="stylesheet" href="~/css/NyServicestyle.css" />
+<script src="~/js/NyServiceScript.js"></script>
+    </head>
 
 <h1>Nytt Serviceskjema</h1>
 
@@ -160,9 +162,10 @@
 </form>
 </div>
 
+<!-- Vi måtte ha scriptet rett i viewen for at det skulle funke -->
 <script>
     function updateSelectedCustomer() {
-         // Henter referansen til HTML-elementet med id 'customerInput' 
+        // Henter referansen til HTML-elementet med id 'customerInput' 
         var customerInput = document.getElementById('customerInput');
 
         // Finner den valgte kunden i dropdown-menyen med id 'customers' som har verdien som samsvarer med customerInput-verdien
@@ -173,11 +176,14 @@
 
         // Sjekker om det valgte alternativet ble funnet
         if (selectedOption) {
-             // Henter verdien av 'data-value' attributtet fra det valgte alternativet
+            // Henter verdien av 'data-value' attributtet fra det valgte alternativet
             kundeIdField.value = selectedOption.getAttribute('data-value');
         }
     }
-    //Legger til en 'change' hendelseslytter på HTML-elementet med id 'customerInput'
-    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
-</script>
+    // Legger til en 'change' hendelseslytter på HTML-elementet med id 'customerInput'
 
+    document.getElementById('customerInput').addEventListener('change', updateSelectedCustomer);
+
+
+
+</script>

@@ -4,9 +4,11 @@
 @{
     ViewData["Title"] = "Registrering";
 }
-
-<link rel="stylesheet" href="~/css/Registreringstyle.css" />
-
+<head>
+    <!-- Link til stylesheeten og scriptet siden bruker. -->
+    <script src="~/js/RegScript.js"></script>
+    <link rel="stylesheet" href="~/css/Registreringstyle.css" />
+</head>
 <h1>Registrering</h1>
 
 <div class="container">
@@ -150,15 +152,3 @@
             <button type="submit" class="btn btn-primary">Send inn</button>
 </form>
 </div>
-<!-- Funksjon som genererer et tilfeldig og unikt Ordre Nr -->
-<script>
-    function generateOrderNumber() {
-        fetch('/Ansatt/GenerateUniqueOrderNumber')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('orderNumberField').value = data.uniqueOrderNumber;
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
-    </script>

@@ -1,9 +1,12 @@
 ﻿<!-- Listet oversikt av serviceskjema siden.-->
 
 @model List<ServiceSkjema>
-<!-- Link til stylesheetsene siden bruker. -->
+<head>
+<!-- Link til stylesheetsene og scriptet siden bruker. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
+<script src="~/js/ListServiceScript.js"></script>
+</head>
 
 <h1> Oversikt over serviceskjema</h1>
 
@@ -12,6 +15,7 @@
     <thead>
         <tr>
             <!-- De forskjellige kolonne-titlene som vises på oversikten. -->
+            <!-- Her måtte vi ha style direkte i tabellen for at det skulle funke -->
             <th style="font-size: 20px; text-align: center;">Serviceskjema ID</th>
             <th style="font-size: 20px; text-align: center;">Kunde Nr</th>
             <th style="font-size: 20px; text-align: center;">Mottatt Dato</th>
@@ -69,11 +73,3 @@
     </tbody>
 
 </table>
-
-<script>
-    function confirmCompletion(ServiceSkjemaId) {
-        return confirm("Er du sikker på at du vil fullføre servicen på Serviceskjema " + ServiceSkjemaId + "?");
-    }
-    function confirmDeletion(ServiceSkjemaId) {
-        return confirm("Er du sikker på at du vil slette Serviceskjema " + ServiceSkjemaId + "?");
-    }</script>

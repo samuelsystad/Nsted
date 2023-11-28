@@ -1,9 +1,11 @@
 ﻿<!-- Listet oversikt av fullførteordre siden.-->
 
 @model List<FullførtOrdre>
+<head>
 <!-- Link til stylesheetsene siden bruker. -->
 <link rel="stylesheet" href="~/css/ListFullførteOrdrer.css" />
 <link rel="stylesheet" href="~/css/NoUnderline.css" />
+</head>
 
 <h1> Oversikt over fullførte ordrer</h1>
 
@@ -28,6 +30,7 @@
         {
             <tr>
                 <!-- Informasjonen om hva kolonnene skal inneholde. -->
+                <!-- Her måtte vi ha style direkte i tabellen for at det skulle funke -->
                 <td style="font-size: 20px; text-align: center;">
                     <!-- Oppretter en lenke for en detaljert visning av serviceskjemaet. -->
                     <a href="@Url.Action("OversiktFullførteOrdreSide", "Ansatt", new { id = fullførtOrdre.ServiceSkjemaId})" class="no-underline">
